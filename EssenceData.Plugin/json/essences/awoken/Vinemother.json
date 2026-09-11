@@ -1,0 +1,75 @@
+{
+  "$schema": "https://github.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/releases/latest/download/schema.json",
+  "essences": [
+    {
+      "character": "Vinemother",
+      "upgrade": "@VinemotherSynthesis"
+    }
+  ],
+  "upgrades": [
+    {
+      "id": "VinemotherSynthesis",
+      "titles": {
+        "key": "CharacterData_nameKey-242a5d834a103550-4897cd510030002429615e2de7c30d6d-v2",
+        "english": "Vinemother",
+        "french": "Sarmenteuse",
+        "german": "Rankenmutter",
+        "russian": "Мать лоз",
+        "portuguese": "Mãe-Vinha",
+        "chinese": "藤蔓之母",
+        "spanish": "Enredadera madre",
+        "chinese_traditional": "藤蔓之母",
+        "korean": "덩굴 대모",
+        "japanese": "ヴァインマザー"
+      },
+      "descriptions": {
+        "key": "CardUpgradeData_upgradeDescriptionKey-04dade81ab42ffb9-d9860d3f4a9221d448e8a62bce28a47c-v2",
+        "english": "+10[health] and '[summon]: Add 3 <b>Sting</b> spells to your hand.'",
+        "french": "+10[health] et '<b>Invocation</b> : Ajoute 3 sorts <b>Piqûre</b> à votre main.'",
+        "german": "+10[health] und „<b>Rufen</b>: Nimm 3 <b>Stachel</b>-Zauber auf die Hand.“",
+        "russian": "+10[health] и «<b>Призыв</b>: добавляет в руку три заклинания <b>\"Укол\"</b>».",
+        "portuguese": "+10 de [health] e <b>Invocar</b>: adiciona 3 feitiços <b>Ferroada</b> à sua mão.",
+        "chinese": "+10[health]，'[summon]：将 3 张<b>蛰刺</b> 法术加入你的手牌。'"
+      },
+      "trigger_upgrades": [
+        "@VinemotherSynthesis.triggerUpgrades0"
+      ],
+      "hide_icon_on_card": true,
+      "show_description_on_cards": false,
+      "bonus_hp": 10
+    }
+  ],
+  "effects": [
+    {
+      "id": "VinemotherSynthesis.triggerUpgrades0.effects0",
+      "name": "CardEffectAddBattleCard",
+      "param_card_pool": {
+        "name": "StingOnlyPool",
+        "cardDataList": [
+          "Sting"
+        ]
+      },
+      "param_int": 3,
+      "param_int_2": 3
+    }
+  ],
+  "character_triggers": [
+    {
+
+      "id": "VinemotherSynthesis.triggerUpgrades0",
+      "descriptions": {
+        "key": "CardUpgradeData_descriptionKey-644ec3d8860e4167-d9860d3f4a9221d448e8a62bce28a47c-v2",
+        "english": "Add 3 <b>Sting</b> spells to your hand.",
+        "french": "Ajoute 3 sorts <b>Piqûre</b> à votre main.",
+        "german": "Nimm 3 <b>Stachel</b>-Zauber auf die Hand.",
+        "russian": "Добавляет в руку 3 заклинания <b>«Укол»</b>.",
+        "portuguese": "Adiciona 3 feitiços <b>Ferroada</b> à sua mão.",
+        "chinese": "将 3 张<b>蛰刺</b> 法术加入你的手牌。"
+      },
+      "trigger": "on_spawn",
+      "effects": [
+        "@VinemotherSynthesis.triggerUpgrades0.effects0"
+      ]
+    }
+  ]
+}

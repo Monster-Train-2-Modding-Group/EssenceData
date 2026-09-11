@@ -1,0 +1,43 @@
+{
+  "$schema": "https://github.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/releases/latest/download/schema.json",
+  "essences": [
+    {
+      "character": "Votivary",
+      "upgrade": "@VotivarySynthesis"
+    }
+  ],
+  "upgrades": [
+    {
+      "id": "VotivarySynthesis",
+      "titles": {
+        "key": "CharacterData_nameKey-318675633a459d29-5450ff25b9ec0494aa937c06b6443284-v2",
+        "english": "Votivary",
+        "french": "Ciergier",
+        "german": "Votivar",
+        "russian": "Молельщик",
+        "portuguese": "Devoto",
+        "chinese": "许愿烛灵",
+        "spanish": "Votivario",
+        "chinese_traditional": "祈願者",
+        "korean": "봉헌자",
+        "japanese": "ヴォティヴァリー"
+      },
+      "descriptions": {
+        "key": "CardUpgradeData_upgradeDescriptionKey-86e21c05de122ff1-3d19706006aaa5d4fa2cdcaa953231a9-v2",
+        "english": "[endless].",
+        "french": "<b>Infinité</b>",
+        "german": "<b>Endlos</b>.",
+        "russian": "<b>Бесконечность</b>.",
+        "portuguese": "<b>Perpétuo</b>.",
+        "chinese": "[endless]。"
+      },
+      "status_effect_upgrades": [
+        {
+          "status": "endless",
+          "count": 1
+        }
+      ],
+      "hide_icon_on_card": true, "show_description_on_cards": false
+    }
+  ]
+}

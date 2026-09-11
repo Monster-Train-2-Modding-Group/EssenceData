@@ -1,0 +1,74 @@
+{
+  "$schema": "https://github.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/releases/latest/download/schema.json",
+  "essences": [
+    {
+      "character": "MonsterGlareminder",
+      "upgrade": "@MonsterGlareminderSynthesis"
+    }
+  ],
+  "upgrades": [
+    {
+      "id": "MonsterGlareminderSynthesis",
+      "titles": {
+        "key": "CharacterData_nameKey-19061d605a114f77-e1fd2f19c4490be48bc61feb628780d2-v2",
+        "english": "Glareminder",
+        "french": "Garde luisant",
+        "german": "Grellwächter",
+        "russian": "Хранитель света",
+        "portuguese": "Brilho-Lembrança",
+        "chinese": "炫目看护者",
+        "spanish": "Cuidador del resplandor",
+        "chinese_traditional": "瞪視看守者",
+        "korean": "글레어마인더",
+        "japanese": "グレアマインダー"
+      },
+      "descriptions": {
+        "key": "CardUpgradeData_upgradeDescriptionKey-8a4e30f0ccd1e67c-584c5dea24833b348bf92d86bb47605f-v2",
+        "english": "+5[health] and '<b>Etch</b>: Apply [corruptpoison] 2 to enemy units.'",
+        "french": "+5[health] et '<b>Gravure</b> : Inflige <b>Fauchage</b> 2 aux unités ennemies.'",
+        "german": "+5[health] und „<b>Schnitzen</b>: Wende 2 <b>Schnitter</b> auf gegnerische Einheiten an.“",
+        "russian": "+5[health] и «<b>Резьба</b>: накладывает на вражеских бойцов 2 заряда <b>жнеца</b>».",
+        "portuguese": "+5 de [health] e <b>Entalhar</b>: aplica <b>Ceifar</b> 2 às unidades inimigas.",
+        "chinese": "+5[health]，'<b>蚀刻</b>：对所有敌方单位施加[corruptpoison] 2。'"
+      },
+      "trigger_upgrades": [
+        "@MonsterGlareminderSynthesis.triggerUpgrades0"
+      ],
+      "hide_icon_on_card": true, "show_description_on_cards": false,
+      "bonus_hp": 5
+    }
+  ],
+  "effects": [
+    {
+      "id": "MonsterGlareminderSynthesis.triggerUpgrades0.effects0",
+      "name": "CardEffectAddStatusEffect",
+      "target_mode": "room",
+      "target_team": "heroes",
+      "param_status_effects": [
+        {
+          "status": "corrupt_poison",
+          "count": 2
+        }
+      ]
+    }
+  ],
+  "character_triggers": [
+    {
+      
+      "id": "MonsterGlareminderSynthesis.triggerUpgrades0",
+      "descriptions": {
+        "key": "CardUpgradeData_descriptionKey-baf9f8b5e9912ab2-584c5dea24833b348bf92d86bb47605f-v2",
+        "english": "Apply [corruptpoison] 2 to enemy units.",
+        "french": "Inflige <b>Fauchage</b> 2 aux unités ennemies.",
+        "german": "Wende 2 <b>Schnitter</b> auf gegnerische Einheiten an.",
+        "russian": "Накладывает на вражеских бойцов 2 заряда <b>жнеца</b>.",
+        "portuguese": "Aplica <b>Ceifar</b> 2 às unidades inimigas.",
+        "chinese": "对所有敌方单位施加[corruptpoison] 2。"
+      },
+      "trigger": "card_exhausted",
+      "effects": [
+        "@MonsterGlareminderSynthesis.triggerUpgrades0.effects0"
+      ]
+    }
+  ]
+}

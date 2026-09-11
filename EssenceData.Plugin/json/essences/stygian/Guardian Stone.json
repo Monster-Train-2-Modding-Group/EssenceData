@@ -1,0 +1,76 @@
+{
+  "$schema": "https://github.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/releases/latest/download/schema.json",
+  "essences": [
+    {
+      "character": "MonsterTotemHealing",
+      "upgrade": "@MonsterTotemHealingSynthesis"
+    }
+  ],
+  "upgrades": [
+    {
+      "id": "MonsterTotemHealingSynthesis",
+      "titles": {
+        "key": "CharacterData_nameKey-1ff9c51bf6a24cf4-9753104f58db2f14caea0965e30e3538-v2",
+        "english": "Guardian Stone",
+        "french": "Pierre gardienne",
+        "german": "Wachenstein",
+        "russian": "Сторожевой камень",
+        "portuguese": "Rocha Guardiã",
+        "chinese": "冥卫之石",
+        "spanish": "Piedra guardián",
+        "chinese_traditional": "守護石",
+        "korean": "수호석",
+        "japanese": "墓守の石"
+      },
+      "descriptions": {
+        "key": "CardUpgradeData_upgradeDescriptionKey-37fecfff93e38449-8e5b2bcbb75184e46963909ff3c01106-v2",
+        "english": "-5[attack] and '[incant]: Apply [armor] 1 to friendly units.'",
+        "french": "-5[attack] et '<b>Incantation</b> : Confère <b>Armure</b> 1 aux unités alliées.'",
+        "german": "-5[attack] und „<b>Verzauberung</b>: Wende 1 <b>Rüstung</b> auf verbündete Einheiten an.",
+        "russian": "-5[attack] и «<b>Мантра</b>: дает союзникам 1 <b>брони</b>».",
+        "portuguese": "-5 de [attack] e <b>Entoar</b>: concede <b>Armadura</b> 1 às unidades aliadas.",
+        "chinese": "-5[attack]，'[incant]：使所有友方单位获得[armor] 1。'"
+      },
+      "trigger_upgrades": [
+        "@MonsterTotemHealingSynthesis.triggerUpgrades0"
+      ],
+      "hide_icon_on_card": true, "show_description_on_cards": false,
+      "bonus_damage": -5
+    }
+  ],
+  "effects": [
+    {
+      "id": "MonsterTotemHealingSynthesis.triggerUpgrades0.effects0",
+      "name": "CardEffectAddStatusEffect",
+      "target_mode": "room",
+      "target_team": "monsters",
+      "param_status_effects": [
+        {
+          "status": "armor",
+          "count": 1
+        }
+      ],
+      "anim_to_play": "attack",
+      "param_int": 100
+    }
+  ],
+  "character_triggers": [
+    {
+      
+      "id": "MonsterTotemHealingSynthesis.triggerUpgrades0",
+      "descriptions": {
+        "key": "CardUpgradeData_descriptionKey-05e2862e8e8bdca8-8e5b2bcbb75184e46963909ff3c01106-v2",
+        "english": "Apply [armor] [effect0.status0.power] to friendly units.",
+        "french": "Confère <b>Armure</b> [effect0.status0.power] aux unités alliées.",
+        "german": "Wende [effect0.status0.power] <b>Rüstung</b> auf verbündete Einheiten an.",
+        "russian": "Дает союзникам [effect0.status0.power] <b>брони</b>.",
+        "portuguese": "Concede <b>Armadura</b> [effect0.status0.power] às unidades aliadas.",
+        "chinese": "所有友方单位获得[armor] [effect0.status0.power]。"
+      },
+      "trigger": "card_spell_played",
+      "effects": [
+        "@MonsterTotemHealingSynthesis.triggerUpgrades0.effects0"
+      ]
+    }
+  ]
+}

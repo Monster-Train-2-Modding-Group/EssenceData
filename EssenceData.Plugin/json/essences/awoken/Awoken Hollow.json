@@ -1,0 +1,114 @@
+{
+  "$schema": "https://github.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/releases/latest/download/schema.json",
+  "essences": [
+    {
+      "character": "MonsterHollowGolem",
+      "upgrade": "@MonsterHollowGolemSynthesis"
+    }
+  ],
+  "upgrades": [
+    {
+      "id": "MonsterHollowGolemSynthesis",
+      "titles": {
+        "key": "CharacterData_nameKey-6acc6a42067bb9e0-0b15ea59d59e1e44a949e54d7274fb65-v2",
+        "english": "Awoken Hollow",
+        "french": "Réceptacle éveillé",
+        "german": "Erweckte Hülle",
+        "russian": "Пробужденный пустой",
+        "portuguese": "Oco Desperto",
+        "chinese": "觉者空灵",
+        "spanish": "Despertado hueco",
+        "chinese_traditional": "覺醒者空心人",
+        "korean": "깨어난 공허한 존재",
+        "japanese": "覚醒のホロウ"
+      },
+      "descriptions": {
+        "key": "CardUpgradeData_upgradeDescriptionKey-4f85393e5d2aca05-3a0d7fd46f708f64387091b3b6cf3c03-v2",
+        "english": "+15[attack], +15[health], +1[size], and '[rejuvenate]: <b>Cultivate 2</b>.'",
+        "french": "+15[attack], +15[health], +1[size] et '<b>Renouveau</b> : <b>Culture 2</b>.'",
+        "german": "+15[attack], +15[health], +1[size] und „<b>Verjüngung</b>: <b>Kultivieren 2</b>.“",
+        "russian": "+15[attack], +15[health], +1[size] и «<b>Омоложение</b>: <b>культивация 2</b>».",
+        "portuguese": "+15 de [attack], +15 de [health], +1 de [size] e <b>Rejuvenescer</b>: <b>Cultivar</b> 2.",
+        "chinese": "+15[attack]，+15[health]，+1[size]，'[rejuvenate]：<b>滋养 2</b>。'"
+      },
+      "trigger_upgrades": [
+        "@MonsterHollowGolemSynthesis.triggerUpgrades0"
+      ],
+      "hide_icon_on_card": true,
+      "show_description_on_cards": false,
+      "bonus_damage": 15,
+      "bonus_hp": 15,
+      "bonus_size": 1
+    },
+    {
+      "id": "AwokenHollowSynthesisTrigger",
+      "bonus_damage": 2,
+      "bonus_hp": 2
+    }
+  ],
+  "additional_tooltips": [
+    {
+      "isTipTooltip": false,
+      "id": "MonsterHollowGolemSynthesis.triggerUpgrades0.effects0.additionalTooltips0",
+      "descriptions": {
+        "key": "CharacterAbility_Cultivate_TooltipText",
+        "english": "Increase the [attack] and [health] of a non-morsel friendly unit with the lowest health by the <b>Cultivate</b> value.",
+        "french": "Augmente l'[attack] et les [health] de l'allié non sous-bistre ayant le moins de PV de la valeur <b>Culture</b>.",
+        "german": "Erhöhe [attack] und [health] einer verbündeten Nicht-Nugget-Einheit mit der niedrigsten Gesundheit um den <b>Kultivieren</b>-Wert.",
+        "russian": "Повышает [attack] и [health] союзника не-заморыша с наименьшим здоровьем на показатель <b>культивации</b>.",
+        "portuguese": "Aumenta o [attack] e a [health] de uma unidade aliada que não seja um Lancho com a menor quantidade de vida pelo valor de <b>Cultivar</b>.",
+        "chinese": "提高生命值最少的友方非影裔单位的[attack]和[health]，数值与<b>滋养</b>层数相同。",
+        "spanish": "Aumenta el [attack] y [health] de la unidad aliada no pincho con menor salud en el valor de <b>Cultivo</b>.",
+        "chinese_traditional": "使生命值最低的非莫塞爾友方單位的[attack]和[health]增加等同於<b>培育</b>值的數量。",
+        "korean": "<b>배양</b> 누적 수치만큼 체력이 가장 낮은 작은 그림자 외의 아군 유닛의 [attack]과 [health]이 증가합니다.",
+        "japanese": "体力が一番低い非モーゼルの味方ユニットの[attack]と[health]を<b>培養</b>と等しい値で増加させる。"
+      },
+      "titles": {
+        "key": "CharacterAbility_Cultivate_CardText",
+        "english": "<b>Cultivate</b>",
+        "french": "<b>Culture</b>",
+        "german": "<b>Kultivieren</b>",
+        "russian": "<b>Культивация</b>",
+        "portuguese": "<b>Cultivar</b>",
+        "chinese": "<b>滋养</b>",
+        "spanish": "<b>Cultivo</b>",
+        "chinese_traditional": "<b>培育</b>",
+        "korean": "<b>배양</b>",
+        "japanese": "<b>培養</b>"
+      },
+      "style": "default"
+    }
+  ],
+  "effects": [
+    {
+      "id": "MonsterHollowGolemSynthesis.triggerUpgrades0.effects0",
+      "name": "CardEffectAddTempCardUpgradeToUnits",
+      "target_mode": "weakest",
+      "target_team": "monsters",
+      "param_upgrade": "@AwokenHollowSynthesisTrigger",
+      "additional_tooltips": [
+        "@MonsterHollowGolemSynthesis.triggerUpgrades0.effects0.additionalTooltips0"
+      ]
+    }
+  ],
+  "character_triggers": [
+    {
+      
+      "id": "MonsterHollowGolemSynthesis.triggerUpgrades0",
+      "descriptions": {
+        "key": "CardUpgradeData_descriptionKey-8e2a5d711a4d3e6b-3a0d7fd46f708f64387091b3b6cf3c03-v2",
+        "english": "<b>Cultivate 2</b>.",
+        "french": "<b>Culture 2</b>.",
+        "german": "<b>Kultivieren 2</b>.",
+        "russian": "<b>Культивация 2</b>.",
+        "portuguese": "<b>Cultivar 2</b>.",
+        "chinese": "<b>滋养 2</b>。"
+      },
+      "trigger": "on_heal",
+      "effects": [
+        "@MonsterHollowGolemSynthesis.triggerUpgrades0.effects0"
+      ],
+      "display_effect_hint_text": true
+    }
+  ]
+}

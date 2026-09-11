@@ -1,0 +1,74 @@
+{
+  "$schema": "https://github.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/releases/latest/download/schema.json",
+  "essences": [
+    {
+      "character": "MonsterRuneboundProtector",
+      "upgrade": "@MonsterRuneboundProtectorSynthesis"
+    }
+  ],
+  "upgrades": [
+    {
+      "id": "MonsterRuneboundProtectorSynthesis",
+      "titles": {
+        "key": "CharacterData_nameKey-92846007e35c90b8-95031c6e57ffb4841994d669ae1824a5-v2",
+        "english": "Titan Sentry",
+        "french": "Sentinelle du titan",
+        "german": "Titanen-Wachposten",
+        "russian": "Охрана Титана",
+        "portuguese": "Sentinela do Titã",
+        "chinese": "泰坦哨兵",
+        "spanish": "Centinela del titán",
+        "chinese_traditional": "泰坦哨兵",
+        "korean": "티탄 감시병",
+        "japanese": "タイタン・セントリー"
+      },
+      "descriptions": {
+        "key": "CardUpgradeData_upgradeDescriptionKey-4decc8453ab5b04a-2bcee537d2dc584468fbf7f220fb1e51-v2",
+        "english": "+10[health] and '[revenge]: Apply [frostbite] 3 to enemy units.'",
+        "french": "+10[health] et '<b>Vengeance</b> : Inflige <b>Gelure</b> 3 aux unités ennemies.'",
+        "german": "+10[health] und „<b>Rache</b>: Wende 3 <b>Frostschaden</b> auf gegnerische Einheiten an.“",
+        "russian": "+10[health] и «<b>Месть</b>: накладывает на вражеских бойцов 3 <b>обморожения</b>».",
+        "portuguese": "+10 de [health] e <b>Vingança</b>: aplica <b>Friagem</b> 3 às unidades inimigas.",
+        "chinese": "+10[health]，'[revenge]：对所有敌方单位施加[frostbite] 3。'"
+      },
+      "trigger_upgrades": [
+        "@MonsterRuneboundProtectorSynthesis.triggerUpgrades0"
+      ],
+      "hide_icon_on_card": true, "show_description_on_cards": false,
+      "bonus_hp": 10
+    }
+  ],
+  "effects": [
+    {
+      "id": "MonsterRuneboundProtectorSynthesis.triggerUpgrades0.effects0",
+      "name": "CardEffectAddStatusEffect",
+      "target_mode": "room",
+      "target_team": "heroes",
+      "param_status_effects": [
+        {
+          "status": "poison",
+          "count": 3
+        }
+      ]
+    }
+  ],
+  "character_triggers": [
+    {
+      
+      "id": "MonsterRuneboundProtectorSynthesis.triggerUpgrades0",
+      "descriptions": {
+        "key": "CardUpgradeData_descriptionKey-4ab8e4c86b502b7f-2bcee537d2dc584468fbf7f220fb1e51-v2",
+        "english": "Apply [frostbite] [effect0.status0.power] to enemy units.",
+        "french": "Inflige <b>Gelure</b> [effect0.status0.power] aux unités ennemies.",
+        "german": "Wende [effect0.status0.power] <b>Frostschaden</b> auf gegnerische Einheiten an.",
+        "russian": "Накладывает на вражеских бойцов [effect0.status0.power] <b>обморожения</b>.",
+        "portuguese": "Aplica <b>Friagem</b> [effect0.status0.power] às unidades inimigas.",
+        "chinese": "对所有敌方单位施加[frostbite] [effect0.status0.power]。"
+      },
+      "trigger": "on_hit",
+      "effects": [
+        "@MonsterRuneboundProtectorSynthesis.triggerUpgrades0.effects0"
+      ]
+    }
+  ]
+}

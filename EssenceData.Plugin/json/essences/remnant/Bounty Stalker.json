@@ -1,0 +1,68 @@
+{
+  "$schema": "https://github.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/releases/latest/download/schema.json",
+  "essences": [
+    {
+      "character": "BountyStalker",
+      "upgrade": "@BountyStalkerSynthesis"
+    }
+  ],
+  "upgrades": [
+    {
+      "id": "BountyStalkerSynthesis",
+      "titles": {
+        "key": "CharacterData_nameKey-fbba9c15201a4755-11a15f5949523af41804f162c783d725-v2",
+        "english": "Bounty Stalker",
+        "french": "Traqueur de primes",
+        "german": "Kopfgeldjäger",
+        "russian": "Охотник за головами",
+        "portuguese": "Caçador de Recompensas",
+        "chinese": "赏金猎手",
+        "spanish": "Acechador a sueldo",
+        "chinese_traditional": "賞金獵人",
+        "korean": "현상금 사냥꾼",
+        "japanese": "バウンティ・ストーカー"
+      },
+      "descriptions": {
+        "key": "CardUpgradeData_upgradeDescriptionKey-a6b4080012b56435-44c2fcc9382d6ed47bf2f3d86baadd5f-v2",
+        "english": "[stealth] 1 and '[extinguish]: +4[attack] permanently.'",
+        "french": "<b>Dissimulation</b> 1 et '<b>Extinction</b> : +4[attack] de façon permanente.'",
+        "german": "1 <b>Tarnung</b> und „<b>Erlöschen</b>: Permanent +4[attack].“",
+        "russian": "1 <b>незаметности</b> и «<b>Угасание</b>: +4[attack] навсегда».",
+        "portuguese": "<b>Furtividade</b> 1 e <b>Extinguir</b>: +4 de [attack] permanentemente.",
+        "chinese": "[stealth] 1，'[extinguish]：永久获得 +4[attack]。'"
+      },
+      "status_effect_upgrades": [
+        {
+          "status": "stealth",
+          "count": 1
+        }
+      ],
+      "card_trigger_upgrades": [
+        "@BountyStalkerSynthesis.cardTriggerUpgrades0"
+      ],
+      "hide_icon_on_card": true, "show_description_on_cards": false
+    }
+  ],
+  "card_triggers": [
+    {
+      "id": "BountyStalkerSynthesis.cardTriggerUpgrades0",
+      "descriptions": {
+        "key": "CardUpgradeData_descriptionKey-3168b84ae238664d-44c2fcc9382d6ed47bf2f3d86baadd5f-v2",
+        "english": "+4[attack] permanently.",
+        "french": "+4[attack] de façon permanente.",
+        "german": "Permanent +4[attack].",
+        "russian": "+4[attack] навсегда.",
+        "portuguese": "+4 de [attack] permanentemente.",
+        "chinese": "永久获得 +4[attack]。"
+      },
+      "trigger": "on_monster_death",
+      "trigger_effects": [
+        {
+          "persistence_mode": "single_run",
+          "trigger_effect": "CardTriggerEffectBuffCharacterDamage",
+          "param_int": 4
+        }
+      ]
+    }
+  ]
+}

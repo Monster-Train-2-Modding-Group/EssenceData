@@ -1,0 +1,86 @@
+{
+  "$schema": "https://github.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/releases/latest/download/schema.json",
+  "essences": [
+    {
+      "character": "MonsterCombativeSiren",
+      "upgrade": "@MonsterCombatativeSirenSynthesis"
+    }
+  ],
+  "upgrades": [
+    {
+      "id": "MonsterCombatativeSirenSynthesis",
+      "titles": {
+        "key": "CharacterData_nameKey-9cf9513f783e1cf4-aaf6ff6dc9da03a48985f18b3310db9e-v2",
+        "english": "Siren of the Sea",
+        "french": "Sirène de la mer",
+        "german": "Sirene der See",
+        "russian": "Морская сирена",
+        "portuguese": "Sirena dos Mares",
+        "chinese": "深海海妖",
+        "spanish": "Sirena marina",
+        "chinese_traditional": "海洋海妖",
+        "korean": "바다의 사이렌",
+        "japanese": "海のセイレーン"
+      },
+      "descriptions": {
+        "key": "CardUpgradeData_upgradeDescriptionKey-93281873fd2ad5d7-08405c0704ba58a48a328517450a886c-v2",
+        "english": "+5[attack] and '[incant]: +1[attack] and +1[health].'",
+        "french": "+5[attack] et '<b>Incantation</b> : +1[attack] et +1[health].'",
+        "german": "+5[attack] und „<b>Verzauberung</b>: +1[attack] und +1[health].“",
+        "russian": "+5[attack] и «<b>Мантра</b>: +1[attack] и +1[health]».",
+        "portuguese": "+5 de [attack] e <b>Entoar</b>: +1 de [attack] e +1 de [health].",
+        "chinese": "+5[attack]，'[incant]：+1[attack]，+1[health]。'"
+      },
+      "trigger_upgrades": [
+        "@MonsterCombatativeSirenSynthesis.triggerUpgrades0"
+      ],
+      "hide_icon_on_card": true, "show_description_on_cards": false,
+      "bonus_damage": 5
+    },
+    {
+      "id": "SirenSeaSynthesisTrigger",
+      "titles": {
+        "key": "CharacterData_nameKey-9cf9513f783e1cf4-aaf6ff6dc9da03a48985f18b3310db9e-v2",
+        "english": "Siren of the Sea",
+        "french": "Sirène de la mer",
+        "german": "Sirene der See",
+        "russian": "Морская сирена",
+        "portuguese": "Sirena dos Mares",
+        "chinese": "深海海妖",
+        "spanish": "Sirena marina",
+        "chinese_traditional": "海洋海妖",
+        "korean": "바다의 사이렌",
+        "japanese": "海のセイレーン"
+      },
+      "bonus_damage": 1,
+      "bonus_hp": 1
+    }
+  ],
+  "effects": [
+    {
+      "id": "MonsterCombatativeSirenSynthesis.triggerUpgrades0.effects0",
+      "name": "CardEffectAddTempCardUpgradeToUnits",
+      "target_mode": "self",
+      "param_upgrade": "@SirenSeaSynthesisTrigger"
+    }
+  ],
+  "character_triggers": [
+    {
+      
+      "id": "MonsterCombatativeSirenSynthesis.triggerUpgrades0",
+      "descriptions": {
+        "key": "CardUpgradeData_descriptionKey-1f8101ca6f253bc0-08405c0704ba58a48a328517450a886c-v2",
+        "english": "+[effect0.upgrade.bonusdamage][attack] and +[effect0.upgrade.bonushp][health].",
+        "french": "+[effect0.upgrade.bonusdamage][attack] et +[effect0.upgrade.bonushp][health].",
+        "german": "+[effect0.upgrade.bonusdamage][attack] und +[effect0.upgrade.bonushp][health].",
+        "russian": "+[effect0.upgrade.bonusdamage][attack] и +[effect0.upgrade.bonushp][health].",
+        "portuguese": "+[effect0.upgrade.bonusdamage] de [attack] e +[effect0.upgrade.bonushp] de [health].",
+        "chinese": "+[effect0.upgrade.bonusdamage][attack]，+[effect0.upgrade.bonushp][health]。"
+      },
+      "trigger": "card_spell_played",
+      "effects": [
+        "@MonsterCombatativeSirenSynthesis.triggerUpgrades0.effects0"
+      ]
+    }
+  ]
+}

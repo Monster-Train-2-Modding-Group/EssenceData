@@ -1,0 +1,48 @@
+{
+  "$schema": "https://github.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/releases/latest/download/schema.json",
+  "essences": [
+    {
+      "character": "MonsterApexImp",
+      "upgrade": "@MonsterApexImpSynthesis"
+    }
+  ],
+  "upgrades": [
+    {
+      "id": "MonsterApexImpSynthesis",
+      "titles": {
+        "key": "CharacterData_nameKey-766daded001111e6-5ea0328fb52d79d4cad8a658a82feb03-v2",
+        "english": "Apex Imp",
+        "french": "Diablotin culminant",
+        "german": "Apex-Kobold",
+        "russian": "Высший бес",
+        "portuguese": "Diabinho Superior",
+        "chinese": "巅峰小鬼",
+        "spanish": "Diablillo supremo",
+        "chinese_traditional": "巔峰小鬼",
+        "korean": "우두머리 임프",
+        "japanese": "エーペックスインプ"
+      },
+      "descriptions": {
+        "key": "CardUpgradeData_upgradeDescriptionKey-ab3dc1174cecadfc-735384fd0563cbf47bdf436fffed64a2-v2",
+        "english": "[armor] 10 and [rage] 10.",
+        "french": "<b>Armure</b> 10 et <b>Rage</b> 10.",
+        "german": "10 <b>Rüstung</b> und 10 <b>Wut</b>.",
+        "russian": "10 <b>брони</b> и 10 <b>ярости</b>.",
+        "portuguese": "<b>Armadura</b> 10 e <b>Fúria</b> 10.",
+        "chinese": "[armor] 10，[rage] 10。"
+      },
+      "status_effect_upgrades": [
+        {
+          "status": "armor",
+          "count": 10
+        },
+        {
+          "status": "buff",
+          "count": 10
+        }
+      ],
+      "hide_icon_on_card": true,
+      "show_description_on_cards": false
+    }
+  ]
+}

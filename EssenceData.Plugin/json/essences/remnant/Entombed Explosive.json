@@ -1,0 +1,59 @@
+{
+  "$schema": "https://github.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/releases/latest/download/schema.json",
+  "essences": [
+    {
+      "character": "MonsterTombExploding",
+      "upgrade": "@MonsterTombExplodingSynthesis"
+    }
+  ],
+  "upgrades": [
+    {
+      "id": "MonsterTombExplodingSynthesis",
+      "titles": {
+        "key": "CharacterData_nameKey-40ce699a854420ba-585e1205f6cc16144a303d0d7196ac7b-v2",
+        "english": "Entombed Explosive",
+        "french": "Explosif enseveli",
+        "german": "Eingebetteter Sprengstoff",
+        "russian": "Вплавленная взрывчатка",
+        "portuguese": "Explosivo Interior",
+        "chinese": "蜡封炸弹",
+        "spanish": "Explosivo contenido",
+        "chinese_traditional": "埋葬爆裂",
+        "korean": "매장된 폭발물",
+        "japanese": "体内爆弾"
+      },
+      "descriptions": {
+        "key": "CardUpgradeData_upgradeDescriptionKey-0545b0446bac453b-6dad9319f9f0c064cad0b5b2ac6ca64d-v2",
+        "english": "[extinguish]: Deal 50 damage to the front enemy unit.",
+        "french": "<b>Extinction</b> : Inflige 50 dégâts à l'unité ennemie en première ligne.",
+        "german": "</b>Erlöschen</b>: Füge der vordersten gegnerischen Einheit 50 Schaden zu.",
+        "russian": "<b>Угасание</b>: наносит переднему вражескому бойцу 50 урона.",
+        "portuguese": "<b>Extinguir</b>: causa 50 de dano à unidade inimiga à frente.",
+        "chinese": "[extinguish]：对前排敌方单位造成 50 点伤害。"
+      },
+      "trigger_upgrades": [
+        "@MonsterTombExplodingSynthesis.triggerUpgrades0"
+      ],
+      "hide_icon_on_card": true, "show_description_on_cards": false
+    }
+  ],
+  "effects": [
+    {
+      "id": "MonsterTombExplodingSynthesis.triggerUpgrades0.effects0",
+      "name": "CardEffectDamage",
+      "target_mode": "front_in_room",
+      "target_team": "heroes",
+      "param_int": 50
+    }
+  ],
+  "character_triggers": [
+    {
+      
+      "id": "MonsterTombExplodingSynthesis.triggerUpgrades0",
+      "trigger": "on_death",
+      "effects": [
+        "@MonsterTombExplodingSynthesis.triggerUpgrades0.effects0"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,73 @@
+{
+  "$schema": "https://github.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/releases/latest/download/schema.json",
+  "essences": [
+    {
+      "character": "MonsterMonstrosity",
+      "upgrade": "@MonsterMonstrositySynthesis"
+    }
+  ],
+  "upgrades": [
+    {
+      "id": "MonsterMonstrositySynthesis",
+      "titles": {
+        "key": "CharacterData_nameKey-84b1076c93f5a108-58bd4aa941e1c4e49b9390f55338d418-v2",
+        "english": "Big Sludge",
+        "french": "Monticule visqueux",
+        "german": "Matschhüne",
+        "russian": "Здоровяк",
+        "portuguese": "Gosmão",
+        "chinese": "巨型蜡油",
+        "spanish": "Gran lodo",
+        "chinese_traditional": "大軟泥",
+        "korean": "거대 밀랍 덩어리",
+        "japanese": "ビッグ・スラッジ"
+      },
+      "descriptions": {
+        "key": "CardUpgradeData_upgradeDescriptionKey-6b955c859416f22c-2adb1e144a35df5458cd8f9189daaa6c-v2",
+        "english": "+1[size] and '[harvest]: Gain [rage] 5.'",
+        "french": "+1[size] et '<b>Récolte</b> : Octroie <b>Rage</b> 5.'",
+        "german": "+1[size] und „<b>Ernte</b>: Erhalte 5 <b>Wut</b>.“",
+        "russian": "+1[size] и «<b>Урожай</b>: дает 5 <b>ярости</b>».",
+        "portuguese": "+1 de [size] e <b>Colheita</b>: receba <b>Fúria</b> 5.",
+        "chinese": "+1[size]，'[harvest]：获得[rage] 5。'"
+      },
+      "trigger_upgrades": [
+        "@MonsterMonstrositySynthesis.triggerUpgrades0"
+      ],
+      "hide_icon_on_card": true, "show_description_on_cards": false,
+      "bonus_size": 1
+    }
+  ],
+  "effects": [
+    {
+      "id": "MonsterMonstrositySynthesis.triggerUpgrades0.effects0",
+      "name": "CardEffectAddStatusEffect",
+      "target_mode": "self",
+      "param_status_effects": [
+        {
+          "status": "buff",
+          "count": 5
+        }
+      ]
+    }
+  ],
+  "character_triggers": [
+    {
+      
+      "id": "MonsterMonstrositySynthesis.triggerUpgrades0",
+      "descriptions": {
+        "key": "CardUpgradeData_descriptionKey-a1fd0236e595e012-2adb1e144a35df5458cd8f9189daaa6c-v2",
+        "english": "Gain [rage] 5.",
+        "french": "Octroie <b>Rage</b> 5.",
+        "german": "Erhalte 5 <b>Wut</b>.",
+        "russian": "Дает 5 <b>ярости</b>.",
+        "portuguese": "Receba <b>Fúria</b> 5.",
+        "chinese": "获得[rage] 5。"
+      },
+      "trigger": "on_any_unit_death_on_floor",
+      "effects": [
+        "@MonsterMonstrositySynthesis.triggerUpgrades0.effects0"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,82 @@
+{
+  "$schema": "https://github.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/releases/latest/download/schema.json",
+  "essences": [
+    {
+      "character": "AlloyedConstruct",
+      "upgrade": "@AlloyedConstructSynthesis"
+    }
+  ],
+  "upgrades": [
+    {
+      "id": "AlloyedConstructSynthesis",
+      "titles": {
+        "key": "CharacterData_nameKey-1e11de0500d18321-69b2e185d7f9a724aa86b2e6d46e8ae5-v2",
+        "english": "Alloyed Construct",
+        "french": "Automate en alliage",
+        "german": "Legiertes Konstrukt",
+        "russian": "Легированный конструкт",
+        "portuguese": "Autômato Blindado",
+        "chinese": "合金构装体",
+        "spanish": "Constructo de aleación",
+        "chinese_traditional": "合金造物",
+        "korean": "합금 구조",
+        "japanese": "合金コンストラクト"
+      },
+      "descriptions": {
+        "key": "CardUpgradeData_upgradeDescriptionKey-37a3f48dd2f7b7e9-27eb14fa378552f4b81cac880c107f7d-v2",
+        "english": "[inert], [multistrike] 1, and '[feed]: Gain [spark] 1.'",
+        "french": "<b>Inerte</b>, <b>Frappe multiple</b> 1 et '<b>Gavage</b> : Octroie <b>Combustible</b> 1.'",
+        "german": "<b>Inaktiv</b>, 1 <b>Multischlag</b> und „<b>Sättigung</b>: Erhalte 1 <b>Brennstoff</b>.“",
+        "russian": "<b>Инертность</b>, <b>мультиудар</b> и «<b>Обжорство</b>: дает 1 <b>топливо</b>».",
+        "portuguese": "<b>Inerte</b>, <b>Golpe Múltiplo</b> 1 e <b>Traçar</b>: receba <b>Combustível</b> 1.",
+        "chinese": "[inert]，[multistrike] 1，'[feed]：获得[spark] 1。'"
+      },
+      "status_effect_upgrades": [
+        {
+          "status": "inert",
+          "count": 1
+        },
+        {
+          "status": "multistrike",
+          "count": 1
+        }
+      ],
+      "trigger_upgrades": [
+        "@AlloyedConstructSynthesis.triggerUpgrades0"
+      ],
+      "hide_icon_on_card": true, "show_description_on_cards": false
+    }
+  ],
+  "effects": [
+    {
+      "id": "AlloyedConstructSynthesis.triggerUpgrades0.effects0",
+      "name": "CardEffectAddStatusEffect",
+      "target_mode": "self",
+      "param_status_effects": [
+        {
+          "status": "spark",
+          "count": 1
+        }
+      ]
+    }
+  ],
+  "character_triggers": [
+    {
+      
+      "id": "AlloyedConstructSynthesis.triggerUpgrades0",
+      "descriptions": {
+        "key": "CardUpgradeData_descriptionKey-257575cf196fe3b0-27eb14fa378552f4b81cac880c107f7d-v2",
+        "english": "Gain [spark] 1.",
+        "french": "Octroie <b>Combustible</b> 1.",
+        "german": "Erhalte 1 <b>Brennstoff</b>.",
+        "russian": "Дает 1 <b>топливо</b>.",
+        "portuguese": "Receba <b>Combustível</b> 1.",
+        "chinese": "获得[spark] 1。"
+      },
+      "trigger": "on_feed",
+      "effects": [
+        "@AlloyedConstructSynthesis.triggerUpgrades0.effects0"
+      ]
+    }
+  ]
+}

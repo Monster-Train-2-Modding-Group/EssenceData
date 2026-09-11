@@ -1,0 +1,47 @@
+{
+  "$schema": "https://github.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/releases/latest/download/schema.json",
+  "essences": [
+    {
+      "character": "Draff",
+      "upgrade": "@DraffSynthesis"
+    }
+  ],
+  "upgrades": [
+    {
+      "id": "DraffSynthesis",
+      "titles": {
+        "key": "CharacterData_nameKey-a09582df06a6e0c4-633eff7c4b07bc543984e120636254b2-v2",
+        "english": "Draff",
+        "french": "Drêche",
+        "german": "Harzwachser",
+        "russian": "Отходы",
+        "portuguese": "Acerado",
+        "chinese": "重塑烛人",
+        "spanish": "Sobrante",
+        "chinese_traditional": "德拉夫",
+        "korean": "잔해",
+        "japanese": "ドラフ"
+      },
+      "descriptions": {
+        "key": "CardUpgradeData_upgradeDescriptionKey-248ded60c85f19b2-133569edb9cb71040be5fb032350983f-v2",
+        "english": "[multistrike] 1 and [burnout] 1.",
+        "french": "<b>Frappe multiple</b> 1 et <b>Consumation</b> 1.",
+        "german": "1 <b>Multischlag</b> und 1 <b>Ausbrennen</b>.",
+        "russian": "<b>Мультиудар</b> и <b>выгорание</b>.",
+        "portuguese": "<b>Golpe Múltiplo</b> 1 e <b>Derretimento</b> 1.",
+        "chinese": "[multistrike] 1，[burnout] 1。"
+      },
+      "status_effect_upgrades": [
+        {
+          "status": "multistrike",
+          "count": 1
+        },
+        {
+          "status": "ephemeral",
+          "count": 1
+        }
+      ],
+      "hide_icon_on_card": true, "show_description_on_cards": false
+    }
+  ]
+}

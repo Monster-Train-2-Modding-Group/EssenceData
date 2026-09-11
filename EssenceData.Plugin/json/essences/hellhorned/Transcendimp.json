@@ -1,0 +1,43 @@
+{
+  "$schema": "https://github.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/releases/latest/download/schema.json",
+  "essences": [
+    {
+      "character": "Transcendimp",
+      "upgrade": "@TranscendimpSynthesis"
+    }
+  ],
+  "upgrades": [
+    {
+      "id": "TranscendimpSynthesis",
+      "titles": {
+        "key": "CharacterData_nameKey-c87606535bedccce-ebd31838e68ddb64d9e059209ef07fe7-v2",
+        "english": "Transcendimp",
+        "french": "Transcendiable",
+        "german": "Transzenbold",
+        "russian": "Трансцендентальный бес",
+        "portuguese": "Diabo de 9 Vidas",
+        "chinese": "超凡小鬼",
+        "spanish": "Transcendiablillo",
+        "chinese_traditional": "超越小鬼",
+        "korean": "초월한 임프",
+        "japanese": "トランセンドインプ"
+      },
+      "descriptions": {
+        "key": "CardUpgradeData_upgradeDescriptionKey-fc1426021b09a587-87a0e0124dea70345a51b2d8df18d9de-v2",
+        "english": "[endless].",
+        "french": "<b>Infinité</b>",
+        "german": "<b>Endlos</b>.",
+        "russian": "<b>Бесконечность</b>.",
+        "portuguese": "<b>Perpétuo</b>.",
+        "chinese": "[endless]。"
+      },
+      "status_effect_upgrades": [
+        {
+          "status": "endless",
+          "count": 1
+        }
+      ],
+      "hide_icon_on_card": true, "show_description_on_cards": false
+    }
+  ]
+}

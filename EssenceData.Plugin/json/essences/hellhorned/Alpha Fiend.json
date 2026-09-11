@@ -1,0 +1,73 @@
+{
+  "$schema": "https://github.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/releases/latest/download/schema.json",
+  "essences": [
+    {
+      "character": "AlphaFiend",
+      "upgrade": "@AlphaFiendSynthesis"
+    }
+  ],
+  "upgrades": [
+    {
+      "id": "AlphaFiendSynthesis",
+      "titles": {
+        "key": "CharacterData_nameKey-3136c43ce835b000-d12e27b33d6c5c848b9f4a9ff82d845e-v2",
+        "english": "Alpha Fiend",
+        "french": "Monstre alpha",
+        "german": "Alpha-Unhold",
+        "russian": "Альфа-изувер",
+        "portuguese": "Maldito Alfa",
+        "chinese": "恐魔领主",
+        "spanish": "Demonio alfa",
+        "chinese_traditional": "阿爾法惡魔",
+        "korean": "악마 우두머리",
+        "japanese": "アルファ・フィーンド"
+      },
+      "descriptions": {
+        "key": "CardUpgradeData_upgradeDescriptionKey-34679d951ad9571e-759078416cc6b234595c78a02d4fb543-v2",
+        "english": "+1[size] and '[strike]: +5[attack].'",
+        "french": "+1[size] et '<b>Frappe</b> : +5[attack].'",
+        "german": "+1[size] und „<b>Angriff</b>: +5[attack].“",
+        "russian": "+1[size] и «<b>Выпад</b>: +5[attack]».",
+        "portuguese": "+1 de [size] e <b> Golpe</b>: +5 de [attack].",
+        "chinese": "+1[size]，'[strike]： +5[attack]。'"
+      },
+      "trigger_upgrades": [
+        "@AlphaFiendSynthesis.triggerUpgrades0"
+      ],
+      "hide_icon_on_card": true,
+      "show_description_on_cards": false,
+      "bonus_size": 1
+    },
+    {
+      "id": "AlphaFiendSynthesisTrigger",
+      "bonus_damage": 5
+    }
+  ],
+  "effects": [
+    {
+      "id": "AlphaFiendSynthesis.triggerUpgrades0.effects0",
+      "name": "CardEffectAddTempCardUpgradeToUnits",
+      "target_mode": "self",
+      "param_upgrade": "@AlphaFiendSynthesisTrigger"
+    }
+  ],
+  "character_triggers": [
+    {
+
+      "id": "AlphaFiendSynthesis.triggerUpgrades0",
+      "descriptions": {
+        "key": "CardUpgradeData_descriptionKey-4327674c30f42727-759078416cc6b234595c78a02d4fb543-v2",
+        "english": "+5[attack].",
+        "french": "+5[attack].",
+        "german": "+5[attack].",
+        "russian": "+5[attack].",
+        "portuguese": "+5 de [attack].",
+        "chinese": "+5[attack]。"
+      },
+      "trigger": "on_attacking",
+      "effects": [
+        "@AlphaFiendSynthesis.triggerUpgrades0.effects0"
+      ]
+    }
+  ]
+}

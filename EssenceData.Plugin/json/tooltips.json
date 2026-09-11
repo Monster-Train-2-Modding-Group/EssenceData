@@ -1,0 +1,15 @@
+{
+  "$schema": "https://github.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/releases/latest/download/schema.json",
+  "tooltip_design_types": [
+    {
+      "id": "Synthesis",
+      "background": "@tooltip_synthesis"
+    }
+  ],
+  "sprites": [
+    {
+      "id": "tooltip_synthesis",
+      "path": "assets/ui/tooltip_synthesis.png"
+    }
+  ]
+}

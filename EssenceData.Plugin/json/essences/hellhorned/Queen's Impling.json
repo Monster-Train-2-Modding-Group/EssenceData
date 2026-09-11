@@ -1,0 +1,59 @@
+{
+  "$schema": "https://github.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/releases/latest/download/schema.json",
+  "essences": [
+    {
+      "character": "MonsterQueensImp",
+      "upgrade": "@MonsterQueensImpSynthesis"
+    }
+  ],
+  "upgrades": [
+    {
+      "id": "MonsterQueensImpSynthesis",
+      "titles": {
+        "key": "CharacterData_nameKey-be46fd89b6603e3b-90b3253ccd2a5314588b252c9dc347cf-v2",
+        "english": "Queen's Impling",
+        "french": "Diabloteau de la Reine",
+        "german": "Kleinbold der Königin",
+        "russian": "Королевский бесенок",
+        "portuguese": "Diabinho da Rainha",
+        "chinese": "女王的小鬼",
+        "spanish": "Diablillo de la Reina",
+        "chinese_traditional": "女王的小鬼",
+        "korean": "여왕의 임프",
+        "japanese": "王女の子インプ"
+      },
+      "descriptions": {
+        "key": "CardUpgradeData_upgradeDescriptionKey-2be67c4563cfed73-409b2d7e4b73dcd4ea342dff740e5a4d-v2",
+        "english": "[summon]: Deal 40 damage to the front enemy unit.",
+        "french": "<b>Invocation</b> : Inflige 40 dégâts à l'unité ennemie en première ligne.",
+        "german": "<b>Rufen</b>: Füge der vordersten gegnerischen Einheit 40 Schaden zu.",
+        "russian": "<b>Призыв</b>: наносит переднему вражескому бойцу 40 урона.",
+        "portuguese": "<b>Invocar</b>: causa 40 de dano à unidade inimiga à frente.",
+        "chinese": "[summon]：对前排敌方单位造成 40 点伤害。"
+      },
+      "trigger_upgrades": [
+        "@MonsterQueensImpSynthesis.triggerUpgrades0"
+      ],
+      "hide_icon_on_card": true, "show_description_on_cards": false
+    }
+  ],
+  "effects": [
+    {
+      "id": "MonsterQueensImpSynthesis.triggerUpgrades0.effects0",
+      "name": "CardEffectDamage",
+      "target_mode": "front_in_room",
+      "target_team": "heroes",
+      "param_int": 40
+    }
+  ],
+  "character_triggers": [
+    {
+      
+      "id": "MonsterQueensImpSynthesis.triggerUpgrades0",
+      "trigger": "on_spawn",
+      "effects": [
+        "@MonsterQueensImpSynthesis.triggerUpgrades0.effects0"
+      ]
+    }
+  ]
+}

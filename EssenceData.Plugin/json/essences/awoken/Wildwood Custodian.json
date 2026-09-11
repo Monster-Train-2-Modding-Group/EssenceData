@@ -1,0 +1,48 @@
+{
+  "$schema": "https://github.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/releases/latest/download/schema.json",
+  "essences": [
+    {
+      "character": "WildwoodCustodian",
+      "upgrade": "@WildwoodCustodianSynthesis"
+    }
+  ],
+  "upgrades": [
+    {
+      "id": "WildwoodCustodianSynthesis",
+      "titles": {
+        "key": "CharacterData_nameKey-207d81c5f9dc835e-1a611d74a82ff864591634f920c20477-v2",
+        "english": "Wildwood Custodian",
+        "french": "Gardien du Boissauvage",
+        "german": "Wildholzhüter",
+        "russian": "Страж Диколесья",
+        "portuguese": "Zelador da Mata Selvagem",
+        "chinese": "野林看护人",
+        "spanish": "Custodio del Bosque Salvaje",
+        "chinese_traditional": "荒野看守者",
+        "korean": "와일드우드 관리자",
+        "japanese": "ワイルドウッド・カストディアン"
+      },
+      "descriptions": {
+        "key": "CardUpgradeData_upgradeDescriptionKey-8d97ed436a1502d9-e820006c0bd236649997a9933e8a050e-v2",
+        "english": "Draw +1 each turn.",
+        "french": "Piochez +1 à chaque tour.",
+        "german": "Ziehe jeden Zug + 1 Karte.",
+        "russian": "Берите +1 каждый ход.",
+        "portuguese": "Compre +1 a cada turno.",
+        "chinese": "每回合抽 +1 张牌。"
+      },
+      "room_modifier_upgrades": [
+        "@WildwoodCustodianSynthesis.roomModifierUpgrades0"
+      ],
+      "hide_icon_on_card": true,
+      "show_description_on_cards": false
+    }
+  ],
+  "room_modifiers": [
+    {
+      "id": "WildwoodCustodianSynthesis.roomModifierUpgrades0",
+      "name": "RoomStateHandSizeModifier",
+      "param_int": 1
+    }
+  ]
+}

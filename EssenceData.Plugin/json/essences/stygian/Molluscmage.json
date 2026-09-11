@@ -1,0 +1,74 @@
+{
+  "$schema": "https://github.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/releases/latest/download/schema.json",
+  "essences": [
+    {
+      "character": "MonsterMagicTotem",
+      "upgrade": "@MonsterMagicTotemSynthesis"
+    }
+  ],
+  "upgrades": [
+    {
+      "id": "MonsterMagicTotemSynthesis",
+      "titles": {
+        "key": "CharacterData_nameKey-00857b91c85bd114-e4091c4b86bbd1244823c88421760583-v2",
+        "english": "Molluscmage",
+        "french": "Limage",
+        "german": "Molluskmagier",
+        "russian": "Моллюскомаг",
+        "portuguese": "Magolusco",
+        "chinese": "软体法师",
+        "spanish": "Magolusco",
+        "chinese_traditional": "軟體魔法師",
+        "korean": "연체 마법사",
+        "japanese": "モラスクメイジ"
+      },
+      "descriptions": {
+        "key": "CardUpgradeData_upgradeDescriptionKey-cf3448cf40d50209-13f1e281737b32f448ebf4e6152caa15-v2",
+        "english": "+5[attack], +3[health], and '+10 [magicpower] on this floor.'",
+        "french": "+5[attack], +3[health] et '+10 <b>Puissance magique</b> à ce niveau.'",
+        "german": "+5[attack], +3[health], und „+10 <nobr><b>magische Kraft</b></nobr> auf dieser Ebene.“",
+        "russian": "+5[attack], +3[health] и «+10 к <nobr><b>силе магии</b></nobr> на этом этаже».",
+        "portuguese": "+5 de [attack], +3 de [health] e +10 <nobr><b>Poder Mágico</b></nobr> neste andar.",
+        "chinese": "+5[attack]，+3[health]，'本层 +10 点[magicpower]。'"
+      },
+      "room_modifier_upgrades": [
+        "@MonsterMagicTotemSynthesis.roomModifierUpgrades0"
+      ],
+      "hide_icon_on_card": true, "show_description_on_cards": false,
+      "bonus_damage": 5,
+      "bonus_hp": 3
+    }
+  ],
+  "room_modifiers": [
+    {
+      "id": "MonsterMagicTotemSynthesis.roomModifierUpgrades0",
+      "extra_body_tooltips": {
+        "key": "ModifyCard_MagicalPower_TooltipBody",
+        "english": "Increases the amount of damage dealt and health restored by spells.",
+        "french": "Augmente la quantité de dommages infligés et de PV restaurés par les sorts.",
+        "german": "Erhöht die Menge an zugefügtem Schaden und wiederhergestellter Gesundheit durch Zauber.",
+        "russian": "Увеличивает количество наносимого чарами урона и восстанавливаемого ими здоровья.",
+        "portuguese": "Aumenta a quantidade de dano causado e de vida restaurada por feitiços.",
+        "chinese": "提高法术造成的伤害与恢复的生命值。",
+        "spanish": "Aumenta la cantidad de daño infligido y salud restaurada con los hechizos.",
+        "chinese_traditional": "增加法術造成的傷害和恢復的生命值。",
+        "korean": "주문으로 주는 피해와 회복량이 증가합니다.",
+        "japanese": "呪文によるダメージと体力の回復量を増加させる。"
+      },
+      "extra_title_tooltips": {
+        "key": "ModifyCard_MagicalPower_TooltipTitle",
+        "english": "Magic Power",
+        "french": "Puissance magique",
+        "german": "Magische Kraft",
+        "russian": "Сила магии",
+        "portuguese": "Poder Mágico",
+        "chinese": "魔法强度",
+        "spanish": "Poder mágico",
+        "chinese_traditional": "魔法力量",
+        "korean": "마법력",
+        "japanese": "魔力"
+      },
+      "name": "RoomStateMagicalPowerModifier"
+    }
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "$schema": "https://github.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/releases/latest/download/schema.json",
+  "essences": [
+    {
+      "character": "MonsterGlugsider",
+      "upgrade": "@MonsterGlugsiderSynthesis"
+    }
+  ],
+  "upgrades": [
+    {
+      "id": "MonsterGlugsiderSynthesis",
+      "titles": {
+        "key": "CharacterData_nameKey-4a78de58f1080e84-4ad178dee60fe804ba1599d86dda9757-v2",
+        "english": "Glugsider",
+        "french": "Gargougluant",
+        "german": "Sumpfraupe",
+        "russian": "Склизкий ползун",
+        "portuguese": "Gorgolejador",
+        "chinese": "肥硕巨虫",
+        "spanish": "Glofondeador",
+        "chinese_traditional": "滑行者",
+        "korean": "글럭사이더",
+        "japanese": "グラッグサイダー"
+      },
+      "descriptions": {
+        "key": "CardUpgradeData_upgradeDescriptionKey-4726ff6a0965e911-657f670814fd96f42886d88baef5c0af-v2",
+        "english": "+20[health], +2[size], and '[revenge]: Apply [corruptpoison] 5 to the attacking unit.'",
+        "french": "+20[health], +2[size] et '<b>Vengeance</b> : Inflige <b>Fauchage</b> 5 à l'unité qui attaque.'",
+        "german": "+20[health], +2[size] und „<b>Rache</b>: Wende 5 <b>Schnitter</b> auf die angreifende Einheit an.“",
+        "russian": "+20[health], +2[size] и «<b>Месть</b>: накладывает на атакующего бойца 5 зарядов <b>жнеца</b>».",
+        "portuguese": "+20 de [health], +2 de [size] e <b>Vingança</b>: aplica <b>Ceifar</b> 5 à unidade atacante.",
+        "chinese": "+20[health]，+2[size]，'[revenge]：对发起攻击的单位施加[corruptpoison] 5。'"
+      },
+      "trigger_upgrades": [
+        "@MonsterGlugsiderSynthesis.triggerUpgrades0"
+      ],
+      "hide_icon_on_card": true, "show_description_on_cards": false,
+      "bonus_hp": 20,
+      "bonus_size": 2
+    }
+  ],
+  "effects": [
+    {
+      "id": "MonsterGlugsiderSynthesis.triggerUpgrades0.effects0",
+      "name": "CardEffectAddStatusEffect",
+      "target_mode": "last_attacker_character",
+      "target_team": "heroes",
+      "param_status_effects": [
+        {
+          "status": "corrupt_poison",
+          "count": 5
+        }
+      ]
+    }
+  ],
+  "character_triggers": [
+    {
+      
+      "id": "MonsterGlugsiderSynthesis.triggerUpgrades0",
+      "descriptions": {
+        "key": "CardUpgradeData_descriptionKey-b64dead1ebe5af8e-657f670814fd96f42886d88baef5c0af-v2",
+        "english": "Apply [corruptpoison] 5 to the attacking unit.",
+        "french": "Inflige <b>Fauchage</b> 5 à l'unité qui attaque.",
+        "german": "Wende 5 <b>Schnitter</b> auf die angreifende Einheit an.",
+        "russian": "Накладывает на атакующего бойца 5 <b>жнеца</b>.",
+        "portuguese": "Aplica <b>Ceifar</b> 5 à unidade atacante.",
+        "chinese": "对发起攻击的单位施加[corruptpoison] 5。"
+      },
+      "trigger": "on_hit",
+      "effects": [
+        "@MonsterGlugsiderSynthesis.triggerUpgrades0.effects0"
+      ]
+    }
+  ]
+}

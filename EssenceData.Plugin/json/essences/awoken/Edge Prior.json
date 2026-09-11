@@ -1,0 +1,69 @@
+{
+  "$schema": "https://github.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/releases/latest/download/schema.json",
+  "essences": [
+    {
+      "character": "EdgePrior",
+      "upgrade": "@EdgePriorSynthesis"
+    }
+  ],
+  "upgrades": [
+    {
+      "id": "EdgePriorSynthesis",
+      "titles": {
+        "key": "CharacterData_nameKey-045ee7473fbab8df-3b6233b623ad808489dd5ee3277c5551-v2",
+        "english": "Edge Prior",
+        "french": "Prieur de la Marche",
+        "german": "Randprior",
+        "russian": "Аббат Пограничья",
+        "portuguese": "Prior da Fronteira",
+        "chinese": "隐修会",
+        "spanish": "Prior de la Linde",
+        "chinese_traditional": "邊際修道士",
+        "korean": "칼날 수도원장",
+        "japanese": "エッジ・プライア"
+      },
+      "descriptions": {
+        "key": "CardUpgradeData_upgradeDescriptionKey-55d7cd4dbc33c359-956c47452ffff5d458e72bcd61302c15-v2",
+        "english": "+5[health] and '[resolve]: Restore 5 health to friendly units.'",
+        "french": "+5[health] et '<b>Résolution</b> : Restaure 5 PV aux unités alliées.'",
+        "german": "+5[health] und „<b>Verrechnen</b>: Stelle bei verbündeten Einheiten 5 Gesundheit wieder her.“",
+        "russian": "+5[health] и «<b>Решимость</b>: восстанавливает союзникам 5 здоровья».",
+        "portuguese": "+5 de [health] e <b>Resolução</b>: restaura 5 de vida de unidades aliadas.",
+        "chinese": "+5[health]，'[resolve]：使所有友方单位恢复 5 点生命值。'"
+      },
+      "trigger_upgrades": [
+        "@EdgePriorSynthesis.triggerUpgrades0"
+      ],
+      "hide_icon_on_card": true, "show_description_on_cards": false, "use_upgrade_highlight_tags": true,
+      "bonus_hp": 5
+    }
+  ],
+  "effects": [
+    {
+      "id": "EdgePriorSynthesis.triggerUpgrades0.effects0",
+      "name": "CardEffectHeal",
+      "target_mode": "room",
+      "target_team": "monsters",
+      "param_int": 5
+    }
+  ],
+  "character_triggers": [
+    {
+      
+      "id": "EdgePriorSynthesis.triggerUpgrades0",
+      "descriptions": {
+        "key": "CardUpgradeData_descriptionKey-e1fbb4517b82f301-956c47452ffff5d458e72bcd61302c15-v2",
+        "english": "Restore 5 health to friendly units.",
+        "french": "Restaure 5 PV aux unités alliées.",
+        "german": "Stelle bei verbündeten Einheiten 5 Gesundheit wieder her.",
+        "russian": "восстанавливает союзникам 5 здоровья.",
+        "portuguese": "restaura 5 de vida de unidades aliadas.",
+        "chinese": "使所有友方单位恢复 5 点生命值。"
+      },
+      "trigger": "post_combat",
+      "effects": [
+        "@EdgePriorSynthesis.triggerUpgrades0.effects0"
+      ]
+    }
+  ]
+}

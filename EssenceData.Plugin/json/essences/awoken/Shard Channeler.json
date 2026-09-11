@@ -1,0 +1,81 @@
+{
+  "$schema": "https://github.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/releases/latest/download/schema.json",
+  "essences": [
+    {
+      "character": "ShardChanneler",
+      "upgrade": "@ShardChannelerSynthesis"
+    }
+  ],
+  "upgrades": [
+    {
+      "id": "ShardChannelerSynthesis",
+      "titles": {
+        "key": "CharacterData_nameKey-44800192a2ad89e1-07bef0b8712e5374e9f1e20f1b06367a-v2",
+        "english": "Shard Channeler",
+        "french": "Pyroccultiste",
+        "german": "Splitterokkultist",
+        "russian": "Заклинатель осколков",
+        "portuguese": "Canalizador de Fragmentos",
+        "chinese": "碎片通灵者",
+        "spanish": "Canalizador de fragmentos",
+        "chinese_traditional": "碎片引導者",
+        "korean": "파편 연결자",
+        "japanese": "シャード・チャネラー"
+      },
+      "descriptions": {
+        "key": "CardUpgradeData_upgradeDescriptionKey-510fe2b66c36da1c-06465d9418210b7479be929e5901968b-v2",
+        "english": "[spikes] 5 and '[resolve]: Apply [spikes] 2 to friendly units.'",
+        "french": "<b>Épines</b> 5 et '<b>Résolution</b> : Confère <b>Épines</b> 2 aux unités alliées.'",
+        "german": "5 <b>Dornen</b> und „<b>Verrechnen</b>: Wende 2 <b>Dornen</b> auf verbündete Einheiten an.“",
+        "russian": "5 <b>шипов</b> и «<b>Решимость</b>: дает союзникам 2 слоя <b>шипов</b>».",
+        "portuguese": "<b>Espinhos</b> 5 e <b>Resolução</b>: concede <b>Espinhos</b> 2 às unidades aliadas.",
+        "chinese": "[spikes] 5，'[resolve]：使所有友方单位获得[spikes] 2。'"
+      },
+      "status_effect_upgrades": [
+        {
+          "status": "spikes",
+          "count": 5
+        }
+      ],
+      "trigger_upgrades": [
+        "@ShardChannelerSynthesis.triggerUpgrades0"
+      ],
+      "hide_icon_on_card": true,
+      "show_description_on_cards": false
+    }
+  ],
+  "effects": [
+    {
+      "id": "ShardChannelerSynthesis.triggerUpgrades0.effects0",
+      "name": "CardEffectAddStatusEffect",
+      "target_mode": "room",
+      "target_team": "monsters",
+      "param_status_effects": [
+        {
+          "status": "spikes",
+          "count": 2
+        }
+      ],
+      "param_int": 100
+    }
+  ],
+  "character_triggers": [
+    {
+
+      "id": "ShardChannelerSynthesis.triggerUpgrades0",
+      "descriptions": {
+        "key": "CardUpgradeData_descriptionKey-50589a6dfb7fd40d-06465d9418210b7479be929e5901968b-v2",
+        "english": "Apply [spikes] [effect0.status0.power] to friendly units.",
+        "french": "Confère <b>Épines</b> [effect0.status0.power] aux unités alliées.",
+        "german": "Wende [effect0.status0.power] <b>Dornen</b> auf verbündete Einheiten an.",
+        "russian": "Дает союзникам [effect0.status0.power] <b>шипов</b>.",
+        "portuguese": "Concede <b>Espinhos</b> [effect0.status0.power] às unidades aliadas.",
+        "chinese": "所有友方单位获得[spikes] [effect0.status0.power]。"
+      },
+      "trigger": "post_combat",
+      "effects": [
+        "@ShardChannelerSynthesis.triggerUpgrades0.effects0"
+      ]
+    }
+  ]
+}

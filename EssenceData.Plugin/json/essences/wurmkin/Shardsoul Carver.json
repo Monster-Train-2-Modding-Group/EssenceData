@@ -1,0 +1,85 @@
+{
+  "$schema": "https://github.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/releases/latest/download/schema.json",
+  "essences": [
+    {
+      "character": "MonsterShardsoulCarver",
+      "upgrade": "@MonsterShardsoulCarverSynthesis"
+    }
+  ],
+  "upgrades": [
+    {
+      "id": "MonsterShardsoulCarverSynthesis",
+      "titles": {
+        "key": "CharacterData_nameKey-c0a435ee7fb880aa-71af267861714f14ea18a1eb9a739092-v2",
+        "english": "Shardsoul Carver",
+        "french": "Graveur d'âme fragmentée",
+        "german": "Splitterseelenschnitzer",
+        "russian": "Резчик Душ осколков",
+        "portuguese": "Entalhador",
+        "chinese": "碎魂雕刻者",
+        "spanish": "Escultor de almas fragmentadas",
+        "chinese_traditional": "碎片靈魂雕刻師",
+        "korean": "파편 영혼 조각자",
+        "japanese": "シャードソウル・カーヴァー"
+      },
+      "descriptions": {
+        "key": "CardUpgradeData_upgradeDescriptionKey-1aba3dfda7aa2cec-68a2ef8a857ed6b409376e2d368fc4c5-v2",
+        "english": "+15[health], +1[capacity], and '<b>Inspire</b>: +2[attack] and [armor] 2.'",
+        "french": "+15[health], +1[capacity] et '<b>Inspiration</b> : +2[attack] et <b>Armure</b> 2.'",
+        "german": "+15[health], +1[capacity] und „<b>Inspiration</b>: +2[attack] und 2 <b>Rüstung</b>.“",
+        "russian": "+15[health], +1[capacity] и «<b>Воодушевление</b>: дает +2[attack] и 2 <b>брони</b>».",
+        "portuguese": "+15 de [health], +1 de [capacity] e <b>Inspirar</b>: receba +2 de [attack] e <b>Armadura</b> 2.",
+        "chinese": "+15[health]，+1[capacity]，'<b>激励</b>：+2[attack]，[armor] 2。'"
+      },
+      "trigger_upgrades": [
+        "@MonsterShardsoulCarverSynthesis.triggerUpgrades0"
+      ],
+      "hide_icon_on_card": true, "show_description_on_cards": false,
+      "bonus_hp": 15,
+      "bonus_size": 1
+    },
+    {
+      "id": "Plus2AttackSynthesis",
+      "bonus_damage": 2
+    }
+  ],
+  "effects": [
+    {
+      "id": "MonsterShardsoulCarverSynthesis.triggerUpgrades0.effects0",
+      "name": "CardEffectAddTempCardUpgradeToUnits",
+      "target_mode": "self",
+      "param_upgrade": "@Plus2AttackSynthesis"
+    },
+    {
+      "id": "MonsterShardsoulCarverSynthesis.triggerUpgrades0.effects1",
+      "name": "CardEffectAddStatusEffect",
+      "target_mode": "self",
+      "param_status_effects": [
+        {
+          "status": "armor",
+          "count": 2
+        }
+      ]
+    }
+  ],
+  "character_triggers": [
+    {
+      
+      "id": "MonsterShardsoulCarverSynthesis.triggerUpgrades0",
+      "descriptions": {
+        "key": "CardUpgradeData_descriptionKey-ce9703e7105a8b7c-68a2ef8a857ed6b409376e2d368fc4c5-v2",
+        "english": "+[effect0.upgrade.bonusdamage][attack] and [armor] [effect1.status0.power].",
+        "french": "+[effect0.upgrade.bonusdamage][attack] et <b>Armure</b> [effect1.status0.power].",
+        "german": "+[effect0.upgrade.bonusdamage][attack] und [effect1.status0.power] <b>Rüstung</b>.",
+        "russian": "+[effect0.upgrade.bonusdamage][attack] и [effect1.status0.power] <b>брони</b>.",
+        "portuguese": "+[effect0.upgrade.bonusdamage] de [attack] e <b>Armadura</b> [effect1.status0.power].",
+        "chinese": "+[effect0.upgrade.bonusdamage][attack]，[armor] [effect1.status0.power]。"
+      },
+      "trigger": "corruption_added",
+      "effects": [
+        "@MonsterShardsoulCarverSynthesis.triggerUpgrades0.effects0",
+        "@MonsterShardsoulCarverSynthesis.triggerUpgrades0.effects1"
+      ]
+    }
+  ]
+}

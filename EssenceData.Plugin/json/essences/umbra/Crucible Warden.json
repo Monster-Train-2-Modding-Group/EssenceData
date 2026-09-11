@@ -1,0 +1,45 @@
+{
+  "$schema": "https://github.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/releases/latest/download/schema.json",
+  "essences": [
+    {
+      "character": "MonsterDrainingSalvager",
+      "upgrade": "@MonsterDrainingSalvagerSynthesis"
+    }
+  ],
+  "upgrades": [
+    {
+      "id": "MonsterDrainingSalvagerSynthesis",
+      "titles": {
+        "key": "CharacterData_nameKey-3aff1edfc78f308a-ff326df83cc365b4a90e2437d1dbb013-v2",
+        "english": "Crucible Warden",
+        "french": "Gardien du creuset",
+        "german": "Schmelztiegel-Aufseher",
+        "russian": "Надзиратель Горнила",
+        "portuguese": "Vigia do Crisol",
+        "chinese": "熔炉看守者",
+        "spanish": "Guardián del Crisol",
+        "chinese_traditional": "地獄熔爐守衛",
+        "korean": "도가니 간수",
+        "japanese": "クルーシブル・ウォーデン"
+      },
+      "descriptions": {
+        "key": "CardUpgradeData_upgradeDescriptionKey-2677cc0a1cc34ce0-e371842372719464b9a9945d025e2229-v2",
+        "english": "+10[attack], +10[health], and [damageshield] 5.",
+        "french": "+10[attack], +10[health] et <b>Bouclier protecteur</b> 5.",
+        "german": "+10[attack], +10[health] und 5 <nobr><b>Schadensschild</b></nobr>.",
+        "russian": "+10[attack], +10[health] и 5 <nobr><b>защиты от урона</b></nobr>.",
+        "portuguese": "+10 de [attack], +10 de [health] e <b>Escudo Protetor</b> 5.",
+        "chinese": "+10[attack]，+10[health]，[damageshield] 5。"
+      },
+      "status_effect_upgrades": [
+        {
+          "status": "damage shield",
+          "count": 5
+        }
+      ],
+      "hide_icon_on_card": true, "show_description_on_cards": false,
+      "bonus_damage": 10,
+      "bonus_hp": 10
+    }
+  ]
+}

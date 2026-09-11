@@ -1,0 +1,79 @@
+{
+  "$schema": "https://github.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/releases/latest/download/schema.json",
+  "essences": [
+    {
+      "character": "WelderHelper",
+      "upgrade": "@WelderHelperSynthesis"
+    }
+  ],
+  "upgrades": [
+    {
+      "id": "WelderHelperSynthesis",
+      "titles": {
+        "key": "CharacterData_nameKey-fd58491aba13bbdd-fbdb9442f0ec2054caf79f7b7c646a87-v2",
+        "english": "Welder Helper",
+        "french": "Assistant soudeur",
+        "german": "Schweißerbold",
+        "russian": "Помощник сварщика",
+        "portuguese": "Ajudante Soldador",
+        "chinese": "焊工助手",
+        "spanish": "Soldador ayudante",
+        "chinese_traditional": "焊接助手",
+        "korean": "용접 도우미",
+        "japanese": "ウェルダー・ヘルパー"
+      },
+      "descriptions": {
+        "key": "CardUpgradeData_upgradeDescriptionKey-2bab5c7c24ce411d-80873b604a653c846a077ca65472f0b6-v2",
+        "english": "[armor] 10 and '[summon]: Apply [armor] 10 to friendly units.'",
+        "french": "<b>Armure</b> 10 et '<b>Invocation</b> : Confère <b>Armure</b> 10 aux unités alliées.'",
+        "german": "10 <b>Rüstung</b> und „<b>Rufen</b>: Wende 10 <b>Rüstung</b> auf verbündete Einheiten an.“",
+        "russian": "10 <b>брони</b> и «<b>Призыв</b>: дает союзникам 10 <b>брони</b>».",
+        "portuguese": "<b>Armadura</b>10 e <b>Invocar</b>: concede <b>Armadura</b> 10 às unidades aliadas.",
+        "chinese": "[armor] 10，'[summon]：使所有友方单位获得[armor] 10。'"
+      },
+      "status_effect_upgrades": [
+        {
+          "status": "armor",
+          "count": 10
+        }
+      ],
+      "trigger_upgrades": [
+        "@WelderHelperSynthesis.triggerUpgrades0"
+      ],
+      "hide_icon_on_card": true, "show_description_on_cards": false
+    }
+  ],
+  "effects": [
+    {
+      "id": "WelderHelperSynthesis.triggerUpgrades0.effects0",
+      "name": "CardEffectAddStatusEffect",
+      "target_mode": "room",
+      "target_team": "monsters",
+      "param_status_effects": [
+        {
+          "status": "armor",
+          "count": 10
+        }
+      ]
+    }
+  ],
+  "character_triggers": [
+    {
+      
+      "id": "WelderHelperSynthesis.triggerUpgrades0",
+      "descriptions": {
+        "key": "CardUpgradeData_descriptionKey-0e3a95712a5c1421-80873b604a653c846a077ca65472f0b6-v2",
+        "english": "Apply [armor] [effect0.status0.power] to friendly units.",
+        "french": "Confère <b>Armure</b> [effect0.status0.power] aux unités alliées.",
+        "german": "Wende [effect0.status0.power] <b>Rüstung</b> auf verbündete Einheiten an.",
+        "russian": "Дает союзникам [effect0.status0.power] <b>брони</b>.",
+        "portuguese": "Concede <b>Armadura</b> [effect0.status0.power] às unidades aliadas.",
+        "chinese": "所有友方单位获得[armor] [effect0.status0.power]。"
+      },
+      "trigger": "on_spawn",
+      "effects": [
+        "@WelderHelperSynthesis.triggerUpgrades0.effects0"
+      ]
+    }
+  ]
+}

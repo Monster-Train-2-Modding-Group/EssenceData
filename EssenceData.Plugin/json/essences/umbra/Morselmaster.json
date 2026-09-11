@@ -1,0 +1,56 @@
+{
+  "$schema": "https://github.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/releases/latest/download/schema.json",
+  "essences": [
+    {
+      "character": "MonsterDevourer",
+      "upgrade": "@MonsterDevourerSynthesis"
+    }
+  ],
+  "upgrades": [
+    {
+      "id": "MonsterDevourerSynthesis",
+      "titles": {
+        "key": "CharacterData_nameKey-61c36f1ee44ef263-e440732c1c6913444aa14863ce8caaed-v2",
+        "english": "Morselmaster",
+        "french": "Maître de sous-bistres",
+        "german": "Nuggetmeister",
+        "russian": "Повелитель заморышей",
+        "portuguese": "Mestre dos Lanchos",
+        "chinese": "影裔宿主",
+        "spanish": "Maestro de pinchos",
+        "chinese_traditional": "莫塞爾大師",
+        "korean": "작은 그림자의 주인",
+        "japanese": "モーゼルマスター"
+      },
+      "descriptions": {
+        "key": "CardUpgradeData_upgradeDescriptionKey-adbdf3c1098af4df-dbef1d987198e7341a61096d5de3d472-v2",
+        "english": "When you summon a [snack] unit on this floor, create a copy.",
+        "french": "Lorsque vous invoquez un <b>sous-bistre</b> à ce niveau, crée une copie.",
+        "german": "Erzeuge eine Kopie, wenn du auf dieser Ebene eine <b>Nugget</b>-Einheit rufst.",
+        "russian": "Призвав на этот этаж <b>заморыша</b>, создайте его копию.",
+        "portuguese": "Ao invocar um <b>Lancho</b> neste andar, crie uma cópia dele.",
+        "chinese": "当你在本层召唤一个[snack]单位时，可产生一个复制品。"
+      },
+      "room_modifier_upgrades": [
+        "@MonsterDevourerSynthesis.roomModifierUpgrades0"
+      ],
+      "hide_icon_on_card": true, "show_description_on_cards": false
+    }
+  ],
+  "room_modifiers": [
+    {
+      "id": "MonsterDevourerSynthesis.roomModifierUpgrades0",
+      "descriptions": {
+        "key": "CardUpgradeData_descriptionKey-b12c863f3ce7dbc6-dbef1d987198e7341a61096d5de3d472-v2",
+        "english": "When you summon a [snack] unit on this floor, create a copy.",
+        "french": "Lorsque vous invoquez un <b>sous-bistre</b> à ce niveau, crée une copie.",
+        "german": "Erzeuge eine Kopie, wenn du auf dieser Ebene eine <b>Nugget</b>-Einheit rufst.",
+        "russian": "Призвав на этот этаж <b>заморыша</b>, создайте его копию.",
+        "portuguese": "Ao invocar um <b>Lancho</b> neste andar, crie uma cópia dele.",
+        "chinese": "当你在本层召唤一个[snack]单位时，可产生一个复制品。"
+      },
+      "name": "RoomStateSpawnUnitOnUnitSpawnModifier",
+      "param_subtype": "SubtypesData_Snack"
+    }
+  ]
+}

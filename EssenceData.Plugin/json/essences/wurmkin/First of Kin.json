@@ -1,0 +1,71 @@
+{
+  "$schema": "https://github.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/releases/latest/download/schema.json",
+  "essences": [
+    {
+      "character": "MonsterFirstOfKin",
+      "upgrade": "@MonsterFirstOfKinSynthesis"
+    }
+  ],
+  "upgrades": [
+    {
+      "id": "MonsterFirstOfKinSynthesis",
+      "titles": {
+        "key": "CharacterData_nameKey-72ebf807e75ef088-1871d5d88e32047478c0e3c189257e5e-v2",
+        "english": "First of Kin",
+        "french": "Proche parent",
+        "german": "Der Erste seiner Art",
+        "russian": "Первый из рода",
+        "portuguese": "Parente Primordial",
+        "chinese": "初代亲族",
+        "spanish": "Primogénito de estirpe",
+        "chinese_traditional": "親族之首",
+        "korean": "최초의 혈족",
+        "japanese": "原初のキン"
+      },
+      "descriptions": {
+        "key": "CardUpgradeData_upgradeDescriptionKey-b531316d46127cc8-62c7de58b20b4334f9899af61c86be60-v2",
+        "english": "<b>Etch</b>: +5[attack].",
+        "french": "<b>Gravure</b> : +5[attack].",
+        "german": "<b>Schnitzen</b>: +5[attack].",
+        "russian": "<b>Резьба</b>: дает +5[attack].",
+        "portuguese": "<b>Entalhar</b>: +5 de [attack].",
+        "chinese": "<b>蚀刻</b>：+5[attack]。"
+      },
+      "trigger_upgrades": [
+        "@MonsterFirstOfKinSynthesis.triggerUpgrades0"
+      ],
+      "hide_icon_on_card": true, "show_description_on_cards": false
+    },
+    {
+      "id": "Plus5AttackSynthesis",
+      "bonus_damage": 5
+    }
+  ],
+  "effects": [
+    {
+      "id": "MonsterFirstOfKinSynthesis.triggerUpgrades0.effects0",
+      "name": "CardEffectAddTempCardUpgradeToUnits",
+      "target_mode": "self",
+      "param_upgrade": "@Plus5AttackSynthesis"
+    }
+  ],
+  "character_triggers": [
+    {
+      
+      "id": "MonsterFirstOfKinSynthesis.triggerUpgrades0",
+      "descriptions": {
+        "key": "CardUpgradeData_descriptionKey-a1800e5d1f95a790-62c7de58b20b4334f9899af61c86be60-v2",
+        "english": "+5[attack].",
+        "french": "+5[attack].",
+        "german": "+5[attack].",
+        "russian": "+5[attack].",
+        "portuguese": "+5 de [attack].",
+        "chinese": "+5[attack]。"
+      },
+      "trigger": "card_exhausted",
+      "effects": [
+        "@MonsterFirstOfKinSynthesis.triggerUpgrades0.effects0"
+      ]
+    }
+  ]
+}

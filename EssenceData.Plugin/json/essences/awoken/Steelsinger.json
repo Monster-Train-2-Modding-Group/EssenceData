@@ -1,0 +1,76 @@
+{
+  "$schema": "https://github.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/releases/latest/download/schema.json",
+  "essences": [
+    {
+      "character": "MonsterSteelsinger",
+      "upgrade": "@MonsterSteelsingerSynthesis"
+    }
+  ],
+  "upgrades": [
+    {
+      "id": "MonsterSteelsingerSynthesis",
+      "titles": {
+        "key": "CharacterData_nameKey-0210fabb1c035ffc-6516db0c15d7daf49a506d35e5779a2f-v2",
+        "english": "Steelsinger",
+        "french": "Clamacier",
+        "german": "Stahlsänger",
+        "russian": "Певец стали",
+        "portuguese": "Cantor de Aço",
+        "chinese": "钢铁歌者",
+        "spanish": "Cantor acerado",
+        "chinese_traditional": "鋼鐵歌手",
+        "korean": "강철 가수",
+        "japanese": "スティールシンガー"
+      },
+      "descriptions": {
+        "key": "CardUpgradeData_upgradeDescriptionKey-af5cf3fbd69b222c-65d296f9d4f5d654abeb5d73d61d3690-v2",
+        "english": "+20[attack], +40[health], +1[size], and '[rejuvenate]: +1[attack].'",
+        "french": "+20[attack], +40[health], +1[size] et '<b>Renouveau</b> : +1[attack].'",
+        "german": "+20[attack], +40[health], +1[size] und „<b>Verjüngung</b>: +1[attack].“",
+        "russian": "+20[attack], +40[health], +1[size] и «<b>Омоложение</b>: +1[attack]».",
+        "portuguese": "+20 de [attack], +40 de [health], +1 de [size] e <b>Rejuvenescer</b>: +1 de [attack].",
+        "chinese": "+20[attack]，+40[health]，+1[size]，'[rejuvenate]：+1 [attack]。'"
+      },
+      "trigger_upgrades": [
+        "@MonsterSteelsingerSynthesis.triggerUpgrades0"
+      ],
+      "hide_icon_on_card": true,
+      "show_description_on_cards": false,
+      "bonus_damage": 20,
+      "bonus_hp": 40,
+      "bonus_size": 1
+    },
+    {
+      "id": "Plus1AttackSynthesis",
+      "bonus_damage": 1
+    }
+  ],
+  "effects": [
+    {
+      "id": "MonsterSteelsingerSynthesis.triggerUpgrades0.effects0",
+      "name": "CardEffectAddTempCardUpgradeToUnits",
+      "target_mode": "self",
+      "param_upgrade": "@Plus1AttackSynthesis"
+    }
+  ],
+  "character_triggers": [
+    {
+
+      "id": "MonsterSteelsingerSynthesis.triggerUpgrades0",
+      "descriptions": {
+        "key": "CardUpgradeData_descriptionKey-ffb6f489392a31e4-65d296f9d4f5d654abeb5d73d61d3690-v2",
+        "english": "+[effect0.upgrade.bonusdamage][attack].",
+        "french": "+[effect0.upgrade.bonusdamage][attack].",
+        "german": "+[effect0.upgrade.bonusdamage][attack].",
+        "russian": "+[effect0.upgrade.bonusdamage][attack].",
+        "portuguese": "+[effect0.upgrade.bonusdamage] de [attack].",
+        "chinese": "+[effect0.upgrade.bonusdamage][attack]。"
+      },
+      "trigger": "on_heal",
+      "effects": [
+        "@MonsterSteelsingerSynthesis.triggerUpgrades0.effects0"
+      ],
+      "display_effect_hint_text": true
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "$schema": "https://github.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/releases/latest/download/schema.json",
+  "essences": [
+    {
+      "character": "MonsterIronMaiden",
+      "upgrade": "@MonsterIronMaidenSynthesis"
+    }
+  ],
+  "upgrades": [
+    {
+      "id": "MonsterIronMaidenSynthesis",
+      "titles": {
+        "key": "CharacterData_nameKey-4bebc515c220d81d-177d4572e5dbc3846bb7f3196bacf680-v2",
+        "english": "Thorned Hollow",
+        "french": "Réceptacle épineux",
+        "german": "Dornige Hülle",
+        "russian": "Колючий Пустой",
+        "portuguese": "Oco Espinhoso",
+        "chinese": "荆棘空灵",
+        "spanish": "Hueco espinoso",
+        "chinese_traditional": "荊棘空心人",
+        "korean": "가시 돋친 공허한 존재",
+        "japanese": "ソーンド・ホロウ"
+      },
+      "descriptions": {
+        "key": "CardUpgradeData_upgradeDescriptionKey-5fd770d4320f6e81-c475aab2a4d85eb4aabd9eb1aa69a13e-v2",
+        "english": "+15[attack], +15[health], +1[size], and [spikes] 10.",
+        "french": "+15[attack], +15[health], +1[size] et <b>Épines</b> 10.",
+        "german": "+15[attack], +15[health], +1[size] und 10 <b>Dornen</b>.",
+        "russian": "+15[attack], +15[health], +1[size] и 10 слоев <b>шипов</b>.",
+        "portuguese": "+15 de [attack], +15 de [health], +1 de [size] e <b>Espinhos</b> 10.",
+        "chinese": "+15[attack]，+15[health]，+1[size]，[spikes] 10。"
+      },
+      "status_effect_upgrades": [
+        {
+          "status": "spikes",
+          "count": 10
+        }
+      ],
+      "hide_icon_on_card": true,
+      "show_description_on_cards": false,
+      "bonus_damage": 15,
+      "bonus_hp": 15,
+      "bonus_size": 1
+    }
+  ]
+}

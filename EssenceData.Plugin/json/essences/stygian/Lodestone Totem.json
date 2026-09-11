@@ -1,0 +1,74 @@
+{
+  "$schema": "https://github.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/releases/latest/download/schema.json",
+  "essences": [
+    {
+      "character": "MonsterFrozenTotem",
+      "upgrade": "@MonsterFrozenTotemSynthesis"
+    }
+  ],
+  "upgrades": [
+    {
+      "id": "MonsterFrozenTotemSynthesis",
+      "titles": {
+        "key": "CharacterData_nameKey-d9a4ce6ba0011908-a80164732cd24ff4cbab53919bda7231-v2",
+        "english": "Lodestone Totem",
+        "french": "Totem de magnétite",
+        "german": "Aderstein-Totem",
+        "russian": "Влекущий тотем",
+        "portuguese": "Totem de Magnetita",
+        "chinese": "磁石图腾",
+        "spanish": "Tótem de piedra angular",
+        "chinese_traditional": "磁石圖騰",
+        "korean": "자철석 토템",
+        "japanese": "ロードストーンのトーテム"
+      },
+      "descriptions": {
+        "key": "CardUpgradeData_upgradeDescriptionKey-e216ce5bc6ef25c4-013fc102752df064f97382b41a785c99-v2",
+        "english": "+2[ember] and '[incant]: Apply [sap] 1 to enemy units.'",
+        "french": "+2[ember] et <b>Incantation</b> : inflige <b>Affaiblissement</b> 1 aux unités ennemies.",
+        "german": "+2[ember] und „<b>Verzauberung</b>: Wende 1 <b>Zehren</b> auf gegnerische Einheiten an.“",
+        "russian": "+2[ember] и «<b>Мантра</b>: накладывает на вражеских бойцов 1 <b>сока</b>».",
+        "portuguese": "+2 de [ember] e <b>Entoar</b>: aplica <b>Dreno</b> 1 às unidades inimigas.'",
+        "chinese": "+2[ember]，'[incant]：对所有敌方单位施加[sap] 1。'"
+      },
+      "trigger_upgrades": [
+        "@MonsterFrozenTotemSynthesis.triggerUpgrades0"
+      ],
+      "hide_icon_on_card": true, "show_description_on_cards": false,
+      "cost_reduction": -2
+    }
+  ],
+  "effects": [
+    {
+      "id": "MonsterFrozenTotemSynthesis.triggerUpgrades0.effects0",
+      "name": "CardEffectAddStatusEffect",
+      "target_mode": "room",
+      "target_team": "heroes",
+      "param_status_effects": [
+        {
+          "status": "debuff",
+          "count": 1
+        }
+      ]
+    }
+  ],
+  "character_triggers": [
+    {
+      
+      "id": "MonsterFrozenTotemSynthesis.triggerUpgrades0",
+      "descriptions": {
+        "key": "CardUpgradeData_descriptionKey-acd22f86991eaa73-013fc102752df064f97382b41a785c99-v2",
+        "english": "Apply [sap] [effect0.status0.power] to enemy units.",
+        "french": "Inflige <b>Affaiblissement</b> [effect0.status0.power] aux unités ennemies.",
+        "german": "Wende [effect0.status0.power] <b>Zehren</b> auf gegnerische Einheiten an.",
+        "russian": "Накладывает на вражеских бойцов [effect0.status0.power] <b>сока</b>.",
+        "portuguese": "Aplica <b>Dreno</b> [effect0.status0.power] às unidades inimigas.",
+        "chinese": "对敌方单位施加[sap] [effect0.status0.power]。"
+      },
+      "trigger": "card_spell_played",
+      "effects": [
+        "@MonsterFrozenTotemSynthesis.triggerUpgrades0.effects0"
+      ]
+    }
+  ]
+}

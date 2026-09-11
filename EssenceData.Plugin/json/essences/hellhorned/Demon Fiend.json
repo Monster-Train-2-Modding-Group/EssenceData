@@ -1,0 +1,40 @@
+{
+  "$schema": "https://github.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/releases/latest/download/schema.json",
+  "essences": [
+    {
+      "character": "MonsterBasher",
+      "upgrade": "@MonsterBasherSynthesis"
+    }
+  ],
+  "upgrades": [
+    {
+      "id": "MonsterBasherSynthesis",
+      "titles": {
+        "key": "CharacterData_nameKey-d2f29c5d395e6b9a-5e107b798f646454b9da085e88db99ff-v2",
+        "english": "Demon Fiend",
+        "french": "Monstre diabolique",
+        "german": "Dämonen-Unhold",
+        "russian": "Демон-изувер",
+        "portuguese": "Demônio Maldito",
+        "chinese": "地狱恶魔",
+        "spanish": "Demonio abominable",
+        "chinese_traditional": "惡魔之鬼",
+        "korean": "고위 악마",
+        "japanese": "デーモン・フィーンド"
+      },
+      "descriptions": {
+        "key": "CardUpgradeData_upgradeDescriptionKey-966137caec3777cc-29d214b9d527bcb4c8f23c692a07c456-v2",
+        "english": "+30[attack], +30[health], and +1[size].",
+        "french": "+30[attack], +30[health] et +1[size].",
+        "german": "+30[attack], +30[health], und +1[size].",
+        "russian": "+30[attack], +30[health] и +1[size].",
+        "portuguese": "+30 de [attack], +30 de [health] e +1 de [size].",
+        "chinese": "+30[attack]，+30[health]，+1[size]。"
+      },
+      "hide_icon_on_card": true, "show_description_on_cards": false,
+      "bonus_damage": 30,
+      "bonus_hp": 30,
+      "bonus_size": 1
+    }
+  ]
+}

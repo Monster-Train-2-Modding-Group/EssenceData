@@ -1,0 +1,40 @@
+{
+  "$schema": "https://github.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/releases/latest/download/schema.json",
+  "essences": [
+    {
+      "character": "Shadowsiege",
+      "upgrade": "@ShadowsiegeSynthesis"
+    }
+  ],
+  "upgrades": [
+    {
+      "id": "ShadowsiegeSynthesis",
+      "titles": {
+        "key": "CharacterData_nameKey-37ee0a54555210a8-6f836f95d2fbdc64ca711ec5c482306a-v2",
+        "english": "Shadowsiege",
+        "french": "Siège ténébreux",
+        "german": "Schattenbelagerung",
+        "russian": "Теневой разрушитель",
+        "portuguese": "Brutamontes das Trevas",
+        "chinese": "暗影破城傀儡",
+        "spanish": "Asedio sombrío",
+        "chinese_traditional": "陰影圍城",
+        "korean": "그림자 공성병기",
+        "japanese": "シャドウシージ"
+      },
+      "descriptions": {
+        "key": "CardUpgradeData_upgradeDescriptionKey-81ccb835fb247266-a49d137548059e747ac96c8bde511d76-v2",
+        "english": "+60[attack], +50[health], and +2[size].",
+        "french": "+60[attack], +50[health] et +2[size].",
+        "german": "+60[attack], +50[health] und +2[size].",
+        "russian": "+60[attack], +50[health] и +2[size].",
+        "portuguese": "+60 de [attack], +50 de [health] e +2 de [size].",
+        "chinese": "+60[attack]，+50[health]，+2[size]。"
+      },
+      "hide_icon_on_card": true, "show_description_on_cards": false,
+      "bonus_damage": 60,
+      "bonus_hp": 50,
+      "bonus_size": 2
+    }
+  ]
+}

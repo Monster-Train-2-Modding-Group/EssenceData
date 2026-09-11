@@ -1,0 +1,74 @@
+{
+  "$schema": "https://github.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/releases/latest/download/schema.json",
+  "essences": [
+    {
+      "character": "MonsterRuneboundGuardian",
+      "upgrade": "@MonsterRuneboundGuardianSynthesis"
+    }
+  ],
+  "upgrades": [
+    {
+      "id": "MonsterRuneboundGuardianSynthesis",
+      "titles": {
+        "key": "CharacterData_nameKey-9f5cda850d71ca90-e0ee630d9703547419fe9f410026797c-v2",
+        "english": "Guard of the Unnamed",
+        "french": "Gardienne du Sans-nom",
+        "german": "Wache des Namenlosen",
+        "russian": "Стража Безымянного",
+        "portuguese": "Guardião do Inominado",
+        "chinese": "无名者护卫",
+        "spanish": "Guardia del Ignoto",
+        "chinese_traditional": "無名者守衛",
+        "korean": "이름 없는 자의 경비대",
+        "japanese": "名もなき巨人の墓守"
+      },
+      "descriptions": {
+        "key": "CardUpgradeData_upgradeDescriptionKey-cde555ae2189e176-bc2b453a5344c2046886dd9b36c488f8-v2",
+        "english": "+10[health] and '[incant]: [armor] 2.'",
+        "french": "+10[health] et '<b>Incantation</b> : <b>Armure</b> 2.'",
+        "german": "+10[health] und „<b>Verzauberung</b>: 2 <b>Rüstung</b>.“",
+        "russian": "+10[health] и «<b>Мантра</b>: 2 <b>брони</b>».",
+        "portuguese": "+10 de [health] e <b>Entoar</b>: <b>Armadura</b> 2.",
+        "chinese": "+10[health]，'[incant]：[armor] 2。'"
+      },
+      "trigger_upgrades": [
+        "@MonsterRuneboundGuardianSynthesis.triggerUpgrades0"
+      ],
+      "hide_icon_on_card": true, "show_description_on_cards": false,
+      "bonus_hp": 10
+    }
+  ],
+  "effects": [
+    {
+      "id": "MonsterRuneboundGuardianSynthesis.triggerUpgrades0.effects0",
+      "name": "CardEffectAddStatusEffect",
+      "target_mode": "self",
+      "param_status_effects": [
+        {
+          "status": "armor",
+          "count": 2
+        }
+      ],
+      "param_int": 100
+    }
+  ],
+  "character_triggers": [
+    {
+      
+      "id": "MonsterRuneboundGuardianSynthesis.triggerUpgrades0",
+      "descriptions": {
+        "key": "CardUpgradeData_descriptionKey-8aed6f51b165cbaf-bc2b453a5344c2046886dd9b36c488f8-v2",
+        "english": "Gain [armor] [effect0.status0.power].",
+        "french": "Octroie <b>Armure</b> [effect0.status0.power].",
+        "german": "Erhalte [effect0.status0.power] <b>Rüstung</b>.",
+        "russian": "Дает [effect0.status0.power] <b>брони</b>.",
+        "portuguese": "Receba [effect0.status0.power] de [armor].",
+        "chinese": "获得[armor] [effect0.status0.power]。"
+      },
+      "trigger": "card_spell_played",
+      "effects": [
+        "@MonsterRuneboundGuardianSynthesis.triggerUpgrades0.effects0"
+      ]
+    }
+  ]
+}

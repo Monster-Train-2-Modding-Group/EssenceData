@@ -1,0 +1,18 @@
+{
+  "$schema": "https://github.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/releases/latest/download/schema.json",
+  "localization_terms": [
+    {
+      "key": "TextFormat_Fused",
+      "texts": {
+        "english": "<b>Fused</b>: {0}"
+      }
+    },
+    {
+      "key": "CardFrameUI_SynthesisTextFormat",
+      "texts": {
+        "english": "+{0}"
+      }
+    }
+
+  ]
+}

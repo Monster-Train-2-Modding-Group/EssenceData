@@ -1,0 +1,41 @@
+{
+  "$schema": "https://github.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/releases/latest/download/schema.json",
+  "essences": [
+    {
+      "character": "WiltingSapwood",
+      "upgrade": "@WiltingSapwoodSynthesis"
+    }
+  ],
+  "upgrades": [
+    {
+      "id": "WiltingSapwoodSynthesis",
+      "titles": {
+        "key": "CharacterData_nameKey-9928b9723dd4d829-75a16e1d56f5f7d4aad752990daadad9-v2",
+        "english": "Wilting Sapwood",
+        "french": "Boissève flétrissant",
+        "german": "Welkendes Saftholz",
+        "russian": "Иссыхающая кора",
+        "portuguese": "Alburno a Expirar",
+        "chinese": "枯萎白木",
+        "spanish": "Savio marchito",
+        "chinese_traditional": "凋零邊材木",
+        "korean": "시들어버린 껍질",
+        "japanese": "ウィルティング・サップウッド"
+      },
+      "descriptions": {
+        "key": "CardUpgradeData_upgradeDescriptionKey-207cc6874266b88e-977e66b1f567dc240ac90683ba5f5fe9-v2",
+        "english": "+5[attack], +10[health], and -2[ember].",
+        "french": "+5[attack], +10[health] et -2[ember].",
+        "german": "+5[attack], +10[health], und -2[ember].",
+        "russian": "+5[attack], +10[health] и -2[ember].",
+        "portuguese": "+5 de [attack], +10 de [health] e -2 de [ember].",
+        "chinese": "+5[attack]，+10[health]，花费 -2[ember]。"
+      },
+      "hide_icon_on_card": true,
+      "show_description_on_cards": false,
+      "bonus_damage": 5,
+      "bonus_hp": 10,
+      "cost_reduction": 2
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "$schema": "https://github.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/releases/latest/download/schema.json",
+  "essences": [
+    {
+      "character": "LadyOfTheHouse",
+      "upgrade": "@LadyOfTheHouseSynthesis"
+    }
+  ],
+  "upgrades": [
+    {
+      "id": "LadyOfTheHouseSynthesis",
+      "titles": {
+        "key": "CharacterData_nameKey-a2e6aa66d3bddd1f-df3ea7cd9cfe467489bf928cfde6834d-v2",
+        "english": "Lady of the House",
+        "french": "Maîtresse de maison",
+        "german": "Dame des Hauses",
+        "russian": "Госпожа Дома",
+        "portuguese": "Matrona da Casa",
+        "chinese": "蜡神夫人",
+        "spanish": "Señora de la casa",
+        "chinese_traditional": "祈禱屋女主人",
+        "korean": "봉헌실의 여인",
+        "japanese": "祠の貴婦人"
+      },
+      "descriptions": {
+        "key": "CardUpgradeData_upgradeDescriptionKey-382235707abad2ef-2a6b26d3d1e1a504fb93882f24fd5465-v2",
+        "english": "+15[attack], +30[health], and [burnout] 3.",
+        "french": "+15[attack], +30[health] et <b>Consumation</b> 3.",
+        "german": "+15[attack], +30[health] und 3 <b>Ausbrennen</b>.",
+        "russian": "+15[attack], +30[health] и три <b>выгорания</b>.",
+        "portuguese": "F+15 de [attack], +30 de [health] e <b>Derretimento</b> 3.",
+        "chinese": "+15[attack]，+30[health]，[burnout] 3。"
+      },
+      "status_effect_upgrades": [
+        {
+          "status": "ephemeral",
+          "count": 3
+        }
+      ],
+      "hide_icon_on_card": true, "show_description_on_cards": false,
+      "bonus_damage": 15,
+      "bonus_hp": 30
+    }
+  ]
+}

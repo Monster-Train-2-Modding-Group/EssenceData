@@ -1,0 +1,73 @@
+{
+  "$schema": "https://github.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/releases/latest/download/schema.json",
+  "essences": [
+    {
+      "character": "MoltenEncasement",
+      "upgrade": "@MoltenEncasementSynthesis"
+    }
+  ],
+  "upgrades": [
+    {
+      "id": "MoltenEncasementSynthesis",
+      "titles": {
+        "key": "CharacterData_nameKey-c4e66bfd378e2b2f-debc5a829dca42c4992d3ce94470c8a4-v2",
+        "english": "Molten Encasement",
+        "french": "Contenant en fusion",
+        "german": "Umhülltes Flüssigwachs",
+        "russian": "Расплав",
+        "portuguese": "Casulo Fundido",
+        "chinese": "燃烧蜡液",
+        "spanish": "Llama atrapada",
+        "chinese_traditional": "熔融外殼",
+        "korean": "밀랍 용기",
+        "japanese": "閉じ込められた蝋"
+      },
+      "descriptions": {
+        "key": "CardUpgradeData_upgradeDescriptionKey-8e7f31e1500f2862-d27d16f6ea763254180c48fca54bf833-v2",
+        "english": "[extinguish]: Apply [stealth] 2 to friendly units.",
+        "french": "<b>Extinction</b> : Confère <b>Dissimulation</b> 2 aux unités alliées.",
+        "german": "<b>Erlöschen</b>: Wende 2 <b>Tarnung</b> auf verbündete Einheiten an.",
+        "russian": "<b>Угасание</b>: дает двум союзникам <b>незаметность</b>.",
+        "portuguese": "<b>Extinguir</b>: concede <b>Furtividade</b> 2 às unidades aliadas.",
+        "chinese": "[extinguish]：使所有友方单位获得[stealth] 2。"
+      },
+      "trigger_upgrades": [
+        "@MoltenEncasementSynthesis.triggerUpgrades0"
+      ],
+      "hide_icon_on_card": true, "show_description_on_cards": false
+    }
+  ],
+  "effects": [
+    {
+      "id": "MoltenEncasementSynthesis.triggerUpgrades0.effects0",
+      "name": "CardEffectAddStatusEffect",
+      "target_mode": "room",
+      "target_team": "monsters",
+      "param_status_effects": [
+        {
+          "status": "stealth",
+          "count": 2
+        }
+      ]
+    }
+  ],
+  "character_triggers": [
+    {
+      
+      "id": "MoltenEncasementSynthesis.triggerUpgrades0",
+      "descriptions": {
+        "key": "CardUpgradeData_descriptionKey-76809d53e23e71a7-d27d16f6ea763254180c48fca54bf833-v2",
+        "english": "Apply [stealth] [effect0.status0.power] to friendly units.",
+        "french": "Confère <b>Dissimulation</b> [effect0.status0.power] aux unités alliées.",
+        "german": "Wende [effect0.status0.power] <b>Tarnung</b> auf verbündete Einheiten an.",
+        "russian": "Дает союзным бойцам [effect0.status0.power] <b>незаметность</b>.",
+        "portuguese": "Concede <b>Furtividade</b> [effect0.status0.power] às unidades aliadas.",
+        "chinese": "所有友方单位获得[stealth] [effect0.status0.power]。"
+      },
+      "trigger": "on_death",
+      "effects": [
+        "@MoltenEncasementSynthesis.triggerUpgrades0.effects0"
+      ]
+    }
+  ]
+}

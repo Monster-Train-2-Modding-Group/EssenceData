@@ -1,0 +1,44 @@
+{
+  "$schema": "https://github.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/releases/latest/download/schema.json",
+  "essences": [
+    {
+      "character": "MonsterAnimusSword",
+      "upgrade": "@MonsterAnimusSwordSynthesis"
+    }
+  ],
+  "upgrades": [
+    {
+      "id": "MonsterAnimusSwordSynthesis",
+      "titles": {
+        "key": "CharacterData_nameKey-827153bad18f30c9-3488e89a1f57d6348ab1cc4c99c70226-v2",
+        "english": "Animus of Speed",
+        "french": "Animus de la vélocité",
+        "german": "Animus der Geschwindigkeit",
+        "russian": "Анима скорости",
+        "portuguese": "Animus da Velocidade",
+        "chinese": "疾速蔓灵",
+        "spanish": "Ánimus de velocidad",
+        "chinese_traditional": "速度靈魂",
+        "korean": "속도의 의사생명체",
+        "japanese": "迅速のアニムス"
+      },
+      "descriptions": {
+        "key": "CardUpgradeData_upgradeDescriptionKey-2b80ea460e316ebb-ad0817d95e87c334285f2b46a2a22586-v2",
+        "english": "[quick].",
+        "french": "<b>Rapidité</b>",
+        "german": "<b>Flink</b>.",
+        "russian": "<b>Быстрота</b>.",
+        "portuguese": "<b>Iniciativa</b>.",
+        "chinese": "[quick]。"
+      },
+      "status_effect_upgrades": [
+        {
+          "status": "ambush",
+          "count": 1
+        }
+      ],
+      "hide_icon_on_card": true,
+      "show_description_on_cards": false
+    }
+  ]
+}

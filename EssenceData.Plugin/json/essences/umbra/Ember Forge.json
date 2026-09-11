@@ -1,0 +1,56 @@
+{
+  "$schema": "https://github.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/releases/latest/download/schema.json",
+  "essences": [
+    {
+      "character": "MonsterEmberFurnace",
+      "upgrade": "@MonsterEmberFurnaceSynthesis"
+    }
+  ],
+  "upgrades": [
+    {
+      "id": "MonsterEmberFurnaceSynthesis",
+      "titles": {
+        "key": "CharacterData_nameKey-aca9bed3ffd92c25-7fddf4cdd7bf0f54d83d4b10e9c30b81-v2",
+        "english": "Ember Forge",
+        "french": "Forge de braises",
+        "german": "Glutasche-Esse",
+        "russian": "Угольная кузница",
+        "portuguese": "Forja de Brasas",
+        "chinese": "余烬锻炉",
+        "spanish": "Forja de ascuas",
+        "chinese_traditional": "餘燼鍛造",
+        "korean": "잔불 대장간",
+        "japanese": "エンバー過熱炉"
+      },
+      "descriptions": {
+        "key": "CardUpgradeData_upgradeDescriptionKey-03383473225ec113-54a1f5a8de28db44f8049e97094e306d-v2",
+        "english": "+1[ember] per turn.",
+        "french": "+1[ember] par tour.",
+        "german": "+1[ember] pro Zug.",
+        "russian": "+1[ember] в ход.",
+        "portuguese": "+1 de [ember] por turno.",
+        "chinese": "每回合 +1[ember]。"
+      },
+      "room_modifier_upgrades": [
+        "@MonsterEmberFurnaceSynthesis.roomModifierUpgrades0"
+      ],
+      "hide_icon_on_card": true, "show_description_on_cards": false
+    }
+  ],
+  "room_modifiers": [
+    {
+      "id": "MonsterEmberFurnaceSynthesis.roomModifierUpgrades0",
+      "descriptions": {
+        "key": "CardUpgradeData_descriptionKey-32c0fbfbaabd6118-54a1f5a8de28db44f8049e97094e306d-v2",
+        "english": "+[paramint][ember] per turn.",
+        "french": "+[paramint][ember] par tour.",
+        "german": "+[paramint][ember] pro Zug.",
+        "russian": "+[paramint][ember] в ход.",
+        "portuguese": "+[paramint] de [ember] por turno.",
+        "chinese": "每回合 +[paramint][ember]。"
+      },
+      "name": "RoomStateEnergyModifier",
+      "param_int": 1
+    }
+  ]
+}

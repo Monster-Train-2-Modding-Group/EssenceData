@@ -1,0 +1,73 @@
+{
+  "$schema": "https://github.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/releases/latest/download/schema.json",
+  "essences": [
+    {
+      "character": "MonsterAggressiveImp",
+      "upgrade": "@MonsterAggressiveImpSynthesis"
+    }
+  ],
+  "upgrades": [
+    {
+      "id": "MonsterAggressiveImpSynthesis",
+      "titles": {
+        "key": "CharacterData_nameKey-36f127237b40f200-9435452254c7d384ba916fe4f3053511-v2",
+        "english": "Fledgling Imp",
+        "french": "Jeune diablotin",
+        "german": "Junger Kobold",
+        "russian": "Юный бес",
+        "portuguese": "Diabinho Novato",
+        "chinese": "懵懂小鬼",
+        "spanish": "Diablillo novel",
+        "chinese_traditional": "幼小小鬼",
+        "korean": "꼬맹이 임프",
+        "japanese": "ひよっこインプ"
+      },
+      "descriptions": {
+        "key": "CardUpgradeData_upgradeDescriptionKey-91f43b4bf92ec188-12d8dd2501a1bb244bf61df948711f82-v2",
+        "english": "[summon]: Apply [rage] 5 to friendly units.",
+        "french": "<b>Invocation</b> : Confère <b>Rage</b> 5 aux unités alliées.",
+        "german": "<b>Rufen</b> Wende 5 <b>Wut</b> auf verbündete Einheiten an.",
+        "russian": "<b>Призыв</b>: дает союзникам 5 <b>ярости</b>.",
+        "portuguese": "<b>Invocar</b>: concede <b>Fúria</b> 5 às unidades aliadas.",
+        "chinese": "[summon]：使友方单位获得[rage] 5。"
+      },
+      "trigger_upgrades": [
+        "@MonsterAggressiveImpSynthesis.triggerUpgrades0"
+      ],
+      "hide_icon_on_card": true, "show_description_on_cards": false
+    }
+  ],
+  "effects": [
+    {
+      "id": "MonsterAggressiveImpSynthesis.triggerUpgrades0.effects0",
+      "name": "CardEffectAddStatusEffect",
+      "target_mode": "room",
+      "target_team": "monsters",
+      "param_status_effects": [
+        {
+          "status": "buff",
+          "count": 5
+        }
+      ]
+    }
+  ],
+  "character_triggers": [
+    {
+      
+      "id": "MonsterAggressiveImpSynthesis.triggerUpgrades0",
+      "descriptions": {
+        "key": "CardUpgradeData_descriptionKey-fc35663d98d9ffcd-12d8dd2501a1bb244bf61df948711f82-v2",
+        "english": "Apply [rage] [effect0.status0.power] to friendly units.",
+        "french": "Confère <b>Rage</b> [effect0.status0.power] aux unités alliées.",
+        "german": "Wende [effect0.status0.power] <b>Wut</b> auf verbündete Einheiten an.",
+        "russian": "Дает союзным бойцам [effect0.status0.power] <b>ярости</b>.",
+        "portuguese": "Concede <b>Fúria</b> [effect0.status0.power] às unidades aliadas.",
+        "chinese": "所有友方单位获得[rage] [effect0.status0.power]。"
+      },
+      "trigger": "on_spawn",
+      "effects": [
+        "@MonsterAggressiveImpSynthesis.triggerUpgrades0.effects0"
+      ]
+    }
+  ]
+}

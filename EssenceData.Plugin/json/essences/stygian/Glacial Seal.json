@@ -1,0 +1,74 @@
+{
+  "$schema": "https://github.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/releases/latest/download/schema.json",
+  "essences": [
+    {
+      "character": "MonsterBlightedTotem",
+      "upgrade": "@MonsterBlightedTotemSynthesis"
+    }
+  ],
+  "upgrades": [
+    {
+      "id": "MonsterBlightedTotemSynthesis",
+      "titles": {
+        "key": "CharacterData_nameKey-c3287ae9aa6cb9f6-fe204451b4721c445870b04950df0056-v2",
+        "english": "Glacial Seal",
+        "french": "Sceau glacial",
+        "german": "Gletschersiegel",
+        "russian": "Ледяная печать",
+        "portuguese": "Selamento Gélido",
+        "chinese": "寒冰封印",
+        "spanish": "Sello glacial",
+        "chinese_traditional": "冰川海豹",
+        "korean": "얼어붙은 봉인",
+        "japanese": "氷の封印"
+      },
+      "descriptions": {
+        "key": "CardUpgradeData_upgradeDescriptionKey-9514fff7d1adf6de-f7ad5d8d2f45c8f4a96097996dd2c367-v2",
+        "english": "[incant]: Apply [frostbite] 2 to enemy units.",
+        "french": "<b>Incantation</b> : Inflige <b>Gelure</b> 2 aux unités ennemies.",
+        "german": "<b>Verzauberung</b>: Wende 2 <b>Frostschaden</b> auf gegnerische Einheiten an.",
+        "russian": "<b>Мантра</b>: накладывает на вражеских бойцов 2 <b>обморожения</b>.",
+        "portuguese": "<b>Entoar</b>: aplica <b>Friagem</b> 2 às unidades inimigas.",
+        "chinese": "[incant]：对所有敌方单位施加[frostbite] 2。"
+      },
+      "trigger_upgrades": [
+        "@MonsterBlightedTotemSynthesis.triggerUpgrades0"
+      ],
+      "hide_icon_on_card": true, "show_description_on_cards": false
+    }
+  ],
+  "effects": [
+    {
+      "id": "MonsterBlightedTotemSynthesis.triggerUpgrades0.effects0",
+      "name": "CardEffectAddStatusEffect",
+      "target_mode": "room",
+      "target_team": "heroes",
+      "param_status_effects": [
+        {
+          "status": "poison",
+          "count": 2
+        }
+      ],
+      "anim_to_play": "attack"
+    }
+  ],
+  "character_triggers": [
+    {
+      
+      "id": "MonsterBlightedTotemSynthesis.triggerUpgrades0",
+      "descriptions": {
+        "key": "CardUpgradeData_descriptionKey-9ec8741e98f4d5a3-f7ad5d8d2f45c8f4a96097996dd2c367-v2",
+        "english": "Apply [frostbite] [effect0.status0.power] to enemy units.",
+        "french": "Inflige <b>Gelure</b> [effect0.status0.power] aux unités ennemies.",
+        "german": "Wende [effect0.status0.power] <b>Frostschaden</b> auf gegnerische Einheiten an.",
+        "russian": "Накладывает на вражеских бойцов [effect0.status0.power] <b>обморожения</b>.",
+        "portuguese": "Aplica <b>Friagem</b> [effect0.status0.power] às unidades inimigas.",
+        "chinese": "对所有敌方单位施加[frostbite] [effect0.status0.power]。"
+      },
+      "trigger": "card_spell_played",
+      "effects": [
+        "@MonsterBlightedTotemSynthesis.triggerUpgrades0.effects0"
+      ]
+    }
+  ]
+}

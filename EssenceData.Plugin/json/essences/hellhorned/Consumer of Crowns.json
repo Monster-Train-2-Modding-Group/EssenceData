@@ -1,0 +1,40 @@
+{
+  "$schema": "https://github.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/releases/latest/download/schema.json",
+  "essences": [
+    {
+      "character": "ConsumerOfCrowns",
+      "upgrade": "@ConsumerOfCrownsSynthesis"
+    }
+  ],
+  "upgrades": [
+    {
+      "id": "ConsumerOfCrownsSynthesis",
+      "titles": {
+        "key": "CharacterData_nameKey-faa003a372237cce-4c6c2775352a2f14caf738ae68d9f1f6-v2",
+        "english": "Consumer of Crowns",
+        "french": "Dévoreur de couronnes",
+        "german": "Verbraucher der Kronen",
+        "russian": "Пожиратель корон",
+        "portuguese": "Destruidor de Reinos",
+        "chinese": "皇冠吞噬者",
+        "spanish": "Devorador de coronas",
+        "chinese_traditional": "王冠消耗者",
+        "korean": "왕관을 먹는 자",
+        "japanese": "王冠を貪る者"
+      },
+      "descriptions": {
+        "key": "CardUpgradeData_upgradeDescriptionKey-741e90e8ed5ab89f-2e4e71502afb00f4eb1f7035fe499b15-v2",
+        "english": "+10[attack], +10[health], and -3[ember].",
+        "french": "+10[attack], +10[health] et -3[ember].",
+        "german": "+10[attack], +10[health] und -3[ember].",
+        "russian": "+10[attack], +10[health] и -3[ember].",
+        "portuguese": "+10 de [attack], +10 de [health] e -3 de [ember].",
+        "chinese": "+10[attack]，+10[health]，花费 -3[ember]。"
+      },
+      "hide_icon_on_card": true, "show_description_on_cards": false,
+      "bonus_damage": 10,
+      "bonus_hp": 10,
+      "cost_reduction": 3
+    }
+  ]
+}

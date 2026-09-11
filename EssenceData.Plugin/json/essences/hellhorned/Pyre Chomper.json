@@ -1,0 +1,38 @@
+{
+  "$schema": "https://github.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/releases/latest/download/schema.json",
+  "essences": [
+    {
+      "character": "MonsterEmberedInfery",
+      "upgrade": "@MonsterEmberedInferySynthesis"
+    }
+  ],
+  "upgrades": [
+    {
+      "id": "MonsterEmberedInferySynthesis",
+      "titles": {
+        "key": "CharacterData_nameKey-4d67de40f63fa3fd-2e9399d4a987b7149883d0deffbaa5f3-v2",
+        "english": "Pyre Chomper",
+        "french": "Grignoteur de Brasier",
+        "german": "Höllenglutschlucker",
+        "russian": "Пеклозуб",
+        "portuguese": "Mastigador de Pira",
+        "chinese": "薪火暴食者",
+        "spanish": "Devorador de Pira",
+        "chinese_traditional": "火堆吞噬者",
+        "korean": "화로 포식자",
+        "japanese": "パイア・チョンパー"
+      },
+      "descriptions": {
+        "key": "CardUpgradeData_upgradeDescriptionKey-7575e283e8e73c84-4c12c2a9b6b61bc4d8b2706d6745b741-v2",
+        "english": "-4[ember].",
+        "french": "-4[ember].",
+        "german": "-4[ember].",
+        "russian": "-4[ember].",
+        "portuguese": "-4 de [ember].",
+        "chinese": "花费 -4[ember]。"
+      },
+      "hide_icon_on_card": true, "show_description_on_cards": false,
+      "cost_reduction": 4
+    }
+  ]
+}

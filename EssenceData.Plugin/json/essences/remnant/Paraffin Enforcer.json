@@ -1,0 +1,82 @@
+{
+  "$schema": "https://github.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/releases/latest/download/schema.json",
+  "essences": [
+    {
+      "character": "ParrafinEnforcer",
+      "upgrade": "@ParafinEnforcerSynthesis"
+    }
+  ],
+  "upgrades": [
+    {
+      "id": "ParafinEnforcerSynthesis",
+      "titles": {
+        "key": "CharacterData_nameKey-18710078b1ac1b9a-76133b80e16423d48b8c011dd15f276b-v2",
+        "english": "Paraffin Enforcer",
+        "french": "Exécuteur de paraffine",
+        "german": "Paraffin-Vollstrecker",
+        "russian": "Парафиновый вышибала",
+        "portuguese": "Cabo Parafina",
+        "chinese": "石蜡执法者",
+        "spanish": "Vigilante de parafina",
+        "chinese_traditional": "石蠟執法者",
+        "korean": "파라핀 집행자",
+        "japanese": "パラフィン・エンフォーサー"
+      },
+      "descriptions": {
+        "key": "CardUpgradeData_upgradeDescriptionKey-1e816c15ae610c6c-4a1416b4a5ebb8c4187ac387f54f175a-v2",
+        "english": "[burnout] 2 and '[strike]: Apply [rage] 3 to friendly [burnout] units.'",
+        "french": "<b>Consumation</b> 2 et '<b>Frappe</b> : Confère <b>Rage</b> 3 aux unités alliées avec <b>Consumation</b>.'",
+        "german": "2 <b>Ausbrennen</b> und „<b>Angriff</b>: Wende 3 <b>Wut</b> auf verbündete <b>Ausbrennen</b>-Einheiten an.“",
+        "russian": "Два <b>выгорания</b> и «<b>Выпад</b>: накладывает на союзников с <b>выгоранием</b> три <b>ярости</b>».",
+        "portuguese": "<b>Derretimento</b> 2 e <b> Golpe</b>: concede <b>Fúria</b> 3 às unidades aliadas com <b>Derretimento</b>.",
+        "chinese": "[burnout] 2，'[strike]：友方[burnout]单位获得[rage] 3。'"
+      },
+      "status_effect_upgrades": [
+        {
+          "status": "ephemeral",
+          "count": 2
+        }
+      ],
+      "trigger_upgrades": [
+        "@ParafinEnforcerSynthesis.triggerUpgrades0"
+      ],
+      "hide_icon_on_card": true, "show_description_on_cards": false
+    }
+  ],
+  "effects": [
+    {
+      "id": "ParafinEnforcerSynthesis.triggerUpgrades0.effects0",
+      "name": "CardEffectAddStatusEffect",
+      "target_mode": "room",
+      "target_team": "monsters",
+      "target_mode_status_effects_filter": [
+        "ephemeral"
+      ],
+      "param_status_effects": [
+        {
+          "status": "buff",
+          "count": 3
+        }
+      ]
+    }
+  ],
+  "character_triggers": [
+    {
+      
+      "id": "ParafinEnforcerSynthesis.triggerUpgrades0",
+      "descriptions": {
+        "key": "CardUpgradeData_descriptionKey-4838b943fa6f04ba-4a1416b4a5ebb8c4187ac387f54f175a-v2",
+        "english": "Apply [rage] [effect0.status0.power] to friendly [burnout] units.",
+        "french": "Confère <b>Rage</b> [effect0.status0.power] aux unités alliées avec <b>Consumation</b>.",
+        "german": "Wende [effect0.status0.power] <b>Wut</b> auf verbündete <b>Ausbrennen</b>-Einheiten an.",
+        "russian": "Накладывает [effect0.status0.power] <b>ярости</b> на союзников с <b>выгоранием</b>.",
+        "portuguese": "Concede [effect0.status0.power] de <b>Fúria</b> às unidades aliadas com <b>Derretimento</b>.",
+        "chinese": "友方[burnout]单位获得[rage] [effect0.status0.power]。"
+      },
+      "trigger": "on_attacking",
+      "effects": [
+        "@ParafinEnforcerSynthesis.triggerUpgrades0.effects0"
+      ]
+    }
+  ]
+}

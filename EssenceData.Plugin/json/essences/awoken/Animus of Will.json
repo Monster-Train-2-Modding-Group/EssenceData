@@ -1,0 +1,45 @@
+{
+  "$schema": "https://github.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/releases/latest/download/schema.json",
+  "essences": [
+    {
+      "character": "MonsterAnimusBow",
+      "upgrade": "@MonsterAnimusBowSynthesis"
+    }
+  ],
+  "upgrades": [
+    {
+      "id": "MonsterAnimusBowSynthesis",
+      "titles": {
+        "key": "CharacterData_nameKey-d84b8a6cabf1a7ad-e213e225193344b459319e9f31b2b1f3-v2",
+        "english": "Animus of Will",
+        "french": "Animus de la volonté",
+        "german": "Animus des Willens",
+        "russian": "Анима воли",
+        "portuguese": "Animus da Vontade",
+        "chinese": "刚毅蔓灵",
+        "spanish": "Ánimus de voluntad",
+        "chinese_traditional": "意志靈魂",
+        "korean": "의지의 의사생명체",
+        "japanese": "意志のアニムス"
+      },
+      "descriptions": {
+        "key": "CardUpgradeData_upgradeDescriptionKey-fb75b58f5a0e99b1-11a01517ca2b9404a98173262b43c752-v2",
+        "english": "-15[attack] and [multistrike] 1.",
+        "french": "-15[attack] et <b>Frappe multiple</b> 1.",
+        "german": "-15[attack] und 1 <b>Multischlag</b>.",
+        "russian": "-15[attack] и <b>мультиудар</b>.",
+        "portuguese": "-15 de [attack] e <b>Golpe Múltiplo</b> 1.",
+        "chinese": "-15[attack]，[multistrike] 1。"
+      },
+      "status_effect_upgrades": [
+        {
+          "status": "multistrike",
+          "count": 1
+        }
+      ],
+      "hide_icon_on_card": true,
+      "show_description_on_cards": false,
+      "bonus_damage": -15
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "$schema": "https://github.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/releases/latest/download/schema.json",
+  "essences": [
+    {
+      "character": "Dreg",
+      "upgrade": "@DregSynthesis"
+    }
+  ],
+  "upgrades": [
+    {
+      "id": "DregSynthesis",
+      "titles": {
+        "key": "CharacterData_nameKey-d506f4f505585e8c-aeaaf31b62556d54fb47acbc2981644f-v2",
+        "english": "Dreg",
+        "french": "Reliquat",
+        "german": "Restwachs",
+        "russian": "Отброс",
+        "portuguese": "Vestígio",
+        "chinese": "蜡渣",
+        "spanish": "Poso",
+        "chinese_traditional": "苦力底層",
+        "korean": "드레그",
+        "japanese": "ドレグ"
+      },
+      "descriptions": {
+        "key": "CardUpgradeData_upgradeDescriptionKey-d41373f57151d17f-6e51e1dd92a0f334ba258fbb30850799-v2",
+        "english": "+10[attack], +10[health], and [burnout] 2.",
+        "french": "+10[attack], +10[health] et <b>Consumation</b> 2.",
+        "german": "+10[attack], +10[health] und 2 <b>Ausbrennen</b>.",
+        "russian": "+10[attack], +10[health] и 2 <b>выгорания</b>.",
+        "portuguese": "+10 de [attack], +10 de [health] e <b>Derretimento</b> 2.",
+        "chinese": "10[attack]，10[health]，[burnout] 2。"
+      },
+      "status_effect_upgrades": [
+        {
+          "status": "ephemeral",
+          "count": 2
+        }
+      ],
+      "hide_icon_on_card": true, "show_description_on_cards": false,
+      "bonus_damage": 10,
+      "bonus_hp": 10
+    }
+  ]
+}

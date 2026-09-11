@@ -1,0 +1,69 @@
+{
+  "$schema": "https://github.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/releases/latest/download/schema.json",
+  "essences": [
+    {
+      "character": "MonsterEnlightenedInfery",
+      "upgrade": "@MonsterEnlightenedInferySynthesis"
+    }
+  ],
+  "upgrades": [
+    {
+      "id": "MonsterEnlightenedInferySynthesis",
+      "titles": {
+        "key": "CharacterData_nameKey-aad8ea7e02bd8778-8c32dfa47b7b4014a825217a4bfbadb3-v2",
+        "english": "Impish Scholar",
+        "french": "Diablotin-telligent",
+        "german": "Kobold-Gelehrter",
+        "russian": "Бес-грамотей",
+        "portuguese": "Diabinho Acadêmico",
+        "chinese": "小鬼学者",
+        "spanish": "Erudito diabólico",
+        "chinese_traditional": "小鬼學者",
+        "korean": "임프 학자",
+        "japanese": "インピッシュ・スコラー"
+      },
+      "descriptions": {
+        "key": "CardUpgradeData_upgradeDescriptionKey-1782185594eb970e-1e09bad94dc5abf44acfe182031d51c2-v2",
+        "english": "[summon]: Return a random consumed spell to your hand.",
+        "french": "<b>Invocation</b> : Renvoie un sort détruit aléatoire dans votre main.",
+        "german": "<b>Rufen</b>: Nimm einen zufälligen verbrauchten Zauber wieder auf die Hand.",
+        "russian": "<b>Призыв</b>: возвращает в вашу руку случайные поглощенные чары.",
+        "portuguese": "<b>Invocar</b>: retorna um feitiço consumido à sua mão.",
+        "chinese": "[summon]：随机将一张被消耗的法术返回到你的手牌。"
+      },
+      "trigger_upgrades": [
+        "@MonsterEnlightenedInferySynthesis.triggerUpgrades0"
+      ],
+      "hide_icon_on_card": true, "show_description_on_cards": false
+    }
+  ],
+  "effects": [
+    {
+      "id": "MonsterEnlightenedInferySynthesis.triggerUpgrades0.effects0",
+      "name": "CardEffectRecursion",
+      "target_mode": "exhaust",
+      "target_card_selection_mode": "random_to_hand",
+      "param_int": 1,
+      "param_int_2": 1
+    }
+  ],
+  "character_triggers": [
+    {
+      
+      "id": "MonsterEnlightenedInferySynthesis.triggerUpgrades0",
+      "descriptions": {
+        "key": "CardUpgradeData_descriptionKey-3cc26144b39787db-1e09bad94dc5abf44acfe182031d51c2-v2",
+        "english": "Return a random consumed spell to your hand.",
+        "french": "Renvoie un sort détruit aléatoire dans votre main.",
+        "german": "Nimm einen zufälligen verbrauchten Zauber wieder auf die Hand.",
+        "russian": "Возвращает в вашу руку случайные поглощенные чары.",
+        "portuguese": "Retorna um feitiço consumido à sua mão.",
+        "chinese": "随机将一张被消耗的法术返回到你的手牌。"
+      },
+      "trigger": "on_spawn",
+      "effects": [
+        "@MonsterEnlightenedInferySynthesis.triggerUpgrades0.effects0"
+      ]
+    }
+  ]
+}

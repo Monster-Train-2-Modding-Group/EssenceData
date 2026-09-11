@@ -1,0 +1,77 @@
+{
+  "$schema": "https://github.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/releases/latest/download/schema.json",
+  "essences": [
+    {
+      "character": "MonsterHoardTotem",
+      "upgrade": "@MonsterHoardTotemSynthesis"
+    }
+  ],
+  "upgrades": [
+    {
+      "id": "MonsterHoardTotemSynthesis",
+      "titles": {
+        "key": "CharacterData_nameKey-de9a82211e36eb8f-e463b9805c203784bb74006b5fd36a22-v2",
+        "english": "Cuttlehex",
+        "french": "Ensorsépion",
+        "german": "Sepiahex",
+        "russian": "Каракатица",
+        "portuguese": "Luliço",
+        "chinese": "邪术乌贼",
+        "spanish": "Sepiarcana",
+        "chinese_traditional": "烏賊妖",
+        "korean": "주술 오징어",
+        "japanese": "カトルヘックス"
+      },
+      "descriptions": {
+        "key": "CardUpgradeData_upgradeDescriptionKey-2c1ca49231d11b66-c2e1fd66b3aa7e04fad92f4daa2fc7c2-v2",
+        "english": "+5[attack], +3[health], and '<b>End of Turn</b>: Apply [freeze] to a random card in your hand.'",
+        "french": "+5[attack], +3[health] et '<b>Fin du tour</b> : Confère <b>Gelé</b> à une carte aléatoire dans votre main.'",
+        "german": "+5[attack], +3[health] und „<b>Am Ende des Zuges</b>: Wende <b>Eingefroren</b> auf eine zufällige Karte auf deiner Hand an.“",
+        "russian": "+5[attack], +3[health] и «<nobr><b>Конец хода</b></nobr>: накладывает <b>заморозку</b> на случайную карту в вашей руке».",
+        "portuguese": "+5 de [attack], +3 de [health] e ao <b>Fim do Turno</b>: <b>Congela</b> uma carta aleatória na sua mão.",
+        "chinese": "+5[attack]，+3[health]，'<b>回合结束</b>：随机[freeze]一张手牌。'"
+      },
+      "trigger_upgrades": [
+        "@MonsterHoardTotemSynthesis.triggerUpgrades0"
+      ],
+      "hide_icon_on_card": true, "show_description_on_cards": false,
+      "bonus_damage": 5,
+      "bonus_hp": 3
+    }
+  ],
+  "effects": [
+    {
+      "id": "MonsterHoardTotemSynthesis.triggerUpgrades0.effects0",
+      "name": "CardEffectFreezeRandomCard",
+      "anim_to_play": "attack"
+    }
+  ],
+  "character_triggers": [
+    {
+      
+      "id": "MonsterHoardTotemSynthesis.triggerUpgrades0",
+      "descriptions": {
+        "key": "CardUpgradeData_descriptionKey-dd723186b10fdb7d-c2e1fd66b3aa7e04fad92f4daa2fc7c2-v2",
+        "english": "Apply [freeze] to a random card in your hand.",
+        "french": "Confère <b>Gelé</b> à une carte aléatoire dans votre main.",
+        "german": "Wende <b>Eingefroren</b> auf eine zufällige Karte auf deiner Hand an.",
+        "russian": "Накладывает <b>заморозку</b> на случайную карту в вашей руке.",
+        "portuguese": "<b>Congela</b> uma carta aleatória na sua mão.",
+        "chinese": "随机[freeze]一张手牌。"
+      },
+      "trigger": "end_turn_pre_hand_discard",
+      "additional_text_on_trigger": {
+        "key": "CardUpgradeData_additionalTextOnTriggerKey-db23117fe576d67d-c2e1fd66b3aa7e04fad92f4daa2fc7c2-v2",
+        "english": "Freezing Card!",
+        "french": "Carte gelée !",
+        "german": "Karte eingefroren!",
+        "russian": "Замораживающая карта!",
+        "portuguese": "Carta Congelante!",
+        "chinese": "冻结卡牌！"
+      },
+      "effects": [
+        "@MonsterHoardTotemSynthesis.triggerUpgrades0.effects0"
+      ]
+    }
+  ]
+}

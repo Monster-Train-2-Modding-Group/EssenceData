@@ -1,0 +1,59 @@
+{
+  "$schema": "https://github.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/releases/latest/download/schema.json",
+  "essences": [
+    {
+      "character": "MonsterUnstableInfery",
+      "upgrade": "@MonsterUnstableInferySynthesis"
+    }
+  ],
+  "upgrades": [
+    {
+      "id": "MonsterUnstableInferySynthesis",
+      "titles": {
+        "key": "CharacterData_nameKey-0466c4a3b24b9eb1-148d3d07d98db814cb0bbbb144ca4aad-v2",
+        "english": "Molting Imp",
+        "french": "Diablotin en mue",
+        "german": "Mausernder Kobold",
+        "russian": "Линяющий бес",
+        "portuguese": "Diabinho Fundente",
+        "chinese": "蜕皮小鬼",
+        "spanish": "Diablillo en muda",
+        "chinese_traditional": "蛻變小鬼",
+        "korean": "탈피하는 임프",
+        "japanese": "モルティングインプ"
+      },
+      "descriptions": {
+        "key": "CardUpgradeData_upgradeDescriptionKey-2b3bb30d2fe00ce6-357837dd8106b5c42a1a2028c149869b-v2",
+        "english": "[summon]: Deal 15 damage to enemy units.",
+        "french": "<b>Invocation</b> : Inflige 15 dégâts aux unités ennemies.",
+        "german": "<b>Rufen</b>: Füge gegnerischen Einheiten 15 Schaden zu.",
+        "russian": "<b>Призыв</b>: наносит 15 урона вражеским бойцам.",
+        "portuguese": "<b>Invocar</b>: causa 15 de dano às unidades inimigas.",
+        "chinese": "[summon]：对所有敌方单位造成 15 点伤害。"
+      },
+      "trigger_upgrades": [
+        "@MonsterUnstableInferySynthesis.triggerUpgrades0"
+      ],
+      "hide_icon_on_card": true, "show_description_on_cards": false
+    }
+  ],
+  "effects": [
+    {
+      "id": "MonsterUnstableInferySynthesis.triggerUpgrades0.effects0",
+      "name": "CardEffectDamage",
+      "target_mode": "room",
+      "target_team": "heroes",
+      "param_int": 15
+    }
+  ],
+  "character_triggers": [
+    {
+      
+      "id": "MonsterUnstableInferySynthesis.triggerUpgrades0",
+      "trigger": "on_spawn",
+      "effects": [
+        "@MonsterUnstableInferySynthesis.triggerUpgrades0.effects0"
+      ]
+    }
+  ]
+}

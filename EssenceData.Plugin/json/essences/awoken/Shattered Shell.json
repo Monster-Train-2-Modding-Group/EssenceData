@@ -1,0 +1,74 @@
+{
+  "$schema": "https://github.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/releases/latest/download/schema.json",
+  "essences": [
+    {
+      "character": "ShatteredShell",
+      "upgrade": "@ShatteredShellSynthesis"
+    }
+  ],
+  "upgrades": [
+    {
+      "id": "ShatteredShellSynthesis",
+      "titles": {
+        "key": "CharacterData_nameKey-9cf218ea88d1e9af-4834dd190672177429a719136c12d90d-v2",
+        "english": "Shattered Shell",
+        "french": "Carapace brisée",
+        "german": "Zerborstene Hülle",
+        "russian": "Расколотый панцирь",
+        "portuguese": "Casco Quebrado",
+        "chinese": "破碎坚壳",
+        "spanish": "Coraza fracturada",
+        "chinese_traditional": "破碎外殼",
+        "korean": "조각난 껍질",
+        "japanese": "シャタード・シェル"
+      },
+      "descriptions": {
+        "key": "CardUpgradeData_upgradeDescriptionKey-f3f171c835950d20-001b80fa9d87a5548b74224c47e61f3b-v2",
+        "english": "+3[attack], +10[health], and '[slay]: +3[attack].'",
+        "french": "+3[attack], +10[health] et '<b>Élimination</b> : +3[attack].'",
+        "german": "+3[attack], +10[health] und „<b>Besiegen</b>: +3[attack].“",
+        "russian": "+3[attack], +10[health] и «<b>Убийство</b>: +3[attack]».",
+        "portuguese": "+3 de [attack], +10 de [health] e <b>Abater</b>: +3 de [attack].",
+        "chinese": "+3[attack]，+10[health]，'[slay]：+3[attack]。'"
+      },
+      "trigger_upgrades": [
+        "@ShatteredShellSynthesis.triggerUpgrades0"
+      ],
+      "hide_icon_on_card": true,
+      "show_description_on_cards": false,
+      "bonus_damage": 3,
+      "bonus_hp": 10
+    },
+    {
+      "id": "ShatteredShellSynthesisTrigger",
+      "bonus_damage": 3
+    }
+  ],
+  "effects": [
+    {
+      "id": "ShatteredShellSynthesis.triggerUpgrades0.effects0",
+      "name": "CardEffectAddTempCardUpgradeToUnits",
+      "target_mode": "self",
+      "param_upgrade": "@ShatteredShellSynthesisTrigger"
+    }
+  ],
+  "character_triggers": [
+    {
+
+      "id": "ShatteredShellSynthesis.triggerUpgrades0",
+      "descriptions": {
+        "key": "CardUpgradeData_descriptionKey-cdc17828ee54ed05-001b80fa9d87a5548b74224c47e61f3b-v2",
+        "english": "+[effect0.upgrade.bonusdamage][attack].",
+        "french": "+[effect0.upgrade.bonusdamage][attack].",
+        "german": "+[effect0.upgrade.bonusdamage][attack].",
+        "russian": "+[effect0.upgrade.bonusdamage][attack].",
+        "portuguese": "+[effect0.upgrade.bonusdamage] de [attack].",
+        "chinese": "+[effect0.upgrade.bonusdamage][attack]。"
+      },
+      "trigger": "on_kill",
+      "effects": [
+        "@ShatteredShellSynthesis.triggerUpgrades0.effects0"
+      ]
+    }
+  ]
+}

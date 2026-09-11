@@ -1,0 +1,44 @@
+{
+  "$schema": "https://github.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/releases/latest/download/schema.json",
+  "essences": [
+    {
+      "character": "DerangedBrute",
+      "upgrade": "@DerangedBruteSynthesis"
+    }
+  ],
+  "upgrades": [
+    {
+      "id": "DerangedBruteSynthesis",
+      "titles": {
+        "key": "CharacterData_nameKey-f71cc65df3354a5f-de076dcd44a0be44ba6137fc2a652c66-v2",
+        "english": "Deranged Brute",
+        "french": "Brute dérangée",
+        "german": "Irrer Wüstling",
+        "russian": "Безумный крушитель",
+        "portuguese": "Brutamontes Enlouquecido",
+        "chinese": "狂乱蛮兽",
+        "spanish": "Bestia demente",
+        "chinese_traditional": "狂亂野蠻人",
+        "korean": "미쳐버린 짐승",
+        "japanese": "ディレインジド・ブルート"
+      },
+      "descriptions": {
+        "key": "CardUpgradeData_upgradeDescriptionKey-faebb00d0345df2d-52ea87b6c9b03f24ea727f5c8018bacd-v2",
+        "english": "+10[attack] and [rage] 10.",
+        "french": "+10[attack] et <b>Rage</b> 10.",
+        "german": "+10[attack] und 10 <b>Wut</b>.",
+        "russian": "+10[attack] и 10 <b>ярости</b>.",
+        "portuguese": "+10 de [attack] e <b>Fúria</b> 10.",
+        "chinese": "获得+10[attack]，[rage] 10。"
+      },
+      "status_effect_upgrades": [
+        {
+          "status": "buff",
+          "count": 10
+        }
+      ],
+      "hide_icon_on_card": true, "show_description_on_cards": false,
+      "bonus_damage": 10
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "$schema": "https://github.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/releases/latest/download/schema.json",
+  "essences": [
+    {
+      "character": "MonsterBogChrysalis",
+      "upgrade": "@MonsterBogChrysalisSynthesis"
+    }
+  ],
+  "upgrades": [
+    {
+      "id": "MonsterBogChrysalisSynthesis",
+      "titles": {
+        "key": "CharacterData_nameKey-ae2a45bb7d9582aa-6a3f30d23203a1a4aaa2e865fd701ea5-v2",
+        "english": "Bog Chrysalis",
+        "french": "Chrysalide des marais",
+        "german": "Sumpfei",
+        "russian": "Болотная хризалида",
+        "portuguese": "Crisálida do Pântano",
+        "chinese": "沼泽虫蛹",
+        "spanish": "Crisálida del cenagal",
+        "chinese_traditional": "沼澤蛹",
+        "korean": "늪 번데기",
+        "japanese": "ボグ・クリサリス"
+      },
+      "descriptions": {
+        "key": "CardUpgradeData_upgradeDescriptionKey-7cb8e85b2a481b27-0fa4436f6f872644f880e9576fe67f66-v2",
+        "english": "[summon]: Summon 2 <b>Bog Fly</b> units.",
+        "french": "<b>Invocation</b> : Invoque 2 unités <b>Volant des marais</b>.",
+        "german": "<b>Rufen</b>: Rufe 2 <b>Sumpffliege</b>-Einheiten.",
+        "russian": "<b>Призыв</b>: призывает двух <b>Болотных мух</b>.",
+        "portuguese": "<b>Invocar</b>: invoca 2 <b>Moscas do Pântano</b>.",
+        "chinese": "[summon]：召唤 2 只<b>沼泽飞蝇</b>单位。"
+      },
+      "trigger_upgrades": [
+        "@MonsterBogChrysalisSynthesis.triggerUpgrades0"
+      ],
+      "hide_icon_on_card": true, "show_description_on_cards": false
+    }
+  ],
+  "effects": [
+    {
+      "id": "MonsterBogChrysalisSynthesis.triggerUpgrades0.effects0",
+      "name": "CardEffectSpawnMonster",
+      "param_int": 2,
+      "param_bool": true,
+      "param_character": "MonsterBogFly"
+    }
+  ],
+  "character_triggers": [
+    {
+      
+      "id": "MonsterBogChrysalisSynthesis.triggerUpgrades0",
+      "descriptions": {
+        "key": "CardUpgradeData_descriptionKey-745cf022c6508075-0fa4436f6f872644f880e9576fe67f66-v2",
+        "english": "Summon 2 <b>Bog Fly</b> units.",
+        "french": "Invoque 2 unités <b>Volant des marais</b>.",
+        "german": "Rufe 2 <b>Sumpffliege</b>-Einheiten.",
+        "russian": "Призывает 2 <b>Болотных мух</b>.",
+        "portuguese": "Invoca 2 <b>Moscas do Pântano</b>.",
+        "chinese": "召唤 2 只<b>沼泽飞蝇</b>单位。"
+      },
+      "trigger": "on_spawn",
+      "effects": [
+        "@MonsterBogChrysalisSynthesis.triggerUpgrades0.effects0"
+      ]
+    }
+  ]
+}

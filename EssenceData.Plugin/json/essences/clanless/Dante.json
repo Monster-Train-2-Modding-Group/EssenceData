@@ -1,0 +1,62 @@
+{
+  "$schema": "https://github.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/releases/latest/download/schema.json",
+  "essences": [
+    {
+      "character": "MonsterDante_Titan",
+      "upgrade": "@MonsterDanteSynthesis"
+    }
+  ],
+  "upgrades": [
+    {
+      "id": "MonsterDanteSynthesis",
+      "descriptions": {
+        "key": "CardUpgradeData_upgradeDescriptionKey-ed2a7a0eecb252d7-19fdb241554cdf54f9b06f091e57e818-v2",
+        "english": "[multistrike] 1 and '[summon]: Add 1 <b>Dante's Candle</b> to your hand.'",
+        "french": "<b>Frappe multiple</b> 1 et '[summon]: Ajoute 1 <b>Bougie de Dante</b> à votre main.'",
+        "german": "1 <b>Multischlag</b> und „[summon]: Nimm 1 <b>Dantes Kerze</b> auf die Hand.“",
+        "russian": "<b>Мультиудар</b> и «[summon]: добавляет в руку <b>\"Свечу Данте\"</b>».",
+        "portuguese": "<b>Golpe Múltiplo</b> 1 e [summon]: adiciona 1 <b>Vela de Dante</b> à sua mão.",
+        "chinese": "[multistrike] 1，'[summon]：将 1 张<b>但丁的蜡烛</b> 加入你的手牌。'"
+      },
+      "status_effect_upgrades": [
+        {
+          "status": "multistrike",
+          "count": 1
+        }
+      ],
+      "trigger_upgrades": [
+        "@MonsterDanteSynthesis.triggerUpgrades0"
+      ],
+      "hide_icon_on_card": true,
+      "show_description_on_cards": false
+    }
+  ],
+  "effects": [
+    {
+      "id": "MonsterDanteSynthesis.triggerUpgrades0.effects0",
+      "name": "CardEffectAddBattleCard",
+      "param_card_pool": "DantesCandleOnlyPool",
+      "param_int": 3,
+      "param_int_2": 1
+    }
+  ],
+  "character_triggers": [
+    {
+      
+      "id": "MonsterDanteSynthesis.triggerUpgrades0",
+      "descriptions": {
+        "key": "CardUpgradeData_descriptionKey-2cb7a01e4c7f23ef-19fdb241554cdf54f9b06f091e57e818-v2",
+        "english": "Add 1 <b>Dante's Candle</b> to your hand.",
+        "french": "Ajoute 1 <b>Bougie de Dante</b> à votre main.",
+        "german": "Nimm 1 <b>Dantes Kerze</b> auf die Hand.",
+        "russian": "Добавляет в руку 1 <b>Свечу Данте</b>.",
+        "portuguese": "Adiciona 1 <b>Vela de Dante</b> à sua mão.",
+        "chinese": "将 1 张<b>但丁的蜡烛</b> 加入你的手牌。"
+      },
+      "trigger": "on_spawn",
+      "effects": [
+        "@MonsterDanteSynthesis.triggerUpgrades0.effects0"
+      ]
+    }
+  ]
+}

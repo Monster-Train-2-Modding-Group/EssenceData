@@ -1,0 +1,73 @@
+{
+  "$schema": "https://github.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/releases/latest/download/schema.json",
+  "essences": [
+    {
+      "character": "MonsterEnlightenedSiren",
+      "upgrade": "@MonsterEnlightenedSirenSynthesis"
+    }
+  ],
+  "upgrades": [
+    {
+      "id": "MonsterEnlightenedSirenSynthesis",
+      "titles": {
+        "key": "CharacterData_nameKey-257dc8e4ad101d1b-6cfd716ef6cdf6d46b48d23b4441100c-v2",
+        "english": "Nameless Siren",
+        "french": "Sirène sans nom",
+        "german": "Namenlose Sirene",
+        "russian": "Безымянная сирена",
+        "portuguese": "Sereia Inominada",
+        "chinese": "无名海妖",
+        "spanish": "Sirena sin nombre",
+        "chinese_traditional": "無名海妖",
+        "korean": "이름 없는 사이렌",
+        "japanese": "名もなきセイレーン"
+      },
+      "descriptions": {
+        "key": "CardUpgradeData_upgradeDescriptionKey-84f3220e05c25369-365b7e4c4191cd54e8340e9147d79c70-v2",
+        "english": "+5[attack] and '[incant]: Gain [rage] 1.'",
+        "french": "+5[attack] et '<b>Incantation</b> : Octroie <b>Rage</b> 1.'",
+        "german": "+5[attack] und „<b>Verzauberung</b>: Erhalte 1 <b>Wut</b>.“",
+        "russian": "+5[attack] и «<b>Мантра</b>: дает 1 <b>ярости</b>».",
+        "portuguese": "+5 de [attack] e <b>Entoar</b>: receba <b>Fúria</b> 1.",
+        "chinese": "+5[attack]，'[incant]：获得[rage] 1。'"
+      },
+      "trigger_upgrades": [
+        "@MonsterEnlightenedSirenSynthesis.triggerUpgrades0"
+      ],
+      "hide_icon_on_card": true, "show_description_on_cards": false,
+      "bonus_damage": 5
+    }
+  ],
+  "effects": [
+    {
+      "id": "MonsterEnlightenedSirenSynthesis.triggerUpgrades0.effects0",
+      "name": "CardEffectAddStatusEffect",
+      "target_mode": "self",
+      "param_status_effects": [
+        {
+          "status": "buff",
+          "count": 1
+        }
+      ]
+    }
+  ],
+  "character_triggers": [
+    {
+      
+      "id": "MonsterEnlightenedSirenSynthesis.triggerUpgrades0",
+      "descriptions": {
+        "key": "CardUpgradeData_descriptionKey-2a4c12f360da75fb-365b7e4c4191cd54e8340e9147d79c70-v2",
+        "english": "Gain [rage] [effect0.status0.power].",
+        "french": "Octroie <b>Rage</b> [effect0.status0.power].",
+        "german": "Erhalte [effect0.status0.power] <b>Wut</b>.",
+        "russian": "Дает [effect0.status0.power] <b>ярости</b>.",
+        "portuguese": "Receba <b>Fúria</b> [effect0.status0.power].",
+        "chinese": "获得[rage] [effect0.status0.power]。"
+      },
+      "trigger": "card_spell_played",
+      "effects": [
+        "@MonsterEnlightenedSirenSynthesis.triggerUpgrades0.effects0"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "$schema": "https://github.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/releases/latest/download/schema.json",
+  "essences": [
+    {
+      "character": "WicklessTycoon",
+      "upgrade": "@WicklessTycoonSynthesis"
+    }
+  ],
+  "upgrades": [
+    {
+      "id": "WicklessTycoonSynthesis",
+      "titles": {
+        "key": "CharacterData_nameKey-501d4b9cb7035256-d72003bdcddf847408c7e2636a6ce623-v2",
+        "english": "Wickless Tycoon",
+        "french": "Magnat sans-mèche",
+        "german": "Dochtloser Tycoon",
+        "russian": "Магнат Безфитильник",
+        "portuguese": "Empreendedor Despaviado",
+        "chinese": "无芯大亨",
+        "spanish": "Magnate sin mecha",
+        "chinese_traditional": "無芯者富豪",
+        "korean": "거물급 심지 없는 자",
+        "japanese": "ウィックレス・タイクーン"
+      },
+      "descriptions": {
+        "key": "CardUpgradeData_upgradeDescriptionKey-fb4f49160d04fd51-f881edad80b163b4d86ec1c307c5455f-v2",
+        "english": "+5[attack], +10[health], and '[harvest]: Gain 5[coin].'",
+        "french": "+5[attack], +10[health] et '<b>Récolte</b> : Octroie 5[coin].'",
+        "german": "+5[attack], +10[health] und „<b>Ernte</b>: Erhalte 5[coin].“",
+        "russian": "+5[attack], +10[health] и «<b>Урожай</b>: дает 5[coin]».",
+        "portuguese": "+5 de [attack], +10 de [health] e <b>Colheita</b>: receba 5 [coin].",
+        "chinese": "+5[attack]，+10[health]，'[harvest]：获得 5[coin]。'"
+      },
+      "trigger_upgrades": [
+        "@WicklessTycoonSynthesis.triggerUpgrades0"
+      ],
+      "hide_icon_on_card": true, "show_description_on_cards": false,
+      "bonus_damage": 5,
+      "bonus_hp": 10
+    }
+  ],
+  "effects": [
+    {
+      "id": "WicklessTycoonSynthesis.triggerUpgrades0.effects0",
+      "name": "CardEffectRewardGold",
+      "param_int": 5
+    }
+  ],
+  "character_triggers": [
+    {
+      
+      "id": "WicklessTycoonSynthesis.triggerUpgrades0",
+      "descriptions": {
+        "key": "CardUpgradeData_descriptionKey-49d4d145d0bd5672-f881edad80b163b4d86ec1c307c5455f-v2",
+        "english": "Gain [effect0.power][coin].",
+        "french": "Octroie [effect0.power][coin].",
+        "german": "Erhalte [effect0.power][coin].",
+        "russian": "Дает [effect0.power][coin].",
+        "portuguese": "Receba [effect0.power] [coin].",
+        "chinese": "获得 [effect0.power][coin]。"
+      },
+      "trigger": "on_any_unit_death_on_floor",
+      "effects": [
+        "@WicklessTycoonSynthesis.triggerUpgrades0.effects0"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "$schema": "https://github.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/releases/latest/download/schema.json",
+  "essences": [
+    {
+      "character": "Railbeater",
+      "upgrade": "@RailbeaterSynthesis"
+    }
+  ],
+  "upgrades": [
+    {
+      "id": "RailbeaterSynthesis",
+      "titles": {
+        "key": "CharacterData_nameKey-b466fb1221595497-207bc586be04f2f40b7d1660dfcdb4ea-v2",
+        "english": "Railbeater",
+        "french": "Marterail",
+        "german": "Gleishämmerer",
+        "russian": "Укладчик",
+        "portuguese": "Trilhador",
+        "chinese": "锻铁者",
+        "spanish": "Clavarraíles",
+        "chinese_traditional": "軌道擊打者",
+        "korean": "선로 파괴자",
+        "japanese": "レイルビーター"
+      },
+      "descriptions": {
+        "key": "CardUpgradeData_upgradeDescriptionKey-07202cf9eb621562-50cb816590012a74fb43ade5db597fcd-v2",
+        "english": "[armor] 30.",
+        "french": "<b>Armure</b> 30.",
+        "german": "30 <b>Rüstung</b>.",
+        "russian": "30 <b>брони</b>.",
+        "portuguese": "<b>Armadura</b> 30.",
+        "chinese": "[armor] 30。"
+      },
+      "status_effect_upgrades": [
+        {
+          "status": "armor",
+          "count": 30
+        }
+      ],
+      "hide_icon_on_card": true, "show_description_on_cards": false
+    }
+  ]
+}

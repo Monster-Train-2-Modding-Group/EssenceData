@@ -1,0 +1,68 @@
+{
+  "$schema": "https://github.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/releases/latest/download/schema.json",
+  "essences": [
+    {
+      "character": "MonsterDeathEater",
+      "upgrade": "@MonsterDeathEaterSynthesis"
+    }
+  ],
+  "upgrades": [
+    {
+      "id": "MonsterDeathEaterSynthesis",
+      "titles": {
+        "key": "CharacterData_nameKey-d06e49cad2006d23-c5fb54b6c2cb6b44eb87dd468e302e7b-v2",
+        "english": "Devourer of Death",
+        "french": "Dévoreur de mort",
+        "german": "Todestilger",
+        "russian": "Пожиратель смерти",
+        "portuguese": "Devorador da Morte",
+        "chinese": "死亡吞没者",
+        "spanish": "Devorador de muerte",
+        "chinese_traditional": "死亡吞噬者",
+        "korean": "죽음의 파괴자",
+        "japanese": "死を貪る者"
+      },
+      "descriptions": {
+        "key": "CardUpgradeData_upgradeDescriptionKey-d9f2150129ce299f-81c7b5bca3f45714789eba59da07100e-v2",
+        "english": "[extinguish]: Deal 15 damage to enemy units.",
+        "french": "<b>Extinction</b> : Inflige 15 dégâts aux unités ennemies.",
+        "german": "<b>Erlöschen</b>: Füge gegnerischen Einheiten 15 Schaden zu.",
+        "russian": "<b>Угасание</b>: наносит 15 урона вражеским бойцам.",
+        "portuguese": "<b>Extinguir</b>: causa 15 de dano às unidades inimigas.",
+        "chinese": "[extinguish]：对所有敌方单位造成 15 点伤害。"
+      },
+      "trigger_upgrades": [
+        "@MonsterDeathEaterSynthesis.triggerUpgrades0"
+      ],
+      "hide_icon_on_card": true, "show_description_on_cards": false
+    }
+  ],
+  "effects": [
+    {
+      "id": "MonsterDeathEaterSynthesis.triggerUpgrades0.effects0",
+      "name": "CardEffectDamage",
+      "target_mode": "room",
+      "target_team": "heroes",
+      "param_int": 15
+    }
+  ],
+  "character_triggers": [
+    {
+      
+      "id": "MonsterDeathEaterSynthesis.triggerUpgrades0",
+      "descriptions": {
+        "key": "CardUpgradeData_descriptionKey-743cf35ede84d97c-81c7b5bca3f45714789eba59da07100e-v2",
+        "english": "Deal 15 damage to enemy units.",
+        "french": "Inflige 15 dégâts aux unités ennemies.",
+        "german": "Füge gegnerischen Einheiten 15 Schaden zu.",
+        "russian": "Наносит 15 урона вражеским бойцам.",
+        "portuguese": "Causa 15 de dano às unidades inimigas.",
+        "chinese": "对所有敌方单位造成 15 点伤害。"
+      },
+      "trigger": "on_death",
+      "effects": [
+        "@MonsterDeathEaterSynthesis.triggerUpgrades0.effects0"
+      ]
+    }
+  ]
+}

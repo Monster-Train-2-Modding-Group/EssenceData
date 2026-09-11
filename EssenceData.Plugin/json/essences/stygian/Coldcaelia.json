@@ -1,0 +1,74 @@
+{
+  "$schema": "https://github.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/releases/latest/download/schema.json",
+  "essences": [
+    {
+      "character": "MonsterColdstingSiren",
+      "upgrade": "@MonsterColdstingSirenSynthesis"
+    }
+  ],
+  "upgrades": [
+    {
+      "id": "MonsterColdstingSirenSynthesis",
+      "titles": {
+        "key": "CharacterData_nameKey-bea799cc72bdddd1-4662d8efeb786184986f83a6da8d07e7-v2",
+        "english": "Coldcaelia",
+        "french": "Caelia de glace",
+        "german": "Kalcelia",
+        "russian": "Ледяная силия",
+        "portuguese": "Gelaelia",
+        "chinese": "寒流",
+        "spanish": "Caelia gélida",
+        "chinese_traditional": "寒凱利亞",
+        "korean": "콜드 카엘리아",
+        "japanese": "コールドカエリア"
+      },
+      "descriptions": {
+        "key": "CardUpgradeData_upgradeDescriptionKey-d366cda86fae32ba-b030925b7ff30f642b4a72b5e8f8afa4-v2",
+        "english": "+10[health] and '[strike]: Apply [frostbite] 3 to the attacked unit.'",
+        "french": "+10[health] et <b>Frappe</b> : inflige <b>Gelure</b> 3 à l'unité attaquée.",
+        "german": "+10[health] und „<b>Angriff</b>: Wende 3 <b>Frostschaden</b> auf die angegriffene Einheit an.“",
+        "russian": "+10[health] и «<b>Выпад</b>: накладывает 3 <b>обморожения</b> на атакованного бойца».",
+        "portuguese": "+10 de [health] e <b>Golpe</b>: aplica <b>Friagem</b> 3 à unidade atacada.'",
+        "chinese": "+10[health]，'[strike]：对被攻击的单位施加[frostbite] 3。"
+      },
+      "trigger_upgrades": [
+        "@MonsterColdstingSirenSynthesis.triggerUpgrades0"
+      ],
+      "hide_icon_on_card": true, "show_description_on_cards": false,
+      "bonus_hp": 10
+    }
+  ],
+  "effects": [
+    {
+      "id": "MonsterColdstingSirenSynthesis.triggerUpgrades0.effects0",
+      "name": "CardEffectAddStatusEffect",
+      "target_mode": "last_attacked_character",
+      "target_team": "heroes",
+      "param_status_effects": [
+        {
+          "status": "poison",
+          "count": 3
+        }
+      ]
+    }
+  ],
+  "character_triggers": [
+    {
+      
+      "id": "MonsterColdstingSirenSynthesis.triggerUpgrades0",
+      "descriptions": {
+        "key": "CardUpgradeData_descriptionKey-41a70578c81dcecd-b030925b7ff30f642b4a72b5e8f8afa4-v2",
+        "english": "Apply [frostbite] [effect0.status0.power] to the attacked unit.",
+        "french": "Inflige <b>Gelure</b> [effect0.status0.power] à l'unité attaquée.",
+        "german": "Wende [effect0.status0.power] <b>Frostschaden</b> auf die angegriffene Einheit an.",
+        "russian": "Накладывает [effect0.status0.power] <b>обморожения</b> на атакованного бойца.",
+        "portuguese": "Aplica <b>Friagem</b> [effect0.status0.power] à unidade atacada.",
+        "chinese": "对被攻击的单位施加[frostbite] [effect0.status0.power]。"
+      },
+      "trigger": "on_attacking",
+      "effects": [
+        "@MonsterColdstingSirenSynthesis.triggerUpgrades0.effects0"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "$schema": "https://github.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/releases/latest/download/schema.json",
+  "essences": [
+    {
+      "character": "MonsterEpicure",
+      "upgrade": "@MonsterEpicureSynthesis"
+    }
+  ],
+  "upgrades": [
+    {
+      "id": "MonsterEpicureSynthesis",
+      "titles": {
+        "key": "CharacterData_nameKey-4f4770de4b96da00-140f50614a678a94c8f80092cc660fa5-v2",
+        "english": "Overgorger",
+        "french": "Goinfre boulimique",
+        "german": "Unersättlicher Gierschlund",
+        "russian": "Великий пожиратель",
+        "portuguese": "Guloso",
+        "chinese": "狂食者",
+        "spanish": "Insaciable",
+        "chinese_traditional": "暴虐吞噬者",
+        "korean": "폭식자",
+        "japanese": "オーバーゴージャー"
+      },
+      "descriptions": {
+        "key": "CardUpgradeData_upgradeDescriptionKey-20e2d9e90243dffa-ab633614e4fc57c4ba28c769b882adc1-v2",
+        "english": "+10[health] and '[feed]: +1[attack] permanently.'",
+        "french": "+10[health] et '<b>Gavage</b> : +1[attack] de façon permanente.'",
+        "german": "+10[health] und „<b>Sättigung</b>: Permanent +1[attack].“",
+        "russian": "+10[health] и «<b>Обжорство</b>: +1[attack] навсегда».",
+        "portuguese": "+10 de [health] e <b>Traçar</b>: +1 de [attack] permanentemente.",
+        "chinese": "+10[health]，'[feed]：永久获得 +1[attack]。'"
+      },
+      "card_trigger_upgrades": [
+        "@MonsterEpicureSynthesis.cardTriggerUpgrades0"
+      ],
+      "hide_icon_on_card": true, "show_description_on_cards": false,
+      "bonus_hp": 10
+    }
+  ],
+  "card_triggers": [
+    {
+      "id": "MonsterEpicureSynthesis.cardTriggerUpgrades0",
+      "descriptions": {
+        "key": "CardUpgradeData_descriptionKey-b00b305a2bab72ed-ab633614e4fc57c4ba28c769b882adc1-v2",
+        "english": "+1[attack] permanently.",
+        "french": "+1[attack] de façon permanente.",
+        "german": "Permanent +1[attack].",
+        "russian": "+1[attack] навсегда.",
+        "portuguese": "+1 de [attack] permanentemente.",
+        "chinese": "永久获得 +1[attack]。"
+      },
+      "trigger": "on_feed",
+      "trigger_effects": [
+        {
+          "persistence_mode": "single_run",
+          "trigger_effect": "CardTriggerEffectBuffCharacterDamage",
+          "param_int": 1
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,67 @@
+{
+  "$schema": "https://github.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/releases/latest/download/schema.json",
+  "essences": [
+    {
+      "character": "ParaffinThug",
+      "upgrade": "@ParaffinThugSynthesis"
+    }
+  ],
+  "upgrades": [
+    {
+      "id": "ParaffinThugSynthesis",
+      "titles": {
+        "key": "CharacterData_nameKey-76485405abeb1780-97fcbe42d1869a847932661b8dbf43d2-v2",
+        "english": "Paraffin Thug",
+        "french": "Brute de paraffine",
+        "german": "Paraffin-Schläger",
+        "russian": "Парафиновый головорез",
+        "portuguese": "Capanga Parafina",
+        "chinese": "石蜡暴徒",
+        "spanish": "Matón de parafina",
+        "chinese_traditional": "石蠟暴徒",
+        "korean": "파라핀 암살단",
+        "japanese": "パラフィン・サグ"
+      },
+      "descriptions": {
+        "key": "CardUpgradeData_upgradeDescriptionKey-38cec9d0688ae966-4a7cfd85a3e7d374c8a2c3e6ad95b501-v2",
+        "english": "+10[attack] and '[slay]: Gain 10[coin].'",
+        "french": "+10[attack] et '<b>Élimination</b> : Octroie 10[coin].'",
+        "german": "+10[attack] und „<b>Besiegen</b>: Erhalte 10[coin].“",
+        "russian": "+10[attack] и «<b>Убийство</b>: дает 10[coin]».",
+        "portuguese": "A unidade aprimorada receberá +10 de [attack] e <b>Abater</b>: receba 10 [coin].",
+        "chinese": "+10[attack]，'[slay]：获得 10[coin]。'"
+      },
+      "trigger_upgrades": [
+        "@ParaffinThugSynthesis.triggerUpgrades0"
+      ],
+      "hide_icon_on_card": true, "show_description_on_cards": false,
+      "bonus_damage": 10
+    }
+  ],
+  "effects": [
+    {
+      "id": "ParaffinThugSynthesis.triggerUpgrades0.effects0",
+      "name": "CardEffectRewardGold",
+      "param_int": 10
+    }
+  ],
+  "character_triggers": [
+    {
+      
+      "id": "ParaffinThugSynthesis.triggerUpgrades0",
+      "descriptions": {
+        "key": "CardUpgradeData_descriptionKey-64ec46cca6004a9a-4a7cfd85a3e7d374c8a2c3e6ad95b501-v2",
+        "english": "Gain [effect0.power][coin].",
+        "french": "Octroie [effect0.power][coin].",
+        "german": "Erhalte [effect0.power][coin].",
+        "russian": "Дает [effect0.power][coin].",
+        "portuguese": "Receba [effect0.power] [coin].",
+        "chinese": "获得 [effect0.power][coin]。"
+      },
+      "trigger": "on_kill",
+      "effects": [
+        "@ParaffinThugSynthesis.triggerUpgrades0.effects0"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,73 @@
+{
+  "$schema": "https://github.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/releases/latest/download/schema.json",
+  "essences": [
+    {
+      "character": "MonsterChaosBasic",
+      "upgrade": "@MonsterChaosBasicSynthesis"
+    }
+  ],
+  "upgrades": [
+    {
+      "id": "MonsterChaosBasicSynthesis",
+      "titles": {
+        "key": "CharacterData_nameKey-299a287205950208-c4afac1bf1d093a4f871cf7eb20d5f2b-v2",
+        "english": "Branded Warrior",
+        "french": "Guerrier marqué",
+        "german": "Gebrandmarkter Krieger",
+        "russian": "Клейменый воин",
+        "portuguese": "Guerreiro Marcado",
+        "chinese": "烙印武士",
+        "spanish": "Guerrero marcado",
+        "chinese_traditional": "烙印戰士",
+        "korean": "낙인 찍힌 전사",
+        "japanese": "烙印の戦士"
+      },
+      "descriptions": {
+        "key": "CardUpgradeData_upgradeDescriptionKey-263c09d98c45d766-9398798a569ab5c44a94ff87b92aedcd-v2",
+        "english": "[slay]: Apply [rage] 3 to friendly units.",
+        "french": "<b>Élimination</b> : Confère <b>Rage</b> 3 aux unités alliées.",
+        "german": "<b>Besiegen</b>: Wende 3 <b>Wut</b> auf verbündete Einheiten an.",
+        "russian": "<b>Убийство</b>: дает союзникам три <b>ярости</b>.",
+        "portuguese": "<b>Abater</b>: concede <b>Fúria</b> 3 às unidades aliadas.",
+        "chinese": "[slay]：使友方单位获得[rage] 3。"
+      },
+      "trigger_upgrades": [
+        "@MonsterChaosBasicSynthesis.triggerUpgrades0"
+      ],
+      "hide_icon_on_card": true, "show_description_on_cards": false
+    }
+  ],
+  "effects": [
+    {
+      "id": "MonsterChaosBasicSynthesis.triggerUpgrades0.effects0",
+      "name": "CardEffectAddStatusEffect",
+      "target_mode": "room",
+      "target_team": "monsters",
+      "param_status_effects": [
+        {
+          "status": "buff",
+          "count": 3
+        }
+      ]
+    }
+  ],
+  "character_triggers": [
+    {
+      
+      "id": "MonsterChaosBasicSynthesis.triggerUpgrades0",
+      "descriptions": {
+        "key": "CardUpgradeData_descriptionKey-4786a16037afd7de-9398798a569ab5c44a94ff87b92aedcd-v2",
+        "english": "Apply [rage] 3 to friendly units.",
+        "french": "Confère <b>Rage</b> 3 aux unités alliées.",
+        "german": "Wende 3 <b>Wut</b> auf verbündete Einheiten an.",
+        "russian": "Дает союзникам три <b>ярости</b>.",
+        "portuguese": "Concede <b>Fúria</b> 3 às unidades aliadas.",
+        "chinese": "使友方单位获得[rage] 3。"
+      },
+      "trigger": "on_kill",
+      "effects": [
+        "@MonsterChaosBasicSynthesis.triggerUpgrades0.effects0"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,67 @@
+{
+  "$schema": "https://github.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/releases/latest/download/schema.json",
+  "essences": [
+    {
+      "character": "MonsterKinhostPupa",
+      "upgrade": "@MonsterKinhostPupaSynthesis"
+    }
+  ],
+  "upgrades": [
+    {
+      "id": "MonsterKinhostPupaSynthesis",
+      "descriptions": {
+        "key": "CardUpgradeData_upgradeDescriptionKey-1d952ede12bce2ee-e5ba36e9c72efe94e954be18e7777f4c-v2",
+        "english": "[armor] 10 and '[strike]: Apply [corruptpoison] 1 to enemy units.'",
+        "french": "<b>Armure</b> 10 et '<b>Frappe</b> : Inflige <b>Fauchage</b> 1 aux unités ennemies.'",
+        "german": "10 <b>Rüstung</b> und „<b>Angriff</b>: Wende 1 <b>Schnitter</b> auf gegnerische Einheiten an.“",
+        "russian": "10 <b>брони</b> и «<b>Выпад</b>: накладывает на вражеских бойцов заряд <b>жнеца</b>».",
+        "portuguese": "<b>Armadura</b> 10 e <b> Golpe</b>: aplica <b>Ceifar</b> 1 às unidades inimigas.",
+        "chinese": "[armor] 10，'[strike]：对所有敌方单位施加[corruptpoison] 1。'"
+      },
+      "status_effect_upgrades": [
+        {
+          "status": "armor",
+          "count": 10
+        }
+      ],
+      "trigger_upgrades": [
+        "@MonsterKinhostPupaSynthesis.triggerUpgrades0"
+      ],
+      "hide_icon_on_card": true,
+      "show_description_on_cards": false
+    }
+  ],
+  "effects": [
+    {
+      "id": "MonsterKinhostPupaSynthesis.triggerUpgrades0.effects0",
+      "name": "CardEffectAddStatusEffect",
+      "target_mode": "room",
+      "target_team": "heroes",
+      "param_status_effects": [
+        {
+          "status": "corrupt_poison",
+          "count": 1
+        }
+      ]
+    }
+  ],
+  "character_triggers": [
+    {
+
+      "id": "MonsterKinhostPupaSynthesis.triggerUpgrades0",
+      "descriptions": {
+        "key": "CardUpgradeData_descriptionKey-268b2420b42d4628-e5ba36e9c72efe94e954be18e7777f4c-v2",
+        "english": "Apply [corruptpoison] 1 to enemy units.",
+        "french": "Inflige <b>Fauchage</b> 1 aux unités ennemies.",
+        "german": "Wende 1 <b>Schnitter</b> auf gegnerische Einheiten an.",
+        "russian": "Накладывает на вражеских бойцов 1 <b>жнеца</b>.",
+        "portuguese": "Aplica <b>Ceifar</b> 1 às unidades inimigas.",
+        "chinese": "对所有敌方单位施加[corruptpoison] 1。"
+      },
+      "trigger": "on_attacking",
+      "effects": [
+        "@MonsterKinhostPupaSynthesis.triggerUpgrades0.effects0"
+      ]
+    }
+  ]
+}

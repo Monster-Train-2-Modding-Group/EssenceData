@@ -1,0 +1,47 @@
+{
+  "$schema": "https://github.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/releases/latest/download/schema.json",
+  "essences": [
+    {
+      "character": "BasicDemon",
+      "upgrade": "@BasicDemonSynthesis"
+    }
+  ],
+  "upgrades": [
+    {
+      "id": "BasicDemonSynthesis",
+      "titles": {
+        "key": "CharacterData_nameKey-9d6e56362af844e9-2bdf15d54745dde4dbeb851405ec4342-v2",
+        "english": "Horned Warrior",
+        "french": "Guerrier à cornes",
+        "german": "Gehörnter Krieger",
+        "russian": "Рогатый воин",
+        "portuguese": "Guerreiro Chifrudo",
+        "chinese": "长角武士",
+        "spanish": "Guerrero Astado",
+        "chinese_traditional": "煉獄族戰士",
+        "korean": "뿔 달린 전사",
+        "japanese": "ホーン・ウォリアー"
+      },
+      "descriptions": {
+        "key": "CardUpgradeData_upgradeDescriptionKey-022eca5e2456842e-8e835c57c575647469b3b31e3393dfd0-v2",
+        "english": "[multistrike] 1 and [fragile].",
+        "french": "<b>Frappe multiple</b> 1 et <b>Fragilité</b>.",
+        "german": "1 <b>Multischlag</b> und <b>Fragil</b>.",
+        "russian": "<b>Мультиудар</b> и <b>хрупкость</b>.",
+        "portuguese": "<b>Golpe Múltiplo</b> 1 e <b>Frágil</b>.",
+        "chinese": "[multistrike] 1，[fragile]。"
+      },
+      "status_effect_upgrades": [
+        {
+          "status": "multistrike",
+          "count": 1
+        },
+        {
+          "status": "fragile",
+          "count": 1
+        }
+      ],
+      "hide_icon_on_card": true, "show_description_on_cards": false
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "$schema": "https://github.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/releases/latest/download/schema.json",
+  "essences": [
+    {
+      "character": "MonsterBogdeepCocoon",
+      "upgrade": "@MonsterBogdeepCocoonSynthesis"
+    }
+  ],
+  "upgrades": [
+    {
+      "id": "MonsterBogdeepCocoonSynthesis",
+      "titles": {
+        "key": "CharacterData_nameKey-e76268dab3f00261-0e426e2c2b599dc4ab62b7e24310d2da-v2",
+        "english": "Bogdeep Cocoon",
+        "french": "Cocon des fonds marais",
+        "german": "Sumpftiefe-Kokon",
+        "russian": "Болотный кокон",
+        "portuguese": "Casulo do Brejofundo",
+        "chinese": "深沼虫茧",
+        "spanish": "Pupa del cenagal",
+        "chinese_traditional": "沼澤深處蛹",
+        "korean": "늪바닥 고치",
+        "japanese": "ボグディープ・コクーン"
+      },
+      "descriptions": {
+        "key": "CardUpgradeData_upgradeDescriptionKey-445b8af41612f102-56ca2607a40557244ac1601f7b589c65-v2",
+        "english": "+20[attack], +10[health], +1[size], and [trample].",
+        "french": "+20[attack], +10[health], +1[size] et <b>Piétinement</b>.",
+        "german": "+20[attack], +10[health], +1[size] und <b>Trampelschaden</b>.",
+        "russian": "+20[attack], +10[health], +1[size] и <b>сминание</b>.",
+        "portuguese": "+20 de [attack], +10 de [health], +1 de [size] e <b>Atropelar</b>.",
+        "chinese": "+20[attack]，+10[health]，+1[size]，[trample]。"
+      },
+      "status_effect_upgrades": [
+        {
+          "status": "trample",
+          "count": 1
+        }
+      ],
+      "hide_icon_on_card": true, "show_description_on_cards": false,
+      "bonus_damage": 20,
+      "bonus_hp": 10,
+      "bonus_size": 1
+    }
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "$schema": "https://github.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/releases/latest/download/schema.json",
+  "localization_terms": [
+    {
+      "key": "UnitSynthesisRewardData_rewardTitleKey",
+      "texts": {
+        "english": "Engage Pact",
+        "french": "Pacte d'engagement",
+        "german": "Pakt akzeptieren",
+        "russian": "Воспользоваться Пактом",
+        "portuguese": "Pacto de Engajamento",
+        "chinese": "立下契约"
+      }
+    },
+    {
+      "key": "UnitSynthesisRewardData_rewardDescriptionKey",
+      "texts": {
+        "english": "Sacrifice a unit to infuse its essence into another unit.",
+        "french": "Sacrifiez une unité pour imprégner une autre unité de son essence.",
+        "german": "Opfere eine Einheit, um eine andere Einheit mit ihrer Essenz zu beseelen.",
+        "russian": "Пожертвуйте бойца, чтобы передать его эссенцию другому бойцу.",
+        "portuguese": "Sacrifique uma unidade para infundir sua essência em outra unidade.",
+        "chinese": "牺牲一个单位以将其精华注入另一个单位。"
+      }
+    },
+    {
+      "key": "UnitSynthesisRewardData_purgeTitleKey",
+      "texts": {
+        "english": "Select a unit to sacrifice.",
+        "french": "Choisissez une unité à sacrifier.",
+        "german": "Wähle eine Einheit zum Opfern aus.",
+        "russian": "Выберите бойца, чтобы принести его в жертву.",
+        "portuguese": "Selecione uma unidade para sacrificar.",
+        "chinese": "选择要牺牲的单位。"
+      }
+    },
+    {
+      "key": "UnitSynthesisRewardData_upgradeUnitTitleKey",
+      "texts": {
+        "english": "Select a unit to enhance with {0}",
+        "french": "Choisissez une unité à améliorer avec {0}",
+        "german": "Wähle eine Einheit aus, die mit '{0}' aufgewertet werden soll.",
+        "russian": "Выберите бойца для улучшения с помощью {0}",
+        "portuguese": "Selecione uma unidade para aprimorar com {0}",
+        "chinese": "选择要使用 {0} 强化的单位。"
+      }
+    }
+  ],
+  "upgrade_masks": [
+    {
+      "id": "HasBeenFused",
+      "card_type": "monster",
+      "excluded_traits": [
+        "@CardTraitFused"
+      ],
+      "excluded_subtypes": [
+        "SubtypesData_Champion_83f21cbe-9d9b-4566-a2c3-ca559ab8ff34"
+      ]
+    }
+  ],
+  "upgrades": [
+    {
+      "id": "Fusion",
+      "trait_upgrades": [
+        "@Fused"
+      ]
+    }
+  ],
+  "traits": [
+    {
+      "id": "Fused",
+      "name": "@CardTraitFused"
+    }
+  ]
+}

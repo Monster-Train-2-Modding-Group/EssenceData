@@ -1,0 +1,68 @@
+{
+  "$schema": "https://github.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/releases/latest/download/schema.json",
+  "essences": [
+    {
+      "character": "RemnantHost",
+      "upgrade": "@RemnantHostSynthesis"
+    }
+  ],
+  "upgrades": [
+    {
+      "id": "RemnantHostSynthesis",
+      "titles": {
+        "key": "CharacterData_nameKey-257590e80c9ae749-23caaea7ff575224bb27ebc4d40ec2b5-v2",
+        "english": "Remnant Host",
+        "french": "Hôte éphémérien",
+        "german": "Relikt-Wirt",
+        "russian": "Огарковый носитель",
+        "portuguese": "Hóspede Resquício",
+        "chinese": "宿主残渣",
+        "spanish": "Anfitrión vestigial",
+        "chinese_traditional": "殘餘宿主",
+        "korean": "잔존자의 숙주",
+        "japanese": "レムナント・ホスト"
+      },
+      "descriptions": {
+        "key": "CardUpgradeData_upgradeDescriptionKey-fbc3e4aa73bff41d-a71bc4c61a269e5449b1fbe91212c587-v2",
+        "english": "[extinguish]: Summon 2 <b>Draff</b> units.",
+        "french": "<b>Extinction</b> : Invoque 2 <b>drêches</b>.",
+        "german": "<b>Erlöschen</b>: Rufe 2 <b>Harzwachser</b>-Einheiten.",
+        "russian": "<b>Угасание</b>: призывает двух бойцов из <b>Отходов</b>.",
+        "portuguese": "<b>Extinguir</b>: invoca 2 <b>Acerados</b>.",
+        "chinese": "[extinguish]：召唤 2 个<b>重塑烛人</b>单位。"
+      },
+      "trigger_upgrades": [
+        "@RemnantHostSynthesis.triggerUpgrades0"
+      ],
+      "hide_icon_on_card": true, "show_description_on_cards": false
+    }
+  ],
+  "effects": [
+    {
+      "id": "RemnantHostSynthesis.triggerUpgrades0.effects0",
+      "name": "CardEffectSpawnMonster",
+      "param_int": 2,
+      "param_bool": true,
+      "param_character": "Draff"
+    }
+  ],
+  "character_triggers": [
+    {
+      
+      "id": "RemnantHostSynthesis.triggerUpgrades0",
+      "descriptions": {
+        "key": "CardUpgradeData_descriptionKey-0e9f324ca7ef61b1-a71bc4c61a269e5449b1fbe91212c587-v2",
+        "english": "Summon 2 <b>Draff</b> units.",
+        "french": "Invoque 2 <b>drêches</b>.",
+        "german": "Rufe 2 <b>Harzwachser</b>-Einheiten.",
+        "russian": "Призывает 2 бойцов из <b>Отходов</b>.",
+        "portuguese": "Invoca 2 <b>Acerados</b>.",
+        "chinese": "召唤 2 个<b>重塑烛人</b>单位。"
+      },
+      "trigger": "on_death",
+      "effects": [
+        "@RemnantHostSynthesis.triggerUpgrades0.effects0"
+      ]
+    }
+  ]
+}

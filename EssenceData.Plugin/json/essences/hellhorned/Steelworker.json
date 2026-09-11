@@ -1,0 +1,74 @@
+{
+  "$schema": "https://github.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/releases/latest/download/schema.json",
+  "essences": [
+    {
+      "character": "Steelworker",
+      "upgrade": "@SteelworkerSynthesis"
+    }
+  ],
+  "upgrades": [
+    {
+      "id": "SteelworkerSynthesis",
+      "titles": {
+        "key": "CharacterData_nameKey-ad85f089c4b7fd31-0dbdfbcc89073344f9b0402c959eacd6-v2",
+        "english": "Steelworker",
+        "french": "Sidérurgiste",
+        "german": "Stahlwerker",
+        "russian": "Сталевар",
+        "portuguese": "Ferreiro",
+        "chinese": "锻铁工人",
+        "spanish": "Siderúrgico",
+        "chinese_traditional": "鋼鐵工人",
+        "korean": "강철공",
+        "japanese": "スティールワーカー"
+      },
+      "descriptions": {
+        "key": "CardUpgradeData_upgradeDescriptionKey-7ebad9c118fa11ce-be54e38a41f5a4542a1f6a3024d3faa7-v2",
+        "english": "[resolve]: Apply [armor] 5 to friendly units.",
+        "french": "<b>Résolution</b> : Confère <b>Armure</b> 5 aux unités alliées.",
+        "german": "<b>Verrechnen</b>: Wende 5 <b>Rüstung</b> auf verbündete Einheiten an.",
+        "russian": "<b>Решимость</b>: дает союзникам 5 <b>брони</b>.",
+        "portuguese": "<b>Resolução</b>: concede <b>Armadura</b> 5 às unidades aliadas.",
+        "chinese": "[resolve]：使友方单位获得[armor] 5。"
+      },
+      "trigger_upgrades": [
+        "@SteelworkerSynthesis.triggerUpgrades0"
+      ],
+      "hide_icon_on_card": true, "show_description_on_cards": false
+    }
+  ],
+  "effects": [
+    {
+      "id": "SteelworkerSynthesis.triggerUpgrades0.effects0",
+      "name": "CardEffectAddStatusEffect",
+      "target_mode": "room",
+      "target_team": "monsters",
+      "param_status_effects": [
+        {
+          "status": "armor",
+          "count": 5
+        }
+      ],
+      "param_int": 100
+    }
+  ],
+  "character_triggers": [
+    {
+      
+      "id": "SteelworkerSynthesis.triggerUpgrades0",
+      "descriptions": {
+        "key": "CardUpgradeData_descriptionKey-5b14abd57410e2f3-be54e38a41f5a4542a1f6a3024d3faa7-v2",
+        "english": "Apply [armor] [effect0.status0.power] to friendly units.",
+        "french": "Confère <b>Armure</b> [effect0.status0.power] aux unités alliées.",
+        "german": "Wende [effect0.status0.power] <b>Rüstung</b> auf verbündete Einheiten an.",
+        "russian": "Дает союзникам [effect0.status0.power] <b>брони</b>.",
+        "portuguese": "Concede <b>Armadura</b> [effect0.status0.power] às unidades aliadas.",
+        "chinese": "所有友方单位获得[armor] [effect0.status0.power]。"
+      },
+      "trigger": "post_combat",
+      "effects": [
+        "@SteelworkerSynthesis.triggerUpgrades0.effects0"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "$schema": "https://github.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/releases/latest/download/schema.json",
+  "essences": [
+    {
+      "character": "WicklessBaron",
+      "upgrade": "@WicklessBaronSynthesis"
+    }
+  ],
+  "upgrades": [
+    {
+      "id": "WicklessBaronSynthesis",
+      "titles": {
+        "key": "CharacterData_nameKey-837d46c859c1aa30-82836a82286061a4aa74ea48a84ddb78-v2",
+        "english": "Wickless Baron",
+        "french": "Baron sans-mèche",
+        "german": "Dochtloser Baron",
+        "russian": "Барон Безфитильник",
+        "portuguese": "Barão Despaviado",
+        "chinese": "无芯男爵",
+        "spanish": "Barón sin mecha",
+        "chinese_traditional": "無芯者男爵",
+        "korean": "심지 없는 남작",
+        "japanese": "ウィックレス男爵"
+      },
+      "descriptions": {
+        "key": "CardUpgradeData_upgradeDescriptionKey-41d82cb80c6c2882-e1214798973c0624880ae39110a3cc6f-v2",
+        "english": "[harvest]: +2[attack] and +2[health].",
+        "french": "<b>Récolte</b> : +2[attack] et +2[health].",
+        "german": "<b>Ernte</b>: +2[attack] und +2[health].",
+        "russian": "<b>Урожай</b>: +2[attack] и +2[health].",
+        "portuguese": "<b>Colheita</b>: +2 de [attack] e +2 de [health]",
+        "chinese": "[harvest]：+2[attack]，+2[health]。"
+      },
+      "trigger_upgrades": [
+        "@WicklessBaronSynthesis.triggerUpgrades0"
+      ],
+      "hide_icon_on_card": true, "show_description_on_cards": false
+    },
+    {
+      "id": "Plus2Attack2HealthSynthesis",
+      "bonus_damage": 2,
+      "bonus_hp": 2
+    }
+  ],
+  "effects": [
+    {
+      "id": "WicklessBaronSynthesis.triggerUpgrades0.effects0",
+      "name": "CardEffectAddTempCardUpgradeToUnits",
+      "target_mode": "self",
+      "param_upgrade": "@Plus2Attack2HealthSynthesis"
+    }
+  ],
+  "character_triggers": [
+    {
+      
+      "id": "WicklessBaronSynthesis.triggerUpgrades0",
+      "descriptions": {
+        "key": "CardUpgradeData_descriptionKey-8f9e0658d62715c1-e1214798973c0624880ae39110a3cc6f-v2",
+        "english": "+[effect0.upgrade.bonusdamage][attack] and +[effect0.upgrade.bonushp][health].",
+        "french": "+[effect0.upgrade.bonusdamage][attack] et +[effect0.upgrade.bonushp][health].",
+        "german": "+[effect0.upgrade.bonusdamage][attack] und +[effect0.upgrade.bonushp][health].",
+        "russian": "+[effect0.upgrade.bonusdamage][attack] и +[effect0.upgrade.bonushp][health].",
+        "portuguese": "+[effect0.upgrade.bonusdamage] de [attack] e +[effect0.upgrade.bonushp] de [health].",
+        "chinese": "+[effect0.upgrade.bonusdamage][attack]，+[effect0.upgrade.bonushp][health]。"
+      },
+      "trigger": "on_any_unit_death_on_floor",
+      "effects": [
+        "@WicklessBaronSynthesis.triggerUpgrades0.effects0"
+      ]
+    }
+  ]
+}

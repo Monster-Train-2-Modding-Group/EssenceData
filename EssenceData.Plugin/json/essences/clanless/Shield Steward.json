@@ -1,0 +1,27 @@
+{
+  "$schema": "https://github.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/releases/latest/download/schema.json",
+  "essences": [
+    {
+      "character": "TrainStewardBig",
+      "upgrade": "@TrainStewardSynthesis"
+    }
+  ],
+  "upgrades": [
+    {
+      "id": "TrainStewardSynthesis",
+      "descriptions": {
+        "key": "CardUpgradeData_upgradeDescriptionKey-6d2ee644e86e9974-e408c7c4aad2b164eaf900fbad41a353-v2",
+        "english": "+5[attack] and +15[health].",
+        "french": "+5[attack] et +15[health].",
+        "german": "+5[attack] und +15[health].",
+        "russian": "+5[attack] и +15[health].",
+        "portuguese": "+5 de [attack] e +15 de [health].",
+        "chinese": "+5[attack]，+15[health]。"
+      },
+      "hide_icon_on_card": true,
+      "show_description_on_cards": false,
+      "bonus_damage": 5,
+      "bonus_hp": 15
+    }
+  ]
+}

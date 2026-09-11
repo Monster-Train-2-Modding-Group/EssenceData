@@ -1,0 +1,47 @@
+{
+  "$schema": "https://github.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/releases/latest/download/schema.json",
+  "essences": [
+    {
+      "character": "MonsterProsperityTotem",
+      "upgrade": "@MonsterProsperityTotemSynthesis"
+    }
+  ],
+  "upgrades": [
+    {
+      "id": "MonsterProsperityTotemSynthesis",
+      "titles": {
+        "key": "CharacterData_nameKey-fca91c71c4cba5e5-3117c8273db87b248b6289f972b97dd8-v2",
+        "english": "Offering Monument",
+        "french": "Monument aux offrandes",
+        "german": "Opferstellen-Monument",
+        "russian": "Алтарный монумент",
+        "portuguese": "Monumento de Oferendas",
+        "chinese": "祭品石碑",
+        "spanish": "Monumento de ofrenda",
+        "chinese_traditional": "供奉紀念碑",
+        "korean": "제물 기념비",
+        "japanese": "供物の像"
+      },
+      "descriptions": {
+        "key": "CardUpgradeData_upgradeDescriptionKey-928bf0bade61cd34-cdded741e0d22db4e9457b18db08adb3-v2",
+        "english": "Draw +1 each turn.",
+        "french": "Piochez +1 à chaque tour.",
+        "german": "Ziehe jeden Zug + 1 Karte.",
+        "russian": "Берите +1 каждый ход.",
+        "portuguese": "Compre +1 a cada turno.",
+        "chinese": "每回合抽 +1 张牌。"
+      },
+      "room_modifier_upgrades": [
+        "@MonsterProsperityTotemSynthesis.roomModifierUpgrades0"
+      ],
+      "hide_icon_on_card": true, "show_description_on_cards": false
+    }
+  ],
+  "room_modifiers": [
+    {
+      "id": "MonsterProsperityTotemSynthesis.roomModifierUpgrades0",
+      "name": "RoomStateHandSizeModifier",
+      "param_int": 1
+    }
+  ]
+}

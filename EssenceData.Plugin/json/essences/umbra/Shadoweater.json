@@ -1,0 +1,59 @@
+{
+  "$schema": "https://github.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/releases/latest/download/schema.json",
+  "essences": [
+    {
+      "character": "MonsterGlutton",
+      "upgrade": "@MonsterGluttonSynthesis"
+    }
+  ],
+  "upgrades": [
+    {
+      "id": "MonsterGluttonSynthesis",
+      "titles": {
+        "key": "CharacterData_nameKey-98e65039ba6b1a5b-2327020f80e424847ac8ee86603ac764-v2",
+        "english": "Shadoweater",
+        "french": "Goinfre des ombres",
+        "german": "Schattenfresser",
+        "russian": "Поглотитель теней",
+        "portuguese": "Glutão Sombrio",
+        "chinese": "噬影者",
+        "spanish": "Devorasombras",
+        "chinese_traditional": "暗影吞噬者",
+        "korean": "그림자 포식자",
+        "japanese": "シャドウイーター"
+      },
+      "descriptions": {
+        "key": "CardUpgradeData_upgradeDescriptionKey-9e6c21136025fc2f-5d8cc9a29754eb54ba0acdda57b7332e-v2",
+        "english": "+10[health] and '[feed]: Restore 10 health.'",
+        "french": "+10[health] et '<b>Gavage</b> : Restaure 10 PV.'",
+        "german": "+10[health] und „<b>Sättigung</b>: Stelle 10 Gesundheit wieder her.“",
+        "russian": "+10[health] и «<b>Обжорство</b>: восстанавливает 10 здоровья».",
+        "portuguese": "+10 de [health] e <b>Traçar</b>: restaura 10 de vida.",
+        "chinese": "+10[health]，'[feed]：恢复 10 点生命值。'"
+      },
+      "trigger_upgrades": [
+        "@MonsterGluttonSynthesis.triggerUpgrades0"
+      ],
+      "hide_icon_on_card": true, "show_description_on_cards": false,
+      "bonus_hp": 10
+    }
+  ],
+  "effects": [
+    {
+      "id": "MonsterGluttonSynthesis.triggerUpgrades0.effects0",
+      "name": "CardEffectHeal",
+      "target_mode": "self",
+      "param_int": 10
+    }
+  ],
+  "character_triggers": [
+    {
+      
+      "id": "MonsterGluttonSynthesis.triggerUpgrades0",
+      "trigger": "on_feed",
+      "effects": [
+        "@MonsterGluttonSynthesis.triggerUpgrades0.effects0"
+      ]
+    }
+  ]
+}

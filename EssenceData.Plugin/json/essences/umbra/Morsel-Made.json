@@ -1,0 +1,69 @@
+{
+  "$schema": "https://github.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/releases/latest/download/schema.json",
+  "essences": [
+    {
+      "character": "MonsterMorselMade",
+      "upgrade": "@MonsterMorselMadeSynthesis"
+    }
+  ],
+  "upgrades": [
+    {
+      "id": "MonsterMorselMadeSynthesis",
+      "titles": {
+        "key": "CharacterData_nameKey-bfd217e10ddbed19-6c9046852d9050b45883c23f7cfd5795-v2",
+        "english": "Morsel-Made",
+        "french": "Made in sous-bistre",
+        "german": "Nugget-Golem",
+        "russian": "Творение заморышей",
+        "portuguese": "Feito por Lanchos",
+        "chinese": "影裔造物",
+        "spanish": "Obra de pinchos",
+        "chinese_traditional": "莫塞爾造物",
+        "korean": "그림자 창조물",
+        "japanese": "モーゼル・メイド"
+      },
+      "descriptions": {
+        "key": "CardUpgradeData_upgradeDescriptionKey-f114b29e8104ef53-56d532193f9836145a4742bcc5b50981-v2",
+        "english": "+10[health] and '<b>Hunger</b>: Feed on units with [eaten].'",
+        "french": "+10[health] et '<b>Faim</b> : Se nourrit des unités avec <b>Mangé</b>.'",
+        "german": "+10[health] und „<b>Hunger</b>: Verschlingt Einheiten mit <b>Verschlungen</b>“",
+        "russian": "+10[health] и «<b>Голод</b>: поедает бойцов с <b>пожиранием</b>».",
+        "portuguese": "+10 de [health] e <b>Fome</b>: devora unidades com <b>Devorado</b>.",
+        "chinese": "+10[health]，'<b>饥饿</b>：立刻吞食带有[eaten]的单位。'"
+      },
+      "trigger_upgrades": [
+        "@MonsterMorselMadeSynthesis.triggerUpgrades0"
+      ],
+      "hide_icon_on_card": true, "show_description_on_cards": false,
+      "bonus_hp": 10
+    }
+  ],
+  "effects": [
+    {
+      "id": "MonsterMorselMadeSynthesis.triggerUpgrades0.effects0",
+      "name": "CardEffectFeederRules",
+      "target_mode": "room",
+      "target_team": "both",
+      "param_bool": true
+    }
+  ],
+  "character_triggers": [
+    {
+      
+      "id": "MonsterMorselMadeSynthesis.triggerUpgrades0",
+      "descriptions": {
+        "key": "CardUpgradeData_descriptionKey-87e87e99290b99df-56d532193f9836145a4742bcc5b50981-v2",
+        "english": "Feed on units with [eaten].",
+        "french": "Se nourrit des unités avec <b>Mangé</b>.",
+        "german": "Verschlingt Einheiten mit <b>Verschlungen</b>.",
+        "russian": "Поедает бойцов с <b>пожиранием</b>.",
+        "portuguese": "Devora unidades com <b>Devorado</b>.",
+        "chinese": "吞食带有[eaten]的单位。"
+      },
+      "trigger": "on_food_spawn",
+      "effects": [
+        "@MonsterMorselMadeSynthesis.triggerUpgrades0.effects0"
+      ]
+    }
+  ]
+}

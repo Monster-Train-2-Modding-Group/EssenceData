@@ -1,0 +1,73 @@
+{
+  "$schema": "https://github.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/releases/latest/download/schema.json",
+  "essences": [
+    {
+      "character": "MonsterGorger",
+      "upgrade": "@MonsterGorgerSynthesis"
+    }
+  ],
+  "upgrades": [
+    {
+      "id": "MonsterGorgerSynthesis",
+      "titles": {
+        "key": "CharacterData_nameKey-e1de3643e5433e91-d77a8ade152623a4ebb75fa1579408c4-v2",
+        "english": "Morselmaker",
+        "french": "Créateur de sous-bistres",
+        "german": "Nuggetformer",
+        "russian": "Творец заморышей",
+        "portuguese": "Criador de Lanchos",
+        "chinese": "影裔制造者",
+        "spanish": "Creapinchos",
+        "chinese_traditional": "莫塞爾製造者",
+        "korean": "그림자 생성기",
+        "japanese": "モーゼルメイカー"
+      },
+      "descriptions": {
+        "key": "CardUpgradeData_upgradeDescriptionKey-aa8d84ef0e92f3fa-854bf5855678a184d9b7a461a859515a-v2",
+        "english": "+5[health] and '[resolve]: +6[attack] and +6[health].'",
+        "french": "+5[health] et '<b>Résolution</b> : +6[attack] et +6[health].'",
+        "german": "+5[health] und „<b>Verrechnen</b>: +6[attack] und +6[health].“",
+        "russian": "+5[health] и «<b>Решимость</b>: +6[attack] и +6[health]».",
+        "portuguese": "+5 de [health] e <b>Resolução</b>: +6 de [attack] e +6 de [health].",
+        "chinese": "+5[health]，'[resolve]：+6[attack]，+6[health]。'"
+      },
+      "trigger_upgrades": [
+        "@MonsterGorgerSynthesis.triggerUpgrades0"
+      ],
+      "hide_icon_on_card": true, "show_description_on_cards": false,
+      "bonus_hp": 5
+    },
+    {
+      "id": "Plus6Attack6HealthSynthesis",
+      "bonus_damage": 6,
+      "bonus_hp": 6
+    }
+  ],
+  "effects": [
+    {
+      "id": "MonsterGorgerSynthesis.triggerUpgrades0.effects0",
+      "name": "CardEffectAddTempCardUpgradeToUnits",
+      "target_mode": "self",
+      "param_upgrade": "@Plus6Attack6HealthSynthesis"
+    }
+  ],
+  "character_triggers": [
+    {
+      
+      "id": "MonsterGorgerSynthesis.triggerUpgrades0",
+      "descriptions": {
+        "key": "CardUpgradeData_descriptionKey-7773c98bf7364c73-854bf5855678a184d9b7a461a859515a-v2",
+        "english": "+[effect0.upgrade.bonusdamage][attack] and +[effect0.upgrade.bonushp][health].",
+        "french": "+[effect0.upgrade.bonusdamage][attack] et +[effect0.upgrade.bonushp][health].",
+        "german": "+[effect0.upgrade.bonusdamage][attack] und +[effect0.upgrade.bonushp][health].",
+        "russian": "+[effect0.upgrade.bonusdamage][attack] и +[effect0.upgrade.bonushp][health].",
+        "portuguese": "+[effect0.upgrade.bonusdamage] de [attack] e +[effect0.upgrade.bonushp] de [health].",
+        "chinese": "+[effect0.upgrade.bonusdamage][attack]，+[effect0.upgrade.bonushp][health]。"
+      },
+      "trigger": "post_combat",
+      "effects": [
+        "@MonsterGorgerSynthesis.triggerUpgrades0.effects0"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "$schema": "https://github.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/releases/latest/download/schema.json",
+  "essences": [
+    {
+      "character": "MonsterKinhostCarapace",
+      "upgrade": "@MonsterKinhostCarapaceSynthesis"
+    }
+  ],
+  "upgrades": [
+    {
+      "id": "MonsterKinhostCarapaceSynthesis",
+      "titles": {
+        "key": "CharacterData_nameKey-c08b7ef3bb7dbc2c-c92e2b2ab06bce9418a76b855e4046a1-v2",
+        "english": "Kinhost Carapace",
+        "french": "Carapace hôtespèce",
+        "german": "Gepanzerter Wirtling",
+        "russian": "Панцирь хранителя рода",
+        "portuguese": "Carapaça do Hospedeiro",
+        "chinese": "亲族宿主甲壳",
+        "spanish": "Caparazón de portador de estirpe",
+        "chinese_traditional": "親族宿主甲殼",
+        "korean": "킨호스트 갑각",
+        "japanese": "キンホスト・キャラペイス"
+      },
+      "descriptions": {
+        "key": "CardUpgradeData_upgradeDescriptionKey-559c8b8ccd06fa08-ba0aececf3646144488bc20711b10dcb-v2",
+        "english": "[summon]: +10[attack] and +10[health].",
+        "french": "<b>Invocation</b> : +10[attack] et +10[health].",
+        "german": "<b>Rufen</b>: +10[attack] und +10[health].",
+        "russian": "<b>Призыв</b>: +10[attack] и +10[health].",
+        "portuguese": "<b>Invocar</b>: +10 de [attack] e +10 de [health].",
+        "chinese": "[summon]：+10[attack]，+10[health]。"
+      },
+      "trigger_upgrades": [
+        "@MonsterKinhostCarapaceSynthesis.triggerUpgrades0"
+      ],
+      "hide_icon_on_card": true, "show_description_on_cards": false
+    },
+    {
+      "id": "Plus10Attack10HealthSynthesis",
+      "bonus_damage": 10,
+      "bonus_hp": 10
+    }
+  ],
+  "effects": [
+    {
+      "id": "MonsterKinhostCarapaceSynthesis.triggerUpgrades0.effects0",
+      "name": "CardEffectAddTempCardUpgradeToUnits",
+      "target_mode": "self",
+      "param_upgrade": "@Plus10Attack10HealthSynthesis"
+    }
+  ],
+  "character_triggers": [
+    {
+      
+      "id": "MonsterKinhostCarapaceSynthesis.triggerUpgrades0",
+      "descriptions": {
+        "key": "CardUpgradeData_descriptionKey-dd6b815aeceb99e1-ba0aececf3646144488bc20711b10dcb-v2",
+        "english": "+10[attack] and +10[health].",
+        "french": "+10[attack] et +10[health].",
+        "german": "+10[attack] und +10[health].",
+        "russian": "+10[attack] и +10[health].",
+        "portuguese": "+10 de [attack] e +10 de [health].",
+        "chinese": "+10[attack]，+10[health]。"
+      },
+      "trigger": "on_spawn",
+      "effects": [
+        "@MonsterKinhostCarapaceSynthesis.triggerUpgrades0.effects0"
+      ]
+    }
+  ]
+}

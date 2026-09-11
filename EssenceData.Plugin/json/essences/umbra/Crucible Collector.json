@@ -1,0 +1,45 @@
+{
+  "$schema": "https://github.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/releases/latest/download/schema.json",
+  "essences": [
+    {
+      "character": "MonsterDrainingHunter",
+      "upgrade": "@MonsterDrainingHunterSynthesis"
+    }
+  ],
+  "upgrades": [
+    {
+      "id": "MonsterDrainingHunterSynthesis",
+      "titles": {
+        "key": "CharacterData_nameKey-0f1ef7f5d2873816-c0959083bc36955498e139131d33a354-v2",
+        "english": "Crucible Collector",
+        "french": "Collectionneur du creuset",
+        "german": "Schmelztiegel-Sammler",
+        "russian": "Коллектор Горнила",
+        "portuguese": "Coletor do Crisol",
+        "chinese": "熔炉收藏家",
+        "spanish": "Recolector del Crisol",
+        "chinese_traditional": "地獄熔爐收集者",
+        "korean": "도가니 수집가",
+        "japanese": "クルーシブル・コレクター"
+      },
+      "descriptions": {
+        "key": "CardUpgradeData_upgradeDescriptionKey-57916bca09282122-aa5a256f89564f94faf04f93bf4e2644-v2",
+        "english": "+10[attack], +10[health], and [lifesteal] 5.",
+        "french": "+10[attack], +10[health] et <b>Vol de vie</b> 5.",
+        "german": "+10[attack], +10[health] und 5 <b>Lebensraub</b>.",
+        "russian": "+10[attack], +10[health] и 5 <nobr><b>кражи жизни</b></nobr>.",
+        "portuguese": "+10 de [attack], +10 de [health] e <b>Vampirismo</b> 5.",
+        "chinese": "+10[attack]，+10[health]，[lifesteal] 5。"
+      },
+      "status_effect_upgrades": [
+        {
+          "status": "lifesteal",
+          "count": 5
+        }
+      ],
+      "hide_icon_on_card": true, "show_description_on_cards": false,
+      "bonus_damage": 10,
+      "bonus_hp": 10
+    }
+  ]
+}

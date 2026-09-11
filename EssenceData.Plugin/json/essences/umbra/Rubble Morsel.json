@@ -1,0 +1,37 @@
+{
+  "$schema": "https://github.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/releases/latest/download/schema.json",
+  "essences": [
+    {
+      "character": "MorselRubbleRaiser",
+      "upgrade": "@MorselRubbleRaiserSynthesis"
+    }
+  ],
+  "upgrades": [
+    {
+      "id": "MorselRubbleRaiserSynthesis",
+      "titles": {
+        "key": "CharacterData_nameKey-381e72366d3f946f-b8e32e399a3fff5418d4d409754f004d-v2",
+        "english": "Morsel Excavator",
+        "french": "Sous-bistre extracteur",
+        "german": "Nugget-Gräber",
+        "russian": "Заморыш-землекоп",
+        "portuguese": "Lancho Escavador",
+        "chinese": "影裔采掘者",
+        "spanish": "Pincho excavador",
+        "chinese_traditional": "莫塞爾挖掘者",
+        "korean": "그림자 발굴자",
+        "japanese": "モーゼル・エクスカベーター"
+      },
+      "descriptions": {
+        "key": "CardUpgradeData_upgradeDescriptionKey-c71c09f8f8ac6f5a-f952c3eb794ad11418396f7de0b29a7e-v2",
+        "english": "No Essence.",
+        "french": "Aucune essence.",
+        "german": "Keine Essenz.",
+        "russian": "Нет эссенции.",
+        "portuguese": "Sem essência.",
+        "chinese": "无精华。"
+      },
+      "hide_icon_on_card": true, "show_description_on_cards": false
+    }
+  ]
+}

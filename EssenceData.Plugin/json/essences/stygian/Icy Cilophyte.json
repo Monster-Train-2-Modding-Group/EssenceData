@@ -1,0 +1,74 @@
+{
+  "$schema": "https://github.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/releases/latest/download/schema.json",
+  "essences": [
+    {
+      "character": "MonsterColdstrikeSiren",
+      "upgrade": "@MonsterColdstrikeSirenSynthesis"
+    }
+  ],
+  "upgrades": [
+    {
+      "id": "MonsterColdstrikeSirenSynthesis",
+      "titles": {
+        "key": "CharacterData_nameKey-8ad888312cfe407b-7950aac77d7d92343b181181dec60509-v2",
+        "english": "Icy Cilophyte",
+        "french": "Cilophyte de glace",
+        "german": "Eisige Celophyte",
+        "russian": "Ледяная целофитка",
+        "portuguese": "Cecaelia Gélida",
+        "chinese": "寒冰之子",
+        "spanish": "Cilofita gélida",
+        "chinese_traditional": "冰冷絲蘿菲特",
+        "korean": "냉혹한 실로파이트",
+        "japanese": "アイシー・シロファイト"
+      },
+      "descriptions": {
+        "key": "CardUpgradeData_upgradeDescriptionKey-e64c76c18bd63e2b-1c509202cebab4d40a60995a253bdb93-v2",
+        "english": "+10[health] and '<b>Action</b>: Apply [spellweakness] 1 to enemy units.'",
+        "french": "+10[health] et '<b>Action</b> : Inflige <b>Faiblesse magique</b> 1 aux unités ennemies.'",
+        "german": "+10[health] und „<b>Aktion</b>: Wende 1 <nobr><b>Zauberanfälligkeit</b></nobr> auf gegnerische Einheiten an.“",
+        "russian": "+10[health] и «<b>Действие</b>: накладывает на вражеских бойцов 1 <nobr><b>уязвимости к чарам</b></nobr>».",
+        "portuguese": "+10 de [health] e <b>Ação</b>: aplica <b>Fraqueza à Magia</b> 1 às unidades inimigas.",
+        "chinese": "+10[health]，'<b>行动</b>：对所有敌方单位施加[spellweakness] 1。'"
+      },
+      "trigger_upgrades": [
+        "@MonsterColdstrikeSirenSynthesis.triggerUpgrades0"
+      ],
+      "hide_icon_on_card": true, "show_description_on_cards": false,
+      "bonus_hp": 10
+    }
+  ],
+  "effects": [
+    {
+      "id": "MonsterColdstrikeSirenSynthesis.triggerUpgrades0.effects0",
+      "name": "CardEffectAddStatusEffect",
+      "target_mode": "room",
+      "target_team": "heroes",
+      "param_status_effects": [
+        {
+          "status": "spell weakness",
+          "count": 1
+        }
+      ]
+    }
+  ],
+  "character_triggers": [
+    {
+      
+      "id": "MonsterColdstrikeSirenSynthesis.triggerUpgrades0",
+      "descriptions": {
+        "key": "CardUpgradeData_descriptionKey-f45c6c1829055de0-1c509202cebab4d40a60995a253bdb93-v2",
+        "english": "Apply [spellweakness] [effect0.status0.power] to enemy units.",
+        "french": "Inflige <nobr><b>Faiblesse magique</b></nobr> [effect0.status0.power] aux unités ennemies.",
+        "german": "Wende [effect0.status0.power] <b>Zauberanfälligkeit</b> auf gegnerische Einheiten an.",
+        "russian": "Накладывает на вражеских бойцов [effect0.status0.power] <b>уязвимости к чарам</b>.",
+        "portuguese": "Aplica<nobr><b>Fraqueza à Magia</b></nobr> [effect0.status0.power] às unidades inimigas.",
+        "chinese": "对所有敌方单位施加 [spellweakness] [effect0.status0.power]。"
+      },
+      "trigger": "on_turn_begin",
+      "effects": [
+        "@MonsterColdstrikeSirenSynthesis.triggerUpgrades0.effects0"
+      ]
+    }
+  ]
+}

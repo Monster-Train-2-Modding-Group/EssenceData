@@ -1,0 +1,70 @@
+{
+  "$schema": "https://github.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/releases/latest/download/schema.json",
+  "essences": [
+    {
+      "character": "MonsterSplitterLarge",
+      "upgrade": "@MonsterSplitterLargeSynthesis"
+    }
+  ],
+  "upgrades": [
+    {
+      "id": "MonsterSplitterLargeSynthesis",
+      "titles": {
+        "key": "CharacterData_nameKey-b637953c3591b379-70952ffb07782ff4ba5ba8f1838c1586-v2",
+        "english": "Legion of Wax",
+        "french": "Légion de cire",
+        "german": "Wachslegion",
+        "russian": "Восковой легион",
+        "portuguese": "Legião Cérea",
+        "chinese": "烛人大军",
+        "spanish": "Legión de cera",
+        "chinese_traditional": "蠟燭軍團",
+        "korean": "밀랍 군단",
+        "japanese": "蝋軍団"
+      },
+      "descriptions": {
+        "key": "CardUpgradeData_upgradeDescriptionKey-deef389e832aaeca-d2c906bfba113bc43aace68c21b80250-v2",
+        "english": "+8[attack], +8[health], and '[revenge]: Summon 1 basic copy of <b>Mote of Wax</b>.'",
+        "french": "+8[attack], +8[health] et <b>Vengeance</b> : invoque 1 version de base de <b>Paillette de cire</b>.",
+        "german": "+8[attack], +8[health] und „<b>Rache</b>: Beschwöre 1 einfache Kopie von <b>Wachsklumpen</b>.“",
+        "russian": "+8[attack], +8[health] и «<b>Месть</b>: призывает базовую копию <b>Восковой головы</b>».",
+        "portuguese": "+8 de [attack], +8 de [health] e <b>Vingança</b>: invoca 1 cópia básica de <b>Partículas Céreas</b>.'",
+        "chinese": "+8[attack]，+8[health]，'[revenge]：召唤 1 只<b>微尘烛人</b>的基础复制品。'"
+      },
+      "trigger_upgrades": [
+        "@MonsterSplitterLargeSynthesis.triggerUpgrades0"
+      ],
+      "hide_icon_on_card": true, "show_description_on_cards": false,
+      "bonus_damage": 8,
+      "bonus_hp": 8
+    }
+  ],
+  "effects": [
+    {
+      "id": "MonsterSplitterLargeSynthesis.triggerUpgrades0.effects0",
+      "name": "CardEffectSpawnMonster",
+      "param_int": 1,
+      "param_bool": true,
+      "param_character": "MonsterSplitterSmall"
+    }
+  ],
+  "character_triggers": [
+    {
+      
+      "id": "MonsterSplitterLargeSynthesis.triggerUpgrades0",
+      "descriptions": {
+        "key": "CardUpgradeData_descriptionKey-2394d39318533bf0-d2c906bfba113bc43aace68c21b80250-v2",
+        "english": "Summon 1 basic copy of <b>Mote of Wax</b>.",
+        "french": "Invoque 1 version de base de <b>Paillette de cire</b>.",
+        "german": "Beschwöre 1 einfache Kopie von <b>Wachsklumpen</b>.",
+        "russian": "Призывает базовую копию <b>Восковой головы</b>.",
+        "portuguese": "Invoca 1 cópia básica de <b>Partículas Céreas</b>.",
+        "chinese": "召唤 1 只<b>微尘烛人</b>的基础复制品。"
+      },
+      "trigger": "on_hit",
+      "effects": [
+        "@MonsterSplitterLargeSynthesis.triggerUpgrades0.effects0"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "$schema": "https://github.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/releases/latest/download/schema.json",
+  "essences": [
+    {
+      "character": "MonsterEelGorgon",
+      "upgrade": "@MonsterEelGorgonSynthesis"
+    }
+  ],
+  "upgrades": [
+    {
+      "id": "MonsterEelGorgonSynthesis",
+      "titles": {
+        "key": "CharacterData_nameKey-1e7ef9c2862bc2a8-8fe33a976b2baa442ae9b392e40d4212-v2",
+        "english": "Eel Gorgon",
+        "french": "Gorgonanguille",
+        "german": "Aal-Gorgone",
+        "russian": "Горгона Угорь",
+        "portuguese": "Górgone Enguia",
+        "chinese": "鳗鱼戈耳工",
+        "spanish": "Gorgonguila",
+        "chinese_traditional": "鰻魚蛇髮女妖",
+        "korean": "장어 고르곤",
+        "japanese": "イール・ゴルゴン"
+      },
+      "descriptions": {
+        "key": "CardUpgradeData_upgradeDescriptionKey-eda625d6dea2cce9-541bef90f0adb524686b3ffa0c2c0598-v2",
+        "english": "[multistrike] 1 and +1[ember].",
+        "french": "<b>Frappe multiple</b> 1 et +1[ember].",
+        "german": "1 <b>Multischlag</b> und +1[ember].",
+        "russian": "<b>Мультиудар</b> и +1[ember].",
+        "portuguese": "<b>Golpe Múltiplo</b> 1 e +1 de [ember].",
+        "chinese": "[multistrike] 1，费用 +1[ember]。"
+      },
+      "status_effect_upgrades": [
+        {
+          "status": "multistrike",
+          "count": 1
+        }
+      ],
+      "hide_icon_on_card": true, "show_description_on_cards": false,
+      "cost_reduction": -1
+    }
+  ]
+}

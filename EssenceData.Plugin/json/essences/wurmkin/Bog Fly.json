@@ -1,0 +1,66 @@
+{
+  "$schema": "https://github.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/releases/latest/download/schema.json",
+  "essences": [
+    {
+      "character": "MonsterBogFly",
+      "upgrade": "@MonsterBogFlySynthesis"
+    }
+  ],
+  "upgrades": [
+    {
+      "id": "MonsterBogFlySynthesis",
+      "titles": {
+        "key": "CharacterData_nameKey-da5bc0cf9bb285e0-8be3987b12f5410469fc72f4cb2f3ee3-v2",
+        "english": "Bog Fly",
+        "french": "Volant des marais",
+        "german": "Sumpffliege",
+        "russian": "Болотная муха",
+        "portuguese": "Mosca do Pântano",
+        "chinese": "沼泽飞蝇",
+        "spanish": "Mosca del cenagal",
+        "chinese_traditional": "沼澤蒼蠅",
+        "korean": "늪 파리",
+        "japanese": "ボグ・フライ"
+      },
+      "descriptions": {
+        "key": "CardUpgradeData_upgradeDescriptionKey-6c6104510dd79134-04b4e0da438d90d41a7e399d7d551679-v2",
+        "english": "+5[health] and '+5[attack] per [corrupt].'",
+        "french": "+5[health] et '+5[attack] par [corrupt].'",
+        "german": "+5[health] und „+5[attack] pro [corrupt].“",
+        "russian": "+5[health] и «+5[attack] за каждый заряд [corrupt]».",
+        "portuguese": "+5 de [health] e +5 de [attack] por [corrupt].",
+        "chinese": "+5[health]，'每个[corrupt] +5[attack]。'"
+      },
+      "room_modifier_upgrades": [
+        "@MonsterBogFlySynthesis.roomModifierUpgrades0"
+      ],
+      "hide_icon_on_card": true, "show_description_on_cards": false,
+      "bonus_hp": 5
+    }
+  ],
+  "room_modifiers": [
+    {
+      "id": "MonsterBogFlySynthesis.roomModifierUpgrades0",
+      "descriptions": {
+        "key": "CardUpgradeData_descriptionKey-7f013a55cc65a4b2-04b4e0da438d90d41a7e399d7d551679-v2",
+        "english": "+[paramint][attack] per [corrupt].",
+        "french": "+[paramint][attack] par [corrupt].",
+        "german": "+[paramint][attack] pro [corrupt].",
+        "russian": "+[paramint][attack] за каждый заряд [corrupt].",
+        "portuguese": "+[paramint] de [attack] por [corrupt].",
+        "chinese": "每个[corrupt] +[paramint][attack]。"
+      },
+      "in_play_descriptions": {
+        "key": "CardUpgradeData_descriptionKeyInPlay-7e30d4049a1fbcf0-04b4e0da438d90d41a7e399d7d551679-v2",
+        "english": "+[paramint][attack] per [corrupt].<br>(+[dynamicint][attack])",
+        "french": "+[paramint][attack] par [corrupt].<br>(+[dynamicint][attack])",
+        "german": "+[paramint][attack] pro [corrupt].<br>(+[dynamicint][attack])",
+        "russian": "+[paramint][attack] за каждый заряд [corrupt].<br>(+[dynamicint][attack])",
+        "portuguese": "+[paramint] de [attack] por [corrupt].<br>(+[dynamicint][attack])",
+        "chinese": "每个[corrupt] +[paramint][attack]。<br>（+[dynamicint][attack]）"
+      },
+      "name": "RoomStateSelfDamagePerCorruptionModifier",
+      "param_int": 5
+    }
+  ]
+}

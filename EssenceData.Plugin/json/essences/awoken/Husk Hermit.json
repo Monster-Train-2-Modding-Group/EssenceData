@@ -1,0 +1,39 @@
+{
+  "$schema": "https://github.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/releases/latest/download/schema.json",
+  "essences": [
+    {
+      "character": "HuskHermit",
+      "upgrade": "@HuskHermitSynthesis"
+    }
+  ],
+  "upgrades": [
+    {
+      "id": "HuskHermitSynthesis",
+      "titles": {
+        "key": "CharacterData_nameKey-a88577320b3de739-42c38ef504e15af428455c5e06db7f24-v2",
+        "english": "Husk Hermit",
+        "french": "Ermite carapacé",
+        "german": "Hülleneremit",
+        "russian": "Отшельница",
+        "portuguese": "Eremita Carapaça",
+        "chinese": "坚壳隐者",
+        "spanish": "Ermitaño hueco",
+        "chinese_traditional": "軀殼隱士",
+        "korean": "껍질 은자",
+        "japanese": "ハスク・ハーミット"
+      },
+      "descriptions": {
+        "key": "CardUpgradeData_upgradeDescriptionKey-d0178e16dda8ee9f-b1d366f110a09b2438a5c10277c4b71a-v2",
+        "english": "+30[health].",
+        "french": "+30[health].",
+        "german": "+30[health].",
+        "russian": "+30[health].",
+        "portuguese": "+30 de [health].",
+        "chinese": "+30[health]。"
+      },
+      "hide_icon_on_card": true,
+      "show_description_on_cards": false,
+      "bonus_hp": 30
+    }
+  ]
+}

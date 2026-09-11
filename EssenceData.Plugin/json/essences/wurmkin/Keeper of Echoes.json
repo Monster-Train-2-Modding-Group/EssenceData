@@ -1,0 +1,73 @@
+{
+  "$schema": "https://github.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/releases/latest/download/schema.json",
+  "essences": [
+    {
+      "character": "MonsterKeeperOfEchoes",
+      "upgrade": "@MonsterKeeperOfEchoesSynthesis"
+    }
+  ],
+  "upgrades": [
+    {
+      "id": "MonsterKeeperOfEchoesSynthesis",
+      "titles": {
+        "key": "CharacterData_nameKey-b084d75ef9ffa418-f5f4b81d8412b634db4570217c39c5b9-v2",
+        "english": "Keeper of Echoes",
+        "french": "Garde-échos",
+        "german": "Echohüter",
+        "russian": "Хранитель эхо",
+        "portuguese": "Guardião dos Ecos",
+        "chinese": "水晶保管者",
+        "spanish": "Guardián de los ecos",
+        "chinese_traditional": "迴響保管者",
+        "korean": "메아리의 수호자",
+        "japanese": "エコーの番人"
+      },
+      "descriptions": {
+        "key": "CardUpgradeData_upgradeDescriptionKey-3d9d6c9d78d6aa0f-16c29f968f0ebc94fb926e20b0f98e5b-v2",
+        "english": "+5[health] and '<b>Inspire</b>: +1[attack] and +1[health].'",
+        "french": "+5[health] et '<b>Inspiration</b> : +1[attack] et +1[health].'",
+        "german": "+5[health] und „<b>Inspiration</b>: +1[attack] und +1[health].“",
+        "russian": "+5[health] и «<b>Воодушевление</b>: +1[attack] и +1[health]».",
+        "portuguese": "+5 de [health] e <b>Inspirar</b>: +1 de [attack] e +1 de [health].",
+        "chinese": "+5[health]，'<b>激励</b>：+1[attack]，+1[health]。'"
+      },
+      "trigger_upgrades": [
+        "@MonsterKeeperOfEchoesSynthesis.triggerUpgrades0"
+      ],
+      "hide_icon_on_card": true, "show_description_on_cards": false,
+      "bonus_hp": 5
+    },
+    {
+      "id": "WurmTransfuserSynthesisTrigger",
+      "bonus_damage": 1,
+      "bonus_hp": 1
+    }
+  ],
+  "effects": [
+    {
+      "id": "MonsterKeeperOfEchoesSynthesis.triggerUpgrades0.effects0",
+      "name": "CardEffectAddTempCardUpgradeToUnits",
+      "target_mode": "self",
+      "param_upgrade": "@WurmTransfuserSynthesisTrigger"
+    }
+  ],
+  "character_triggers": [
+    {
+      
+      "id": "MonsterKeeperOfEchoesSynthesis.triggerUpgrades0",
+      "descriptions": {
+        "key": "CardUpgradeData_descriptionKey-ea427ec23a46f79d-16c29f968f0ebc94fb926e20b0f98e5b-v2",
+        "english": "+[effect0.upgrade.bonusdamage][attack] and +[effect0.upgrade.bonushp][health].",
+        "french": "+[effect0.upgrade.bonusdamage][attack] et +[effect0.upgrade.bonushp][health].",
+        "german": "+[effect0.upgrade.bonusdamage][attack] und +[effect0.upgrade.bonushp][health].",
+        "russian": "+[effect0.upgrade.bonusdamage][attack] и +[effect0.upgrade.bonushp][health].",
+        "portuguese": "+[effect0.upgrade.bonusdamage] de [attack] e +[effect0.upgrade.bonushp] de [health].",
+        "chinese": "+[effect0.upgrade.bonusdamage][attack]，+[effect0.upgrade.bonushp][health]。"
+      },
+      "trigger": "corruption_added",
+      "effects": [
+        "@MonsterKeeperOfEchoesSynthesis.triggerUpgrades0.effects0"
+      ]
+    }
+  ]
+}
