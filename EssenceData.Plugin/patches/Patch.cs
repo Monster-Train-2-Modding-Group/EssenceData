@@ -128,6 +128,16 @@ static class UnitEssenceToggle
         AccessTools.Method(typeof(CompendiumSectionCards), logbook),
     ];
 
+    private static readonly FieldInfo DeckScreen_Mode = AccessTools.Field(typeof(DeckScreen), "mode");
+
+    // The deck screen in ApplyUpgrade mode previews the upgrade on each card, so essences stay off there.
+    private static bool ButtonEnabled(MonoBehaviour screen)
+    {
+        if (CardUI_UpdateTextContent_ShowSynthesisEffectPatch.DisableSynthesisButton)
+            return false;
+        return screen is not DeckScreen deck || (DeckScreen.Mode)DeckScreen_Mode.GetValue(deck) != DeckScreen.Mode.ApplyUpgrade;
+    }
+
     [HarmonyPatch]
     static class Toggle
     {
@@ -138,7 +148,8 @@ static class UnitEssenceToggle
             // Typing "h" into the logbook's search field must not toggle essences.
             var selected = UnityEngine.EventSystems.EventSystem.current?.currentSelectedGameObject;
             if (triggeredMappingID != InputManager.Controls.DragonsHoard
-                || (selected != null && selected.TryGetComponent<TMP_InputField>(out var field) && field.isFocused))
+                || (selected != null && selected.TryGetComponent<TMP_InputField>(out var field) && field.isFocused)
+                || !ButtonEnabled(__instance))
                 return true;
 
             var flag = (CardUI_UpdateTextContent_ShowSynthesisEffectPatch.EnableShowingSynthesis ^= true);
@@ -164,7 +175,6 @@ static class UnitEssenceToggle
     static class AddButton
     {
         static IEnumerable<MethodBase> TargetMethods() => Screens("Setup", "Setup", "Open");
-        static readonly FieldInfo DeckScreen_Mode = AccessTools.Field(typeof(DeckScreen), "mode");
 
         // Setup/Open run every time the screen is shown while the button object survives, so only
         // create it the first time. ShowState still runs every time: Close resets the flag, and a
@@ -176,17 +186,46 @@ static class UnitEssenceToggle
                 Create(__instance);
             }
 
-            bool flag = !CardUI_UpdateTextContent_ShowSynthesisEffectPatch.DisableSynthesisButton;
-            if (__instance is DeckScreen screen)
-            {
-                var mode = (DeckScreen.Mode)DeckScreen_Mode.GetValue(screen);
-                if (mode == DeckScreen.Mode.ApplyUpgrade)
-                {
-                    flag = false;
-                }
-            }
+            Place(__instance);
+            ShowState(__instance, ButtonEnabled(__instance));
+        }
 
-            ShowState(__instance, flag);
+        // The draft screen's "Choose a card" line sits under its title, so the button goes above
+        // the title instead, in the dialog's top frame.
+        private const float DraftFrameTop = -85f;
+
+        // Space between the deck screen's banner and the button under it.
+        private const float BannerGap = 12f;
+
+        private static void Place(MonoBehaviour screen)
+        {
+            if (screen.GetComponentsInChildren<GameUISelectableButton>(true).FirstOrDefault(b => b.name == ButtonName)?.transform is not RectTransform rect)
+                return;
+            if (screen is DeckScreen deck)
+            {
+                PlaceUnderBanner(rect, Traverse.Create(deck).Field<GameObject>("deckBanner").Value?.transform as RectTransform);
+                return;
+            }
+            rect.anchoredPosition = new Vector2(0f, DraftFrameTop);
+        }
+
+        // The deck screen's cards scroll up to the top edge, so the top middle is no place for the
+        // button: it goes under the view's banner ("Deck", "Draw Pile", ...), at the left, where
+        // the grid never reaches. Every banner sits in the same spot, so the deck banner serves as
+        // the reference even when another one, or none (the pickers), is shown. On an ultrawide
+        // screen the banner's left end is cut off by the screen edge, so the button lines up with
+        // the banner's right edge, which is the end that stays visible.
+        private static void PlaceUnderBanner(RectTransform rect, RectTransform? banner)
+        {
+            if (banner == null)
+                return;
+            rect.SetParent(banner.parent, false);
+            // Same anchor point and pivot as the banner, so its anchoredPosition is directly comparable.
+            var anchor = banner.anchorMin + Vector2.Scale(banner.pivot, banner.anchorMax - banner.anchorMin);
+            rect.anchorMin = rect.anchorMax = anchor;
+            rect.pivot = banner.pivot;
+            var right = (banner.rect.width - rect.rect.width) * (1f - banner.pivot.x);
+            rect.anchoredPosition = banner.anchoredPosition + new Vector2(right, -(banner.rect.height + rect.rect.height) / 2f - BannerGap);
         }
 
         private static void Create(MonoBehaviour __instance)
@@ -207,8 +246,7 @@ static class UnitEssenceToggle
             Traverse.Create(button).Field("inputType").SetValue((int)new CoreSymbol(nameof(InputManager.Controls.DragonsHoard)).m_value);
 
             var rect = (RectTransform)button.transform;
-            rect.anchorMin = rect.anchorMax = rect.pivot = Vector2.one;
-            rect.anchoredPosition = new Vector2(-23.5f, -201f);
+            rect.anchorMin = rect.anchorMax = rect.pivot = new Vector2(0.5f, 1f); // top middle; Place sets the position
             rect.sizeDelta = new Vector2(255f, 64f);
             if (button.transform.Find("Target Graphic") is RectTransform graphic)
                 graphic.sizeDelta = new Vector2(graphic.sizeDelta.x, 80f); // 104 by default

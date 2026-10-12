@@ -4,6 +4,10 @@ Data mod containing Essences for Units. This mod by itself does not surface the 
 
 Currently the mod defines essences for the MT1 units, along with Dante, Shield and Spear Steward.
 
+In game, a Toggle Unit Essences button on the deck, draft and logbook screens (also the
+Dragon's Hoard key, H by default, or right stick click) switches every unit card between
+its own text and its essence text.
+
 If you wish to help with designing essences for the MT2 units there is a spreadsheet.
 https://docs.google.com/spreadsheets/d/1lRSo0pYxt87rcTUNz7858ZSK5r8swT7mkqz8okg7jZo/edit?usp=sharing
 
